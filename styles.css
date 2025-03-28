@@ -665,8 +665,12 @@ h2 {
     }
 
     .container-items {
+        display: grid;
         grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-        gap: 10px; /* Espacio entre elementos */
+        grid-template-rows: repeat(2, auto); /* Dos filas */
+        gap: 15px; /* Espacio entre elementos */
+        padding: 10px; /* Espaciado interno del contenedor */
+        box-sizing: border-box; /* Ajusta el ancho total */
     }
 
     img {
@@ -675,14 +679,22 @@ h2 {
     }
 
     .item {
-        width: calc(50% - 10px); /* Asegura espacio entre columnas */
+        width: 100%; /* El ancho se ajusta al contenedor */
         margin: 0 auto; /* Centra cada producto */
-        padding: 8px; /* Espaciado interno */
+        padding: 10px; /* Espaciado interno */
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px; /* Bordes redondeados */
+        text-align: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade sombra */
     }
 
     .sidebar {
-        width: 100%; /* Sidebar ocupa todo el ancho */
-        margin-bottom: 20px; /* Añadir espacio inferior */
+        width: 80%; /* Reduce el ancho de la sidebar */
+        margin: 0 auto 15px; /* Centra la barra y añade espacio inferior */
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+        padding: 10px; /* Espaciado interno */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
     }
 
     .logo {
@@ -765,44 +777,44 @@ h2 {
 /* Vista para pantallas muy pequeñas (hasta 480px) */
 @media (max-width: 480px) {
     .container-items {
-        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas más pequeñas */
-        gap: 5px; /* Espaciado más reducido entre elementos */
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        gap: 10px; /* Espaciado entre elementos */
     }
 
     .item {
         width: 100%; /* Los productos ocupan todo el ancho disponible */
         padding: 10px; /* Espaciado interno cómodo */
-        margin-bottom: 15px; /* Espacio entre elementos */
+        margin-bottom: 15px; /* Espacio adicional inferior */
     }
 
     .sidebar {
-        display: visible; /* Oculta la barra lateral en pantallas muy pequeñas */
+        display: none; /* Oculta la barra lateral en pantallas pequeñas */
     }
 
     .logo {
-        width: 20px; /* Tamaño compacto para el logo */
+        width: 30px; /* Tamaño compacto para el logo */
         height: auto;
     }
 
     .title-image {
-        width: 40px; /* Ajusta el tamaño del título para pantallas más pequeñas */
+        width: 70px; /* Ajusta el tamaño del título */
         height: auto;
     }
 
     .icon-cart {
-        width: 15px; /* Tamaño aún más reducido */
-        height: 15px;
+        width: 20px; /* Tamaño reducido del ícono */
+        height: 20px;
     }
 
     .container-cart-products {
         width: 100%; /* Sigue ocupando todo el ancho */
-        max-height: 250px; /* Altura aún más compacta */
-        overflow-y: auto; /* Scroll si hay muchos productos */
+        max-height: 250px; /* Limita la altura */
+        overflow-y: auto; /* Activa scroll si hay muchos productos */
         padding: 8px;
     }
 
     .cart-whatsapp-button {
-        font-size: 0.9rem; /* Texto del botón más compacto */
+        font-size: 0.9rem; /* Texto más compacto */
         padding: 8px;
     }
 }
