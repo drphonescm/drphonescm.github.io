@@ -664,6 +664,18 @@ h2 {
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
     }
 
+        /* Incrementar el tamaño del logo y del título en el header */
+    .header-logo {
+        width: 150px; /* Aumenta el tamaño del logo */
+        height: auto; /* Mantén la proporción */
+    }
+    
+    .header-title {
+        font-size: 1.8em; /* Aumenta el tamaño de la fuente del título */
+        font-weight: bold; /* Resalta más el título */
+    }
+  
+
     .search-bar-container {
         width: 100%;
         margin: 0 auto;
@@ -726,7 +738,7 @@ h2 {
         padding: 10px;
         background-color: #f4f4f4;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        font-size: 0.8rem; /* Texto compacto */
+        font-size: 0.5rem; /* Texto compacto */
         border-radius: 5px;
     }
 
@@ -825,7 +837,13 @@ h2 {
         flex-direction: column; /* Cambia a una columna */
         gap: 10px;
     }
-
+    
+    .sidebar-item {
+        padding: 5px 10px; /* Disminuye el relleno para reducir el tamaño visual */
+        font-size: 0.8em;  /* Ajusta la fuente del ítem individualmente si es necesario */
+      }
+      
+    
     .sidebar,
     .product {
         width: 100%; /* Ocupa todo el ancho */
