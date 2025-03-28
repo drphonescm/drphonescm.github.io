@@ -425,15 +425,15 @@ h3 {
 
 .item {
     position: relative; /* Permite ajustar capas */
-    overflow: hidden; /* Evita que los bordes de la imagen sobresalgan */
+    overflow: visible; /* Evita que los bordes de la imagen sobresalgan */
     border-radius: 10px; /* Bordes redondeados del contenedor */
     padding: 5px; /* Espaciado interno */
     background-color: #f9f9f9; /* Fondo neutro para destacar las imágenes PNG */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
     transition: box-shadow 0.3s ease;
     margin: auto;
-    height: 480px; /* Define una altura fija para todos los contenedores */
-    width: 220px;
+    height: auto; /* Define una altura fija para todos los contenedores */
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Distribuye contenido uniformemente dentro del contenedor */
@@ -446,7 +446,7 @@ h3 {
 }
 
 .item img {
-    width: 800px;
+    width: 100%;
     height: auto;
     object-fit: contain;
     border-radius: 10px 10px 0 0;
@@ -455,7 +455,7 @@ h3 {
 }
 
 .item figure {
-    overflow: hidden;
+    overflow: visible;
 }
 
 .item:hover img {
@@ -903,7 +903,7 @@ h2 {
     border-radius: 5px; /* Bordes menos redondeados */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
     z-index: 1000;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(-15px); /* Ajusta la animación según el nuevo tamaño */
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
