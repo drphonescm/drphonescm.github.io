@@ -651,6 +651,8 @@ h2 {
 }
 /* Media Queries para diseño responsivo */
 
+/* Media Queries para diseño responsivo */
+
 /* Vista para pantallas medianas (hasta 768px) */
 @media (max-width: 768px) {
     /* Header */
@@ -671,8 +673,8 @@ h2 {
 
     .search-bar {
         display: flex;
-        width: 90%;
-        max-width: 250px;
+        width: 60%; /* Reduce el largo de la barra de búsqueda */
+        max-width: 300px;
     }
 
     .search-bar input {
@@ -688,47 +690,57 @@ h2 {
     }
 
     .logo {
-        width: 25px;
+        width: 20px; /* Más pequeño */
     }
 
     .title-image {
-        width: 60px;
+        width: 50px; /* Más compacto */
     }
 
-    /* Sidebar */
-    .sidebar {
-        display: none;
-    }
-
-    /* Contenedor de productos */
-    .container-items {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 10px;
-        padding: 8px;
-    }
-
-    .item {
-        padding: 6px;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-
-    img {
+    /* Parte inferior: distribución 30% - 30% - 30% */
+    .container-bottom {
+        display: flex;
+        justify-content: space-between; /* Espaciado entre las columnas */
         width: 100%;
-        height: auto;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .sidebar {
+        width: 30%; /* Barra de filtros ocupa el 30% del ancho */
+        padding: 10px;
+        background-color: #f4f4f4;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 0.8rem; /* Texto más compacto */
         border-radius: 5px;
     }
 
-    h2 {
-        font-size: 0.9rem;
+    .product {
+        width: 30%; /* Cada producto ocupa el 30% del ancho */
+        padding: 8px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        text-align: center;
     }
 
-    .price {
+    .product img {
+        width: 100%;
+        height: auto; /* Mantiene proporción de la imagen */
+        margin-bottom: 8px;
+    }
+
+    .product h2 {
+        font-size: 0.9rem; /* Títulos más compactos */
+        margin-bottom: 5px;
+    }
+
+    .product .price {
         font-size: 1rem;
+        color: #6A5ACD;
+        font-weight: bold;
+        margin-bottom: 8px;
     }
 
     button {
@@ -741,7 +753,7 @@ h2 {
         background-color: #007BFF;
         color: white;
         cursor: pointer;
-        transition: background 0.3s;
+        transition: background 0.3s ease;
     }
 
     button:hover {
@@ -751,25 +763,25 @@ h2 {
     /* Modal */
     #product-modal {
         width: 90%;
-        max-width: 400px;
+        max-width: 300px; /* Reduce el modal */
         padding: 10px;
         border-radius: 8px;
     }
 
     #modal-img {
         width: 60%;
-        max-width: 200px;
+        max-width: 180px;
         margin: 0 auto 10px;
         border-radius: 8px;
     }
 
     #modal-title {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         margin-bottom: 8px;
     }
 
     #modal-price {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-bottom: 10px;
     }
 
@@ -780,6 +792,73 @@ h2 {
     }
 }
 
+/* Vista para pantallas pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+    /* Productos en una columna */
+    .container-items {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 8px;
+        padding: 5px;
+    }
+
+    .item {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Header compacto */
+    .logo {
+        width: 15px; /* Muy compacto */
+    }
+
+    .title-image {
+        width: 40px; /* Más reducido */
+    }
+
+    .search-bar-container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 5px;
+    }
+
+    .search-bar input {
+        padding: 3px;
+        font-size: 0.75rem;
+    }
+
+    .search-bar button {
+        padding: 3px 6px;
+        font-size: 0.75rem;
+    }
+
+    /* Modal compacto */
+    #product-modal {
+        width: 100%;
+        padding: 8px;
+    }
+
+    #modal-title {
+        font-size: 1rem; /* Más reducido */
+    }
+
+    #modal-price {
+        font-size: 0.9rem;
+    }
+
+    #add-to-cart-modal-button {
+        font-size: 0.75rem; /* Botón compacto */
+        padding: 5px 8px;
+        border-radius: 3px;
+    }
+}
 
 /* Vista para pantallas pequeñas (hasta 480px) */
 @media (max-width: 480px) {
