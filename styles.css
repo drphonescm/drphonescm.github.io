@@ -651,95 +651,75 @@ h2 {
     position: sticky;
 }
 
+/* Media Queries para diseño responsivo */
 
+/* Vista para pantallas medianas (hasta 768px) */
 @media (max-width: 768px) {
     header {
         width: 100%; /* Hace que el header ocupe todo el ancho disponible */
         box-sizing: border-box; /* Ajusta el ancho incluyendo padding/margin */
     }
+
     .search-bar-container {
         width: 100%; /* Asegura que la barra de búsqueda se adapte */
         margin: 0 auto; /* Centra la barra */
     }
-}
 
-/* Media Queries para diseño responsivo */
-
-/* Vista para pantallas pequeñas (hasta 768px) */
-@media (max-width: 768px) {
     .container-items {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-        gap: 10px;
-
+        gap: 10px; /* Espacio entre elementos */
     }
+
     img {
         width: 100%; /* Ajusta las imágenes al ancho del contenedor */
         height: auto; /* Mantiene proporción */
     }
+
     .item {
         width: calc(50% - 10px); /* Asegura espacio entre columnas */
         margin: 0 auto; /* Centra cada producto */
-        padding: 8px;
+        padding: 8px; /* Espaciado interno */
     }
+
     .sidebar {
         width: 100%; /* Sidebar ocupa todo el ancho */
         margin-bottom: 20px; /* Añadir espacio inferior */
     }
+
     .logo {
         width: 40px; /* Ajusta el tamaño del logo */
         height: auto; /* Mantiene proporciones */
     }
+
     .title-image {
         width: 80px; /* Ajusta el tamaño del título */
         height: auto;
     }
+
     .derecha {
         flex-direction: column; /* Acomoda logo y título en una fila vertical */
         align-items: center;
     }
+
     h2 {
         font-size: 1rem; /* Ajusta los títulos para pantallas más pequeñas */
     }
+
     .price {
         font-size: 1.1rem; /* Ajuste proporcional del precio */
     }
+
     button {
         padding: 10px; /* Botones más compactos */
         width: 100%; /* Ocupan todo el ancho disponible */
         margin: 5px 0; /* Espaciado vertical entre botones */
     }
-}
 
-
-/* Vista para pantallas muy pequeñas (hasta 480px) */
-@media (max-width: 480px) {
-    .container-items {
-        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas más pequeñas */
-        gap: 5px; /* Espaciado más reducido entre elementos */
-    }
-    .item {
-        width: 100%; /* Los productos ocupan todo el ancho disponible */
-        padding: 10px; /* Espaciado interno cómodo */
-        margin-bottom: 15px; /* Espacio entre elementos */
-    }
-    .sidebar {
-        display: none; /* Oculta la barra lateral en pantallas muy pequeñas */
-    }
-    .logo {
-        width: 40px; /* Tamaño compacto para el logo */
-        height: auto;
-    }
-    .title-image {
-        width: 80px; /* Ajusta el tamaño del título para pantallas más pequeñas */
-        height: auto;
-    }
-}
-
-@media (max-width: 768px) {
     .icon-cart {
         width: 24px; /* Tamaño reducido del ícono */
         height: 24px;
     }
+
     .count-products {
         font-size: 0.9rem; /* Texto más pequeño para el contador */
         width: 20px;
@@ -748,6 +728,7 @@ h2 {
         justify-content: center;
         align-items: center;
     }
+
     .container-cart-products {
         width: 100%; /* Ocupa todo el ancho de la pantalla */
         max-height: 300px; /* Limita la altura */
@@ -758,19 +739,23 @@ h2 {
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Suaviza el diseño */
     }
+
     .cart-products {
         font-size: 0.9rem; /* Ajusta el tamaño del texto */
     }
+
     .cart-total {
         display: flex;
         justify-content: space-between; /* Separación entre total y número */
         font-size: 1rem; /* Tamaño de texto ajustado */
         padding: 10px 0;
     }
+
     .cart-button {
         text-align: center; /* Centra el botón */
         padding-top: 10px;
     }
+
     .cart-whatsapp-button {
         width: 100%; /* Botón ocupa todo el ancho */
         padding: 10px;
@@ -778,17 +763,45 @@ h2 {
     }
 }
 
+/* Vista para pantallas muy pequeñas (hasta 480px) */
 @media (max-width: 480px) {
+    .container-items {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas más pequeñas */
+        gap: 5px; /* Espaciado más reducido entre elementos */
+    }
+
+    .item {
+        width: 100%; /* Los productos ocupan todo el ancho disponible */
+        padding: 10px; /* Espaciado interno cómodo */
+        margin-bottom: 15px; /* Espacio entre elementos */
+    }
+
+    .sidebar {
+        display: none; /* Oculta la barra lateral en pantallas muy pequeñas */
+    }
+
+    .logo {
+        width: 40px; /* Tamaño compacto para el logo */
+        height: auto;
+    }
+
+    .title-image {
+        width: 80px; /* Ajusta el tamaño del título para pantallas más pequeñas */
+        height: auto;
+    }
+
     .icon-cart {
         width: 20px; /* Tamaño aún más reducido */
         height: 20px;
     }
+
     .container-cart-products {
         width: 100%; /* Sigue ocupando todo el ancho */
         max-height: 250px; /* Altura aún más compacta */
         overflow-y: auto; /* Scroll si hay muchos productos */
         padding: 8px;
     }
+
     .cart-whatsapp-button {
         font-size: 0.9rem; /* Texto del botón más compacto */
         padding: 8px;
