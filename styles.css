@@ -656,7 +656,8 @@ h2 {
 /* Media Queries para diseño responsivo */
 @media (max-width: 768px) {
     .container-items {
-        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
     }
     img {
         width: 100%; /* Las imágenes se ajustan al contenedor */
@@ -674,7 +675,8 @@ h2 {
 
 @media (max-width: 480px) {
     .container-items {
-        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
     }
     .sidebar {
         width: 100%; /* Ocupa todo el ancho del contenedor */
@@ -704,6 +706,28 @@ h2 {
     }
     .price {
         font-size: 1.2rem; /* Ajuste proporcional del precio */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 30px; /* Reduce el tamaño del logo */
+        height: auto; /* Mantiene proporciones */
+    }
+    .title-image {
+        width: 150px; /* Ajusta el ancho del título */
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 25px; /* Tamaño compacto para pantallas pequeñas */
+        height: auto; 
+    }
+    .title-image {
+        width: 120px; /* Reduce el título para que se ajuste mejor */
+        height: auto; 
     }
 }
 
