@@ -1,0 +1,929 @@
+/* Globales */
+*::after,
+*::before,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%; 
+    font-family: 'Magneto-Bold', sans-serif;
+    color: #333;
+    background-color: #f4f4f9;
+    
+}
+
+img {
+    max-width: 100%;
+    border-radius: 50px; /* Ajusta los bordes de la imagen */
+}
+
+/* Logo y título más compactos */
+.derecha-hover {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Menor espacio entre elementos */
+}
+
+.derecha {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espacio entre las imágenes */
+    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+}
+
+.logo,
+.title-image {
+    width: 80px; /* Ajusta este valor al tamaño deseado */
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+}
+
+.logo {
+    width: 40px; /* Reducir tamaño del logo */
+    height: auto;
+    border-radius: 5px; /* Ajustar bordes */
+}
+
+.title-image {
+    width: 200px; /* Reducir ancho del título */
+    height: auto;
+}
+
+.derecha-hover:hover .derecha {
+    transform: scale(1.05); /* Agranda las imágenes al pasar el cursor */
+}
+
+/* Header */
+header {
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 25px; /* Reducir padding */
+    border-bottom: 2px solid #333; /* Línea más delgada */
+    margin-bottom: 2px; /* Espacio inferior reducido */
+    background-color: #fff;
+    position: relative;
+}
+
+/* Contenedor para centrar el buscador */
+.search-bar-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-radius: 20px; /* Bordes más redondeados */
+    width: 100%;
+    max-width: 280px; /* Barra más compacta */
+    box-shadow: 0 2px 4px rgba(22, 22, 22, 0.1); /* Sombra más ligera */
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+.search-bar input {
+    padding: 8px 10px; /* Menor padding */
+    font-size: 12px; /* Fuente más pequeña */
+    border: none;
+    border-radius: 20px 0 0 20px; 
+    width: 100%;
+}
+
+.search-bar input:focus {
+    background-color: #f9f9f9; 
+}
+
+.search-bar button {
+    background: linear-gradient(90deg, #8A2BE2, #BA55D3); /* Degradado en tonos lilas */
+    color: white; /* Texto blanco */
+    font-size: 0.8rem; /* Tamaño de fuente */
+    font-weight: bold; /* Texto en negrita */
+    padding: 8px 10px; /* Espaciado interno */
+    border: none; /* Sin bordes visibles */
+    border-radius: 0 20px 20px 0; /* Bordes redondeados para coincidir con el diseño */
+    cursor: pointer; /* Indicador de clic */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra suave */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
+}
+
+.search-bar button:hover {
+    background: linear-gradient(90deg, #7B68EE, #DDA0DD); /* Degradado más claro en hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.05); /* Zoom ligero al pasar el ratón */
+}
+
+.search-bar button:active {
+    background: linear-gradient(90deg, #6A5ACD, #9932CC); /* Tonos más intensos en clic */
+    transform: scale(0.95); /* Efecto de hundimiento al hacer clic */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Sombra reducida */
+}
+
+
+h1 {
+    text-align: right;
+    font-family: 'Magneto-Bold', sans-serif; /* Usa el nombre correcto aquí */
+}
+
+
+
+/* Estilos del contenedor principal */
+.container {
+    display: flex;
+    justify-content: center; /* Centra el contenido principal */
+    margin-bottom: 10px; /* Espacio extra para acomodar la paginación */
+
+}
+
+/* Barra de paginación */
+.pagination {
+    display: flex; /* Activar Flexbox */
+    align-items: center; /* Alinear elementos verticalmente */
+    justify-content: center; /* Centrar los botones horizontalmente */
+    gap: 10px; /* Separar uniformemente entre botones */
+    padding: 10px 0; /* Espaciado interno */
+    background-color: #f1f1f1; /* Fondo claro */
+    border-top: 1px solid #ddd; /* Línea separadora superior */
+    position: relative; /* Asegura que no quede detrás de otros elementos */
+    bottom: 0; /* Mantén la paginación al fondo si usas posición fija */
+
+
+}
+
+/* Números de página */
+.pagination button,
+.page-number {
+    background: linear-gradient(90deg, #8A2BE2, #BA55D3); /* Degradado en tonos lilas */
+    color: white; /* Texto blanco */
+    font-size: 1rem; /* Tamaño de texto */
+    font-weight: bold; /* Negrita */
+    padding: 5px 10px; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    border-radius: 30px; /* Bordes redondeados completos */
+    cursor: pointer; /* Indicador de clic */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra ligera */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
+}
+
+
+.pagination button:hover,
+.page-number:hover {
+    background: linear-gradient(90deg, #7B68EE, #DDA0DD); /* Degradado más claro en hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.05); /* Zoom ligero */
+}
+
+
+
+
+
+.page-number.active {
+    background: linear-gradient(90deg, #433984, #702595); /* Fondo más oscuro para la página activa */
+    color: white; /* Texto blanco */
+    font-weight: bold; /* Texto destacado */
+}
+
+/* Botones "Anterior" y "Siguiente" */
+.pagination button {
+    background-color: #A7A6D9;
+    color: #fff;
+    border: none;
+    padding: 8px 15px; /* Tamaño consistente con los números de página */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Suavizar cambios */
+}
+
+.pagination button:hover {
+    background-color: #8684B1; /* Fondo más oscuro al pasar el cursor */
+    transform: scale(1.05); /* Efecto visual */
+}
+
+
+/* Ícono del carrito más pequeño */
+.container-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.icon-cart {
+    width: 25px; /* Reducir tamaño del ícono */
+    height: 25px;
+    stroke: #6A5ACD;
+    transition: transform 0.3s ease;
+}
+
+.icon-cart:hover {
+    transform: scale(1.1); /* Mantener efecto al pasar el cursor */
+}
+
+.count-products {
+    top: 50%; /* Ajuste de posición */
+    right: 0;
+    width: 18px; /* Contador más pequeño */
+    height: 18px;
+    font-size: 10px;
+}
+
+.hidden-cart {
+    display: none !important;
+}
+
+.show-cart {
+    display: block !important;
+}
+
+.container-cart-products {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #ffffff;
+    width: 450px;
+    z-index: 1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20);
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 20px;
+    max-height: 450px;
+    overflow-y: visible;
+    display: flex;
+    flex-direction: column; 
+    
+}
+
+.cart-product {
+    margin-bottom: 15px; /* Mayor espacio entre productos */
+    padding: 15px 20px; /* Espacio interno más cómodo */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.cart-product:hover {
+    transform: scale(1.02); /* Efecto sutil al pasar el cursor */
+}
+
+.cantidad-producto-carrito {
+    font-weight: bold;
+    color: #444;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.titulo-producto-carrito {
+    flex: 1;
+    margin: 0 3px;
+    font-size: 13px;
+    color: #555;
+    font-weight: 600;
+    text-align: left;
+}
+
+.precio-producto-carrito {
+    color: #A7A6D9;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+/* Estilos del contenido principal */
+.main-content {
+    width: 75%;
+    padding: 20px;
+    margin-bottom: 60px;
+}
+
+/* Estilos de la sección de ordenamiento */
+.dropdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    padding: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    max-width: 240px;
+    margin-left: 15px; /* Alinear a la izquierda */
+    font-size: 0.5rem; /* Reduce el tamaño del texto */
+    margin-top: 0;
+}
+
+.dropdown label {
+    font-size: 0.8rem;
+    color: #333;
+}
+
+.dropdown select {
+    padding: 3px 6px;
+    font-size: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 1px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dropdown select:hover {
+    border-color: #A7A6D9;
+}
+
+.dropdown select:focus {
+    border-color: #A7A6D9;
+    box-shadow: 0 0 0 2px rgba(167, 166, 217, 0.2);
+}
+
+
+.cantidad-producto-carrito {
+    font-weight: 400;
+    font-size: 14px; 
+    color: #666; 
+}
+.cart-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f9;
+    padding: 10px 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    margin-top: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #ddd;
+}
+
+.total-pagar {
+    color: #6A5ACD;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #6A5ACD;
+    margin-bottom: 20px;
+}
+
+.cart-total h3 {
+    font-size: 1rem;
+    
+}
+
+
+.remove-product-button {
+    background: linear-gradient(90deg, #8A2BE2, #BA55D3); /* Degradado en tonos lilas */
+    color: white; /* Texto blanco */
+    font-size: 0.8rem; /* Tamaño más pequeño del texto */
+    font-weight: bold; /* Negrita */
+    padding: 5px 10px; /* Espaciado interno reducido */
+    border: none; /* Sin bordes visibles */
+    border-radius: 20px; /* Bordes redondeados */
+    cursor: pointer; /* Indicador de clic */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra ligera */
+    margin-left: 10px; /* Margen a la izquierda */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
+}
+
+.remove-product-button:hover {
+    background: linear-gradient(90deg, #7B68EE, #DDA0DD); /* Degradado más claro en hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.05); /* Zoom ligero */
+}
+
+.remove-product-button:active {
+    background: linear-gradient(90deg, #6A5ACD, #9932CC); /* Degradado más intenso al hacer clic */
+    transform: scale(0.95); /* Efecto de hundimiento */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Sombra reducida */
+}
+
+/* Ajuste para mostrar 3 filas de celulares */
+.container-items {
+    width: 80%; 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 20px;
+    padding: 1rem;
+    max-height: auto; 
+    overflow-y: visible;
+    justify-items: center;
+    margin-bottom: 5px;  
+}
+
+.item {
+    position: relative; /* Permite ajustar capas */
+    overflow: hidden; /* Evita que los bordes de la imagen sobresalgan */
+    border-radius: 10px; /* Bordes redondeados del contenedor */
+    padding: 5px; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo neutro para destacar las imágenes PNG */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+    transition: box-shadow 0.3s ease;
+    margin: auto;
+    height: 480px; /* Define una altura fija para todos los contenedores */
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye contenido uniformemente dentro del contenedor */
+    align-items: center; /* Centra los elementos */
+
+}
+
+.item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Efecto al pasar el cursor */
+}
+
+.item img {
+    width: 800px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+    display: flex;
+}
+
+.item figure {
+    overflow: hidden;
+}
+
+.item:hover img {
+    transform: scale(1.2);
+}
+
+.info-product {
+    padding: 1rem 1.3rem;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex-grow: 1;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #6A5ACD;
+    text-align: center; 
+}
+
+
+
+.cart-button {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente si es necesario */
+    padding: 15px;
+}
+
+
+.cart-whatsapp-button {
+    background-color: #25d366;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 15px;
+}
+
+.cart-whatsapp-button:hover {
+    background-color: #1da851;
+    transform: scale(1.05);
+}
+
+.cart-whatsapp-button .icon {
+    margin-right: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.cart-whatsapp-button span {
+    font-weight: bold;
+}
+
+.close-button:hover::after {
+    content: "Cerrar carrito";
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 5px;
+    top: -30px;
+    right: 0;
+}
+
+/* WhatsApp Button */
+.whatsapp-button {
+    position: fixed;
+    bottom: 10px; /* Reducir más la separación del borde inferior */
+    right: 20px; /* Separación estándar del lado derecho */
+    width: 60px; /* Tamaño del botón */
+    height: 60px;
+    border-radius: 50%;
+    background-color: #25d366; /* Color verde de WhatsApp */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para mejor visibilidad */
+    z-index: 100; /* Siempre visible encima de otros elementos */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #1da851; /* Color más oscuro al pasar el cursor */
+    transform: scale(1.1); /* Efecto de agrandamiento */
+}
+
+.whatsapp-button img {
+    width: 70%; /* Tamaño ajustado del logo dentro del botón */
+    height: 70%;
+    object-fit: contain;
+    border-radius: 50%; /* Bordes redondeados */
+}
+
+
+
+/* Estilos para el control deslizante */
+
+.filter-group {
+    height: auto; /* Ajuste dinámico */
+    overflow: visible; /* Permite que el contenido crezca */
+    margin-bottom: 20px; /* Separación inferior */
+}
+
+.filter-group h4 {
+    font-size: 1.3rem;
+    color: #6A5ACD;
+    margin-bottom: 10px;
+}
+
+.filter-group label {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.filter-group input[type="checkbox"] {
+    margin-right: 10px;
+    accent-color: #9932CC;
+}
+
+.filter-group input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    background: #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease-in-out;
+}
+
+.filter-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #A7A6D9;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.filter-group input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: #8684B1;
+    transform: scale(1.1);
+}
+
+.filter-group input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #A7A6D9;
+    border-radius: 100%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.filter-group input[type="range"]::-moz-range-thumb:hover {
+    background-color: #8684B1;
+    transform: scale(1.1);
+}
+
+h2 {
+    font-size: 1rem; 
+    font-weight: bold; 
+    color: #333; 
+}
+
+/* Estilos de la barra lateral */
+.sidebar {
+    width: 20%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-right: 20px;
+    position: sticky;
+    top: 20px;
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 1200px) {
+    .container-items {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+    .sidebar {
+        margin-bottom: 20px; /* Añadir espacio inferior */
+    }
+}
+
+@media (max-width: 768px) {
+    .container-items {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+    .sidebar {
+        width: 100%; /* Ajustar el ancho para pantallas más pequeñas */
+        margin-bottom: 20px; /* Añadir espacio inferior */
+    }
+}
+
+@media (max-width: 480px) {
+    .container-items {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+    .sidebar {
+        width: 100%; /* Ajustar el ancho para pantallas más pequeñas */
+        margin-bottom: 20px; /* Añadir espacio inferior */
+    }
+}
+
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+
+#product-modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    max-width: 370px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.98);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    z-index: 1000;
+    text-align: center; /* Centra el contenido */
+}
+
+
+@media (max-width: 768px) {
+    #product-modal {
+        width: 100%; /* Ancho completo para pantallas pequeñas */
+        max-width: none; /* Sin límite de ancho */
+        border-radius: 0; /* Elimina bordes redondeados para mejor ajuste */
+    }
+
+    #modal-img {
+        width: 80%; /* Imagen centrada y más pequeña */
+        max-width: 230px;
+        height: auto;
+        margin: 0 auto 15px; /* Centra horizontalmente */
+        border-radius: 10px; /* Bordes redondeados */
+    }
+    
+
+    #modal-title {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: #444;
+        margin-bottom: 10px;
+    }
+
+    #modal-price {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #6A5ACD;
+        margin-bottom: 15px;
+    }
+    
+
+    #modal-features {
+        list-style-type: none;
+        padding: 0;
+        font-size: 1rem;
+        color: #555;
+    }
+    
+}
+
+#modal-title {
+    font-size: 1.8rem; /* Texto más grande */
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#modal-price {
+    font-size: 1.8rem; /* Aumentar tamaño del precio */
+    font-weight: bold;
+    color: #6A5ACD;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#modal-features {
+    list-style: none; /* Quitar viñetas */
+    padding: 0;
+    font-size: 1.2rem; /* Aumentar tamaño de las características */
+    color: #555;
+    text-align: left; /* Alinear texto */
+}
+
+#modal-features li {
+    margin-bottom: 8px; /* Espaciado entre elementos */
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-button:hover {
+    color: #A7A6D9;
+}
+
+
+.modal-open {
+    overflow: hidden; /* Este estilo bloquea el scroll */
+}
+
+#image-container {
+    position: relative;
+    width: 100%;
+    max-width: 370px;
+    margin: 0 auto;
+}
+
+#modal-img {
+    width: 70%; /* Imagen ajustada al contenedor */
+    border-radius: 8px;
+    position: relative;
+    z-index: 1; /* Imagen está detrás del botón */
+    transform-origin: center;
+
+}
+
+
+#add-to-cart-modal-button {
+    background: linear-gradient(90deg, #8A2BE2, #BA55D3); /* Degradado en tonos lilas */
+    color: #ffffff; /* Texto blanco */
+    font-size: 1.2rem; /* Tamaño del texto */
+    font-weight: bold; /* Negrita para destacar el texto */
+    padding: 12px 25px; /* Espaciado interno */
+    border: none; /* Sin bordes */
+    border-radius: 30px; /* Bordes redondeados completos */
+    cursor: pointer; /* Indicador de clic */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra ligera */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Animaciones suaves */
+}
+
+#add-to-cart-modal-button:hover {
+    background: linear-gradient(90deg, #7B68EE, #DDA0DD); /* Degradado más claro en hover */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.05); /* Zoom ligero al pasar el ratón */
+}
+
+#add-to-cart-modal-button:active {
+    background: linear-gradient(90deg, #6A5ACD, #9932CC); /* Degradado más intenso al hacer clic */
+    transform: scale(0.95); /* Reducir ligeramente al hacer clic */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra reducida */
+}
+
+#modal-overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
+    z-index: 999; /* Colocar detrás del modal pero delante del resto */
+}
+
+#product-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.98); /* Fondo blanco */
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra ligera */
+    z-index: 1000; /* Por encima del fondo oscuro */
+}
+
+.add-to-cart-button {
+    background: linear-gradient(90deg, #8A2BE2, #BA55D3); /* Degradado en tonos lilas */
+    color: white; /* Texto blanco */
+    font-size: 1rem; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    padding: 12px 20px; /* Espaciado interno */
+    border: none; /* Sin bordes visibles */
+    border-radius: 25px; /* Bordes completamente redondeados */
+    cursor: pointer; /* Indicador de clic */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra ligera */
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
+}
+
+
+.add-to-cart-button:hover {
+    background: linear-gradient(90deg, #7B68EE, #DDA0DD); /* Degradado más claro al pasar el ratón */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.05); /* Zoom ligero */
+}
+
+.add-to-cart-button:active {
+    background: linear-gradient(90deg, #6A5ACD, #9932CC); /* Tonos más intensos en clic */
+    transform: scale(0.95); /* Efecto de hundimiento */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Sombra reducida */
+}
+
+#add-to-cart-message {
+    position: fixed;
+    top: 10%; /* Mantén la posición */
+    right: 10%;
+    background-color: #7B68EE; /* Lila vibrante */
+    color: white;
+    font-size: 0.9rem; /* Reduce el tamaño del texto */
+    font-weight: bold;
+    padding: 8px 15px; /* Menor espaciado interno */
+    border-radius: 5px; /* Bordes menos redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-15px); /* Ajusta la animación según el nuevo tamaño */
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+#close-modal {
+    position: absolute; /* Mantenerlo flotante */
+    top: 10px; /* Espaciado desde arriba */
+    right: 15px; /* Espaciado desde la derecha */
+    z-index: 9999; /* Asegúrate de que sea el más alto */
+    font-size: 1.5rem; /* Tamaño grande para visibilidad */
+    color: white; /* Texto blanco */
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+    border: 2px solid red; 
+    border-radius: 50%;
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#close-modal:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Más oscuro al pasar el ratón */
+}
+

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Phone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="derecha-hover" onclick="refreshPage()">
+            <div class="derecha">
+                <img src="img/logo.jpg" class="logo" alt="Logo de la Tienda"/>
+                <img src="img/title-image.jpg" class="title-image" alt="Título"/>
+            </div>
+        </div>                
+        </div>
+        <div class="search-bar-container">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar productos..." />
+                <button id="searchButton">Buscar</button>
+            </div>
+        </div>
+        <div class="container-icon">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="icon-cart"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 
+                    1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 
+                    10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                />
+            </svg>
+            <div class="count-products">
+                <span id="contador-productos">0</span>
+            </div>
+            <div class="container-cart-products hidden-cart">
+                <div class="cart-products">
+                </div>
+                <div class="cart-total">
+                    <h3>Total:</h3>
+                    <span class="total-pagar">$0</span>
+                </div>
+                <div class="cart-button">
+                    <button id="whatsappButton" class="cart-whatsapp-button">
+                        <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                        <span>Cerrar compra y enviar por WhatsApp</span>
+                    </button>
+                </div>                
+            </div>            
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Filtros</h3>
+            <div class="filter-group">
+                <h4>Marca</h4>
+                <label><input type="checkbox" value="Motorola" class="filter-checkbox"> Motorola</label>
+                <label><input type="checkbox" value="Xiaomi" class="filter-checkbox"> Xiaomi</label>
+                <label><input type="checkbox" value="Samsung" class="filter-checkbox"> Samsung</label>
+            </div>
+            <div class="filter-group">
+                <h4>Precio</h4>
+                <label for="priceRange">Rango de precio: <span id="priceRangeValue">200000 - 1600000</span></label>
+                <input type="range" id="priceRange" min="200000" max="1600000" step="1000" value="1600000">
+            </div>                                  
+        </aside>
+        <main class="main-content">
+            <div class="dropdown">
+                <label for="sort">Ordenar por:</label>
+                <select id="sort" name="sort">
+                    <option value="relevance">Más relevantes</option>
+                    <option value="lowest-price">Menor precio</option>
+                    <option value="highest-price">Mayor precio</option>
+                </select>
+            </div>
+
+
+            <div class="container-items"  id="products-container">
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\G04S.png" alt="producto" onclick="openModal(1)" data-id="1"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Motorola Moto G04s 64 GB</h2>
+                        <p class="price">$226.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\G24 POWER.png" alt="producto" onclick="openModal(2)" data-id="2"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Motorola Moto G24 Power 128 GB</h2>
+                        <p class="price">$286.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\G14.png" alt="producto" onclick="openModal(3)" data-id="3"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Motorola Moto G14 128 GB</h2>
+                        <p class="price">$264.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\G84.png" alt="producto" onclick="openModal(4)" data-id="4"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Motorola Moto G84 5G 256 GB</h2>
+                        <p class="price">$520.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\A05.png" alt="producto" onclick="openModal(5)" data-id="5"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Samsung Galaxy A05 128 GB</h2>
+                        <p class="price">$293.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div> 
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\A15.png" alt="producto" onclick="openModal(6)" data-id="6"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Samsung Galaxy A15 128 GB</h2>
+                        <p class="price">$309.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\A25.png" alt="producto" onclick="openModal(7)" data-id="7"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Samsung Galaxy A25 5G 128 GB</h2>
+                        <p class="price">$389.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>  
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\A25 256GB.png" alt="producto" onclick="openModal(8)" data-id="8"/>
+                    </figure>
+                    <div class="info-product"> 
+                        <h2>Samsung Galaxy A25 5G 256 GB</h2>
+                        <p class="price">$442.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\A35.png" alt="producto" onclick="openModal(9)" data-id="9"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Samsung Galaxy A35 5G 128 GB</h2>
+                        <p class="price">$530.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\A35 256.png" alt="producto" onclick="openModal(10)" data-id="10"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Samsung Galaxy A35 5G 256 GB</h2>
+                        <p class="price">$548.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div> 
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\A55.png" alt="producto" onclick="openModal(11)" data-id="11"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Samsung Galaxy A55 5G 128 GB</h2>
+                        <p class="price">$610.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\A55 256.png" alt="producto" onclick="openModal(12)" data-id="12"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Samsung Galaxy A55 5G 256 GB</h2>
+                        <p class="price">$671.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\S23 ULTRA.png" alt="producto" onclick="openModal(13)" data-id="13"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Samsung S23 ULTRA 256GB / 8GB</h2>
+                        <p class="price">$1.224.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\S23 ULTRA 512.png" alt="producto" onclick="openModal(14)" data-id="14"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Samsung S23 ULTRA 512GB / 12GB</h2>
+                        <p class="price">$1.313.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\S24 FE.png" alt="producto" onclick="openModal(15)" data-id="15"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Samsung S24 FE 256GB / 8GB</h2>
+                        <p class="price">$1.135.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\S24 256.png" alt="producto" onclick="openModal(16)" data-id="16"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Samsung S24 ULTRA 256GB / 12GB</h2>
+                        <p class="price">$1.446.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\S24 512.png" alt="producto" onclick="openModal(17)" data-id="17"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Samsung S24 ULTRA 512GB / 12GB</h2>
+                        <p class="price">$1.556.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\NOTE 13.png" alt="producto" onclick="openModal(18)" data-id="18"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Xiaomi Redmi Note 13 256GB / 8GB</h2>
+                        <p class="price">$386.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\NOTE 13 PRO.png" alt="producto" onclick="openModal(19)" data-id="19"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Xiaomi Redmi Note 13 PRO 5G 256GB / 8GB</h2>
+                        <p class="price">$528.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\NOTE 13 PRO 512.png" alt="producto" onclick="openModal(20)" data-id="20"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Xiaomi Redmi Note 13 PRO 5G 512GB / 12GB</h2>
+                        <p class="price">$607.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\NOTE 13 PRO PLUS.png" alt="producto" onclick="openModal(21)" data-id="21"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Xiaomi Redmi Note 13 PRO PLUS 5G 256GB / 12GB</h2>
+                        <p class="price">$639.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\NOTE 13C.png" alt="producto" onclick="openModal(22)" data-id="22"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Xiaomi Redmi Note 13C 128GB / 4GB</h2>
+                        <p class="price">$265.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\NOTE 14C.png" alt="producto" onclick="openModal(23)" data-id="23"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Xiaomi Redmi Note 14C 128GB / 8GB</h2>
+                        <p class="price">$291.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\G14 256.png" alt="producto" onclick="openModal(24)" data-id="24"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Motorola Moto G14 5G 256 GB</h2>
+                        <p class="price">$349.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src=".\Img\CELULARES\G84.png" alt="producto" onclick="openModal(25)" data-id="25"/>
+                    </figure>
+                    <div class="info-product">
+                        <h2>Motorola Moto G84 5G 256 GB</h2>
+                        <p class="price">$520.999</p>
+                        <button class="add-to-cart-button">Añadir al carrito</button>
+                    </div>
+                </div>
+                
+            </div>
+
+        </main>
+    </div>
+
+   
+    <a href="https://wa.me/message/Y2LKRKQ3VWM5P1" class="whatsapp-button" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">       
+    </a>
+
+    <script>
+        document.getElementById("whatsappButton").addEventListener("click", function() {
+            var total = document.querySelector(".total-pagar").innerText;
+            var numeroTelefono = "+54 9 3512 53-6346"; 
+            var productos = document.querySelectorAll(".cart-product");
+            var detalleProductos = "";
+    
+            productos.forEach(function(producto) {
+                var nombre = producto.querySelector(".producto-carrito").innerText;
+                var cantidad = producto.querySelector(".cantidad-producto-carrito").innerText;
+                detalleProductos += `${nombre} (${cantidad})\n`;
+            });
+    
+            var mensaje = encodeURIComponent(`Hola, deseo cerrar mi compra. El total es: ${total}. Productos:\n${detalleProductos}`);
+     
+            var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            var url = isMobile 
+                ? "https://api.whatsapp.com/send?phone=" + numeroTelefono + "&text=" + mensaje
+                : "https://web.whatsapp.com/send?phone=" + numeroTelefono + "&text=" + mensaje;
+    
+            window.open(url, "_blank");
+        });
+    </script>
+    <script>
+        function refreshPage() {
+            location.reload(); // Esto recargará la página
+        }
+    </script>
+    <div id="modal-overlay"></div>
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+          <figure>
+            <img id="modal-img" src="" alt="">
+            <div id="zoom-lens"></div> <!-- Elemento para la lupa -->
+          </figure>
+          <span class="close-button" onclick="closeModal()">&times;</span>
+          <h2 id="modal-title"></h2>
+          <p id="modal-price"></p>
+          <ul id="modal-features"></ul>
+          <button id="add-to-cart-modal-button">Añadir al carrito</button>
+        </div>
+    </div>
+    </div>
+      <script src="index.js"></script>
+      <div id="add-to-cart-message" style="display: none;">Producto añadido al carrito</div>
+      <div class="pagination">
+        <button id="prev-page" class="btn-paginate">Anterior</button>
+        <div id="page-numbers">1 - 2 - 3</div>
+        <button id="next-page" class="btn-paginate">Siguiente</button>
+    </div> 
+</body>
+</html>
