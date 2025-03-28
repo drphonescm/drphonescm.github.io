@@ -776,7 +776,7 @@ h2 {
     }
 
     .sidebar {
-        display: auto; /* Oculta la barra lateral en pantallas muy pequeñas */
+        display: visible; /* Oculta la barra lateral en pantallas muy pequeñas */
     }
 
     .logo {
