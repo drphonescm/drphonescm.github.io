@@ -658,90 +658,106 @@ h2 {
 /* Vista para pantallas medianas (hasta 768px) */
 @media (max-width: 768px) {
     header {
-        width: 100%; /* Asegura que el header ocupe todo el ancho disponible */
-        box-sizing: border-box; /* Incluye padding/margin en el cálculo de ancho */
+        width: 100%;
+        box-sizing: border-box; /* Ajusta el ancho incluyendo padding/margin */
         padding: 10px;
     }
 
     .search-bar-container {
-        width: 100%; /* Barra de búsqueda ocupa todo el ancho */
+        width: 100%;
         margin: 0 auto;
     }
 
+    .search-bar {
+        display: flex;
+        width: 100%;
+        max-width: 300px; /* Reducido para adaptarse mejor */
+    }
+
+    .search-bar input {
+        flex: 1;
+        padding: 6px; /* Más compacto */
+        font-size: 0.9rem;
+    }
+
+    .search-bar button {
+        padding: 6px 10px; /* Botón de buscar más compacto */
+        font-size: 0.9rem;
+        border-radius: 4px;
+    }
+
     .container-items {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas para productos */
-        gap: 15px; /* Espaciado más amplio entre elementos */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 10px; /* Espaciado entre elementos */
         padding: 10px;
     }
 
     img {
-        width: 100%; /* Ajusta las imágenes al ancho del contenedor */
+        width: 100%;
         height: auto; /* Mantiene proporciones */
     }
 
     .item {
-        width: calc(50% - 15px); /* Espacio ajustado para dos columnas */
-        margin: 0 auto; /* Centra cada producto dentro del contenedor */
-        padding: 10px;
+        width: calc(50% - 10px); /* Espacio ajustado para dos columnas */
+        margin: 0 auto;
+        padding: 8px;
         background-color: #fff;
         border: 1px solid #ddd;
         border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para diseño limpio */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Añade sombra ligera */
         text-align: center;
     }
 
     .sidebar {
-        width: 75%; /* Sidebar ocupa menos espacio */
-        margin: 0 auto 20px; /* Centra la barra y añade espacio inferior */
-        font-size: 0.85rem; /* Texto más pequeño para compactar diseño */
-        padding: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        background-color: #f8f8f8;
+        display: none; /* Oculta completamente la barra lateral */
     }
 
     .logo {
-        width: 40px; /* Ajusta el tamaño del logo */
+        width: 30px; /* Logo más pequeño */
         height: auto;
-        margin-bottom: 10px;
     }
 
     .title-image {
-        width: 80px; /* Ajusta el título para pantallas más pequeñas */
+        width: 70px; /* Título reducido */
         height: auto;
     }
 
-    .derecha {
-        flex-direction: column; /* Acomoda elementos verticalmente */
-        align-items: center;
-    }
-
     h2 {
-        font-size: 1rem; /* Títulos compactos pero legibles */
+        font-size: 1rem; /* Ajusta los títulos para pantallas medianas */
     }
 
     .price {
-        font-size: 1.1rem; /* Ajusta el tamaño del precio */
-        color: #333;
+        font-size: 1.1rem; /* Precio proporcional */
     }
 
     button {
-        padding: 10px; /* Botones más compactos */
-        width: 100%; /* Ocupan todo el ancho disponible */
-        margin: 5px 0; /* Espaciado entre botones */
+        padding: 8px; /* Botones más compactos */
+        font-size: 0.9rem;
+        width: 100%;
+        margin: 5px 0;
+        border-radius: 4px;
         border: none;
-        border-radius: 5px;
         background-color: #007BFF;
         color: white;
         cursor: pointer;
     }
 
+    .cart-button {
+        padding: 6px 10px; /* Botón quitar del carrito más compacto */
+        font-size: 0.85rem;
+        border-radius: 3px;
+        background-color: #FF3E3E;
+        color: white;
+        cursor: pointer;
+    }
+
     .icon-cart {
-        width: 24px; /* Ícono compacto */
+        width: 24px; /* Ícono reducido */
         height: 24px;
     }
 
     .count-products {
-        font-size: 0.8rem; /* Texto más pequeño para contador */
+        font-size: 0.85rem; /* Texto más pequeño para el contador */
         width: 20px;
         height: 20px;
         display: flex;
@@ -750,38 +766,32 @@ h2 {
     }
 
     .container-cart-products {
-        width: 100%; /* Ocupa todo el ancho en móviles */
+        width: 100%;
         max-height: 300px; /* Limita altura para evitar desbordes */
-        overflow-y: auto; /* Activa scroll para contenido largo */
+        overflow-y: auto; /* Activa scroll */
         box-sizing: border-box;
         padding: 10px;
-        background-color: white; /* Fondo limpio */
+        background-color: white;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .cart-products {
-        font-size: 0.9rem; /* Texto del carrito ajustado */
+        font-size: 0.9rem; /* Ajusta el tamaño del texto */
     }
 
     .cart-total {
         display: flex;
-        justify-content: space-between; /* Espaciado claro entre total y número */
-        font-size: 1rem;
+        justify-content: space-between;
+        font-size: 1rem; /* Tamaño proporcional */
         padding: 10px 0;
-    }
-
-    .cart-button {
-        text-align: center;
-        padding-top: 10px;
     }
 
     .cart-whatsapp-button {
         width: 100%;
-        padding: 10px;
-        font-size: 1rem;
-        border: none;
-        border-radius: 5px;
+        padding: 8px;
+        font-size: 0.9rem;
+        border-radius: 4px;
         background-color: #25D366;
         color: white;
         cursor: pointer;
@@ -792,46 +802,47 @@ h2 {
 @media (max-width: 480px) {
     .container-items {
         grid-template-columns: 1fr; /* Cambia a una sola columna */
-        gap: 10px; /* Espaciado reducido pero cómodo */
+        gap: 10px;
         padding: 10px;
     }
 
     .item {
-        width: 100%; /* Productos ocupan el ancho completo */
-        padding: 10px;
+        width: 100%;
+        padding: 8px;
         margin-bottom: 15px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
+        border-radius: 4px;
     }
 
     .sidebar {
-        display: none; /* Oculta sidebar para maximizar espacio en móviles pequeños */
+        display: none; /* Sidebar oculta completamente */
     }
 
     .logo {
-        width: 30px; /* Logo más pequeño para pantallas pequeñas */
+        width: 25px; /* Logo más compacto */
         height: auto;
     }
 
     .title-image {
-        width: 70px; /* Título ajustado para pantallas pequeñas */
+        width: 60px; /* Título aún más reducido */
         height: auto;
     }
 
     .icon-cart {
-        width: 20px; /* Ícono compacto para pantalla pequeña */
+        width: 20px; /* Ícono reducido aún más */
         height: 20px;
     }
 
     .container-cart-products {
-        max-height: 250px; /* Limita altura del carrito */
+        max-height: 250px; /* Limita altura */
         overflow-y: auto;
         padding: 8px;
     }
 
     .cart-whatsapp-button {
-        font-size: 0.9rem; /* Botón más compacto */
-        padding: 8px;
+        font-size: 0.85rem; /* Botón ajustado */
+        padding: 6px;
+        border-radius: 3px;
     }
 }
     
