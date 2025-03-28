@@ -653,22 +653,34 @@ h2 {
 }
 
 
+@media (max-width: 768px) {
+    header {
+        width: 100%; /* Hace que el header ocupe todo el ancho disponible */
+        box-sizing: border-box; /* Ajusta el ancho incluyendo padding/margin */
+    }
+    .search-bar-container {
+        width: 100%; /* Asegura que la barra de búsqueda se adapte */
+        margin: 0 auto; /* Centra la barra */
+    }
+}
+
 /* Media Queries para diseño responsivo */
 
 /* Vista para pantallas pequeñas (hasta 768px) */
 @media (max-width: 768px) {
     .container-items {
         grid-template-columns: repeat(2, 1fr); /* Mantén dos columnas */
-        gap: 10px; /* Espacio entre los elementos */
+        gap: 10px; /* Espacio entre productos */
+        padding: 0 10px; /* Evita que los productos se corten con el margen */
+        box-sizing: border-box; /* Incluye padding en el ancho total */
     }
     img {
         width: 100%; /* Ajusta las imágenes al ancho del contenedor */
         height: auto; /* Mantiene proporción */
     }
     .item {
-        width: calc(50% - 10px); /* Ajusta el ancho para que haya espacio entre columnas */
-        margin: 10px 0; /* Espacio vertical entre elementos */
-        padding: 10px; /* Espaciado interno para elementos individuales */
+        width: calc(50% - 10px); /* Asegura espacio entre columnas */
+        margin: 0 auto; /* Centra cada producto */
     }
     .sidebar {
         width: 100%; /* Sidebar ocupa todo el ancho */
@@ -699,6 +711,7 @@ h2 {
     }
 }
 
+
 /* Vista para pantallas muy pequeñas (hasta 480px) */
 @media (max-width: 480px) {
     .container-items {
@@ -723,7 +736,65 @@ h2 {
     }
 }
 
+@media (max-width: 768px) {
+    .icon-cart {
+        width: 24px; /* Tamaño reducido del ícono */
+        height: 24px;
+    }
+    .count-products {
+        font-size: 0.9rem; /* Texto más pequeño para el contador */
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-cart-products {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        max-height: 300px; /* Limita la altura */
+        overflow-y: auto; /* Activa scroll si excede el límite */
+        box-sizing: border-box;
+        padding: 10px;
+        background-color: white; /* Fondo claro para visibilidad */
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Suaviza el diseño */
+    }
+    .cart-products {
+        font-size: 0.9rem; /* Ajusta el tamaño del texto */
+    }
+    .cart-total {
+        display: flex;
+        justify-content: space-between; /* Separación entre total y número */
+        font-size: 1rem; /* Tamaño de texto ajustado */
+        padding: 10px 0;
+    }
+    .cart-button {
+        text-align: center; /* Centra el botón */
+        padding-top: 10px;
+    }
+    .cart-whatsapp-button {
+        width: 100%; /* Botón ocupa todo el ancho */
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
 
+@media (max-width: 480px) {
+    .icon-cart {
+        width: 20px; /* Tamaño aún más reducido */
+        height: 20px;
+    }
+    .container-cart-products {
+        width: 100%; /* Sigue ocupando todo el ancho */
+        max-height: 250px; /* Altura aún más compacta */
+        overflow-y: auto; /* Scroll si hay muchos productos */
+        padding: 8px;
+    }
+    .cart-whatsapp-button {
+        font-size: 0.9rem; /* Texto del botón más compacto */
+        padding: 8px;
+    }
+}
     
 
 .close-button {
