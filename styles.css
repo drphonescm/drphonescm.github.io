@@ -653,7 +653,7 @@ h2 {
 }
 
 /* Media Queries para diseño responsivo */
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
     .container-items {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas */
     }
