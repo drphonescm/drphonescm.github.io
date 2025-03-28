@@ -649,7 +649,6 @@ h2 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
 }
-
 /* Media Queries para diseño responsivo */
 
 /* Vista para pantallas medianas (hasta 768px) */
@@ -658,7 +657,7 @@ h2 {
     header {
         width: 100%;
         box-sizing: border-box;
-        padding: 10px;
+        padding: 5px; /* Espaciado reducido */
     }
 
     .search-bar-container {
@@ -669,28 +668,28 @@ h2 {
     .search-bar {
         display: flex;
         width: 100%;
-        max-width: 300px;
+        max-width: 250px; /* Más estrecho */
     }
 
     .search-bar input {
         flex: 1;
-        padding: 6px; /* Compacto */
-        font-size: 0.9rem;
+        padding: 4px; /* Más compacto */
+        font-size: 0.8rem; /* Texto más pequeño */
     }
 
     .search-bar button {
-        padding: 6px 10px; /* Compacto */
-        font-size: 0.9rem;
-        border-radius: 4px;
+        padding: 4px 8px; /* Más compacto */
+        font-size: 0.8rem;
+        border-radius: 3px;
     }
 
     .logo {
-        width: 30px; /* Más pequeño */
+        width: 20px; /* Más pequeño */
         height: auto;
     }
 
     .title-image {
-        width: 70px; /* Título más compacto */
+        width: 50px; /* Más compacto */
         height: auto;
     }
 
@@ -702,18 +701,18 @@ h2 {
     /* Contenedor de productos */
     .container-items {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-        gap: 10px;
-        padding: 10px;
+        gap: 8px;
+        padding: 5px; /* Espaciado reducido */
     }
 
     .item {
-        width: calc(50% - 10px);
+        width: calc(50% - 8px);
         margin: 0 auto;
-        padding: 8px;
+        padding: 5px;
         background-color: #fff;
         border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         text-align: center;
     }
 
@@ -723,19 +722,19 @@ h2 {
     }
 
     h2 {
-        font-size: 1rem;
+        font-size: 0.9rem; /* Más pequeño */
     }
 
     .price {
-        font-size: 1.1rem;
+        font-size: 1rem; /* Compacto */
     }
 
     button {
-        padding: 8px;
-        font-size: 0.9rem;
+        padding: 6px; /* Más compacto */
+        font-size: 0.8rem;
         width: 100%;
-        margin: 5px 0;
-        border-radius: 4px;
+        margin: 4px 0;
+        border-radius: 3px;
         border: none;
         background-color: #007BFF;
         color: white;
@@ -744,33 +743,33 @@ h2 {
 
     /* Modal */
     #product-modal {
-        width: 100%; /* Ancho completo */
-        max-width: none; /* Sin límite de ancho */
-        border-radius: 0; /* Sin bordes redondeados */
-        padding: 15px; /* Espaciado interno reducido */
+        width: 100%;
+        max-width: none;
+        border-radius: 0;
+        padding: 10px; /* Espaciado interno reducido */
     }
 
     #modal-img {
-        width: 80%;
-        max-width: 230px;
-        margin: 0 auto 15px; /* Centrado */
-        border-radius: 10px;
+        width: 60%;
+        max-width: 200px;
+        margin: 0 auto 10px; /* Centrado */
+        border-radius: 8px;
     }
 
     #modal-title {
-        font-size: 1.6rem;
-        margin-bottom: 10px;
+        font-size: 1.4rem; /* Más compacto */
+        margin-bottom: 8px;
     }
 
     #modal-price {
-        font-size: 1.4rem;
-        margin-bottom: 15px;
+        font-size: 1.2rem; /* Más pequeño */
+        margin-bottom: 10px;
     }
 
     #add-to-cart-modal-button {
-        font-size: 0.9rem; /* Botón más compacto */
-        padding: 8px 12px; /* Ajustar tamaño */
-        border-radius: 5px;
+        font-size: 0.8rem; /* Botón más compacto */
+        padding: 6px 10px;
+        border-radius: 4px;
     }
 }
 
@@ -779,16 +778,16 @@ h2 {
     /* Contenedor de productos */
     .container-items {
         grid-template-columns: 1fr; /* Una sola columna */
-        gap: 10px;
-        padding: 10px;
+        gap: 8px; /* Espaciado reducido */
+        padding: 5px;
     }
 
     .item {
         width: 100%;
-        padding: 8px;
-        margin-bottom: 15px;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        border-radius: 4px;
+        padding: 5px;
+        margin-bottom: 10px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 3px;
     }
 
     img {
@@ -798,28 +797,49 @@ h2 {
 
     /* Header */
     .logo {
-        width: 25px; /* Logo compacto */
+        width: 15px; /* Muy compacto */
     }
 
     .title-image {
-        width: 60px; /* Título reducido */
+        width: 40px; /* Más reducido */
     }
 
     .search-bar-container {
         width: 100%;
         margin: 0 auto;
-        padding: 8px; /* Espaciado interno más pequeño */
+        padding: 5px;
     }
 
     .search-bar input {
-        padding: 5px;
-        font-size: 0.85rem;
+        padding: 3px;
+        font-size: 0.75rem;
     }
 
     .search-bar button {
-        padding: 5px 8px;
-        font-size: 0.85rem;
+        padding: 3px 6px;
+        font-size: 0.75rem;
     }
+
+    /* Modal */
+    #product-modal {
+        width: 100%;
+        padding: 8px;
+    }
+
+    #modal-title {
+        font-size: 1.2rem;
+    }
+
+    #modal-price {
+        font-size: 1rem;
+    }
+
+    #add-to-cart-modal-button {
+        font-size: 0.75rem; /* Botón compacto */
+        padding: 5px 8px;
+        border-radius: 3px;
+    }
+}
 
     /* Modal */
     #product-modal {
