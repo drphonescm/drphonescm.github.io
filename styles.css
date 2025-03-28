@@ -731,6 +731,12 @@ h2 {
     }
 }
 
+@media (max-width: 768px) {
+    .derecha {
+        gap: 10px; /* Reduce el espacio entre logo y título */
+    }
+}
+
 .close-button {
     position: absolute;
     top: 10px;
