@@ -10,11 +10,8 @@
 body {
     margin: 0;
     padding: 0;
-    width: 100%; 
-    font-family: 'Magneto-Bold', sans-serif;
-    color: #333;
-    background-color: #f4f4f9;
-    
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 img {
@@ -61,15 +58,15 @@ img {
 
 /* Header */
 header {
-    width: 100%; 
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 25px; /* Reducir padding */
+    width: 100%;
+    padding: 10px 15px;
+    background-color: #f8f8f8;
     border-bottom: 2px solid #333; /* Línea más delgada */
     margin-bottom: 2px; /* Espacio inferior reducido */
-    background-color: #fff;
-    position: relative;
 }
 
 /* Contenedor para centrar el buscador */
@@ -81,21 +78,17 @@ header {
 
 .search-bar {
     display: flex;
-    align-items: center;
-    border-radius: 20px; /* Bordes más redondeados */
     width: 100%;
-    max-width: 280px; /* Barra más compacta */
-    box-shadow: 0 2px 4px rgba(22, 22, 22, 0.1); /* Sombra más ligera */
-    background-color: #fff;
-    border: 1px solid #ccc;
+    max-width: 400px;
+
 }
 
 .search-bar input {
-    padding: 8px 10px; /* Menor padding */
-    font-size: 12px; /* Fuente más pequeña */
-    border: none;
-    border-radius: 20px 0 0 20px; 
-    width: 100%;
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+
 }
 
 .search-bar input:focus {
@@ -107,10 +100,10 @@ header {
     color: white; /* Texto blanco */
     font-size: 0.8rem; /* Tamaño de fuente */
     font-weight: bold; /* Texto en negrita */
-    padding: 8px 10px; /* Espaciado interno */
-    border: none; /* Sin bordes visibles */
-    border-radius: 0 20px 20px 0; /* Bordes redondeados para coincidir con el diseño */
-    cursor: pointer; /* Indicador de clic */
+    padding: 8px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra suave */
     transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
 }
@@ -244,18 +237,19 @@ h1 {
 }
 
 .container-cart-products {
-    position: absolute;
-    top: 50px;
+    position: fixed;
+    top: 60px;
     right: 0;
     background-color: #ffffff;
-    width: 450px;
+    width: 100%;
     z-index: 1;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20);
     border-radius: 15px;
     overflow: hidden;
-    padding: 20px;
-    max-height: 450px;
-    overflow-y: visible;
+    padding: 15px;
+    max-width: 400px; /* Limita su tamaño en pantallas más grandes */
+    max-height: 100%;
+    overflow-y: auto;
     display: flex;
     flex-direction: column; 
     
@@ -415,8 +409,8 @@ h3 {
     width: 80%; 
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas */
-    gap: 20px;
-    padding: 1rem;
+    gap: 15px;
+    padding: 15px;
     max-height: auto; 
     overflow-y: visible;
     justify-items: center;
@@ -426,9 +420,9 @@ h3 {
 .item {
     position: relative; /* Permite ajustar capas */
     overflow: visible; /* Evita que los bordes de la imagen sobresalgan */
-    border-radius: 10px; /* Bordes redondeados del contenedor */
+    border-radius: 8px; /* Bordes redondeados del contenedor */
     padding: 5px; /* Espaciado interno */
-    background-color: #f9f9f9; /* Fondo neutro para destacar las imágenes PNG */
+    background-color: #fff; /* Fondo neutro para destacar las imágenes PNG */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
     transition: box-shadow 0.3s ease;
     margin: auto;
@@ -438,6 +432,10 @@ h3 {
     flex-direction: column;
     justify-content: space-between; /* Distribuye contenido uniformemente dentro del contenedor */
     align-items: center; /* Centra los elementos */
+    border: 1px solid #ddd;
+    text-align: center;
+
+
 
 }
 
@@ -452,6 +450,8 @@ h3 {
     border-radius: 10px 10px 0 0;
     transition: all .5s;
     display: flex;
+    margin-bottom: 10px;
+
 }
 
 .item figure {
@@ -473,7 +473,7 @@ h3 {
 }
 
 .price {
-    font-size: 2rem;
+    font-size: 1.2rem;
     font-weight: 900;
     color: #6A5ACD;
     text-align: center; 
@@ -569,7 +569,7 @@ h3 {
 .filter-group {
     height: auto; /* Ajuste dinámico */
     overflow: visible; /* Permite que el contenido crezca */
-    margin-bottom: 20px; /* Separación inferior */
+    margin-bottom: 15px; /* Separación inferior */
 }
 
 .filter-group h4 {
@@ -643,13 +643,12 @@ h2 {
 /* Estilos de la barra lateral */
 .sidebar {
     width: 20%;
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-right: 20px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #f4f4f4;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
     position: sticky;
-    top: 20px;
 }
 
 
@@ -669,10 +668,9 @@ h2 {
 /* Vista para pantallas pequeñas (hasta 768px) */
 @media (max-width: 768px) {
     .container-items {
-        grid-template-columns: repeat(2, 1fr); /* Mantén dos columnas */
-        gap: 10px; /* Espacio entre productos */
-        padding: 0 10px; /* Evita que los productos se corten con el margen */
-        box-sizing: border-box; /* Incluye padding en el ancho total */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 10px;
+
     }
     img {
         width: 100%; /* Ajusta las imágenes al ancho del contenedor */
@@ -681,17 +679,18 @@ h2 {
     .item {
         width: calc(50% - 10px); /* Asegura espacio entre columnas */
         margin: 0 auto; /* Centra cada producto */
+        padding: 8px;
     }
     .sidebar {
         width: 100%; /* Sidebar ocupa todo el ancho */
         margin-bottom: 20px; /* Añadir espacio inferior */
     }
     .logo {
-        width: 50px; /* Ajusta el tamaño del logo */
+        width: 40px; /* Ajusta el tamaño del logo */
         height: auto; /* Mantiene proporciones */
     }
     .title-image {
-        width: 100px; /* Ajusta el tamaño del título */
+        width: 80px; /* Ajusta el tamaño del título */
         height: auto;
     }
     .derecha {
