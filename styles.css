@@ -780,18 +780,18 @@ h2 {
     }
 
     .logo {
-        width: 40px; /* Tamaño compacto para el logo */
+        width: 20px; /* Tamaño compacto para el logo */
         height: auto;
     }
 
     .title-image {
-        width: 80px; /* Ajusta el tamaño del título para pantallas más pequeñas */
+        width: 40px; /* Ajusta el tamaño del título para pantallas más pequeñas */
         height: auto;
     }
 
     .icon-cart {
-        width: 20px; /* Tamaño aún más reducido */
-        height: 20px;
+        width: 15px; /* Tamaño aún más reducido */
+        height: 15px;
     }
 
     .container-cart-products {
