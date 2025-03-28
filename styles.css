@@ -653,9 +653,10 @@ h2 {
 }
 
 /* Media Queries para diseño responsivo */
+/* Media Queries para diseño responsivo */
 @media (max-width: 768px) {
     .container-items {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+        grid-template-columns: 1fr; /* Una sola columna */
     }
     img {
         width: 100%; /* Las imágenes se ajustan al contenedor */
@@ -665,32 +666,46 @@ h2 {
         width: 90%; /* Ajusta el ancho al 90% del contenedor */
         margin: 10px auto; /* Centra los elementos */
     }
-
-    .sidebar {
-        margin-bottom: 20px; /* Añadir espacio inferior */
-    }
-}
-
-@media (max-width: 768px) {
-    .container-items {
-        grid-template-columns: 1fr; /* 1 columna */
-    }
     .sidebar {
         width: 100%; /* Ajustar el ancho para pantallas más pequeñas */
-        margin-bottom: 20px; /* Añadir espacio inferior */
+        margin-bottom: 20px; /* Espacio inferior */
     }
 }
 
 @media (max-width: 480px) {
     .container-items {
-        grid-template-columns: 1fr; /* 1 columna */
+        grid-template-columns: 1fr; /* Una sola columna */
     }
     .sidebar {
-        width: 100%; /* Ajustar el ancho para pantallas más pequeñas */
-        margin-bottom: 20px; /* Añadir espacio inferior */
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        margin-bottom: 20px; /* Espacio inferior */
     }
 }
 
+@media (max-width: 768px) {
+    button {
+        padding: 10px 15px;
+        font-size: 1rem;
+        margin: 5px 0; /* Espacio entre botones */
+        width: 100%; /* Que ocupen el ancho total */
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        margin-bottom: 15px; /* Espacio más amplio entre productos */
+        padding: 10px; /* Espaciado interno cómodo */
+    }
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1rem; /* Títulos más compactos */
+    }
+    .price {
+        font-size: 1.2rem; /* Ajuste proporcional del precio */
+    }
+}
 
 .close-button {
     position: absolute;
