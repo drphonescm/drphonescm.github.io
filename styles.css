@@ -690,7 +690,7 @@ h2 {
     }
 
     .sidebar {
-        width: 30%; /* Reduce el ancho de la sidebar */
+        width: 80%; /* Reduce el ancho de la sidebar */
         margin: 0 auto 15px; /* Centra la barra y añade espacio inferior */
         font-size: 0.9rem; /* Reduce el tamaño del texto */
         padding: 10px; /* Espaciado interno */
