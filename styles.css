@@ -695,7 +695,7 @@ h2 {
 
     /* Sidebar */
     .sidebar {
-        display: none; /* Oculta la barra lateral */
+        display: visible; /* Oculta la barra lateral */
     }
 
     /* Contenedor de productos */
