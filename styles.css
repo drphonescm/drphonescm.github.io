@@ -653,74 +653,95 @@ h2 {
 /* Media Queries para diseño responsivo */
 
 /* Vista para pantallas medianas (hasta 768px) */
+/* Media Queries para diseño responsivo */
+
+/* Vista para pantallas medianas (hasta 768px) */
 @media (max-width: 768px) {
     header {
-        width: 100%; /* Hace que el header ocupe todo el ancho disponible */
-        box-sizing: border-box; /* Ajusta el ancho incluyendo padding/margin */
+        width: 100%; /* Asegura que el header ocupe todo el ancho disponible */
+        box-sizing: border-box; /* Incluye padding/margin en el cálculo de ancho */
+        padding: 10px;
     }
 
     .search-bar-container {
-        width: 100%; /* Asegura que la barra de búsqueda se adapte */
-        margin: 0 auto; /* Centra la barra */
+        width: 100%; /* Barra de búsqueda ocupa todo el ancho */
+        margin: 0 auto;
     }
 
     .container-items {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-        gap: 10px; /* Espacio entre elementos */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para productos */
+        gap: 15px; /* Espaciado más amplio entre elementos */
+        padding: 10px;
     }
 
     img {
         width: 100%; /* Ajusta las imágenes al ancho del contenedor */
-        height: auto; /* Mantiene proporción */
+        height: auto; /* Mantiene proporciones */
     }
 
     .item {
-        width: calc(50% - 10px); /* Asegura espacio entre columnas */
-        margin: 0 auto; /* Centra cada producto */
-        padding: 8px; /* Espaciado interno */
+        width: calc(50% - 15px); /* Espacio ajustado para dos columnas */
+        margin: 0 auto; /* Centra cada producto dentro del contenedor */
+        padding: 10px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera para diseño limpio */
+        text-align: center;
     }
 
     .sidebar {
-        width: 100%; /* Sidebar ocupa todo el ancho */
-        margin-bottom: 20px; /* Añadir espacio inferior */
+        width: 75%; /* Sidebar ocupa menos espacio */
+        margin: 0 auto 20px; /* Centra la barra y añade espacio inferior */
+        font-size: 0.85rem; /* Texto más pequeño para compactar diseño */
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        background-color: #f8f8f8;
     }
 
     .logo {
         width: 40px; /* Ajusta el tamaño del logo */
-        height: auto; /* Mantiene proporciones */
+        height: auto;
+        margin-bottom: 10px;
     }
 
     .title-image {
-        width: 80px; /* Ajusta el tamaño del título */
+        width: 80px; /* Ajusta el título para pantallas más pequeñas */
         height: auto;
     }
 
     .derecha {
-        flex-direction: column; /* Acomoda logo y título en una fila vertical */
+        flex-direction: column; /* Acomoda elementos verticalmente */
         align-items: center;
     }
 
     h2 {
-        font-size: 1rem; /* Ajusta los títulos para pantallas más pequeñas */
+        font-size: 1rem; /* Títulos compactos pero legibles */
     }
 
     .price {
-        font-size: 1.1rem; /* Ajuste proporcional del precio */
+        font-size: 1.1rem; /* Ajusta el tamaño del precio */
+        color: #333;
     }
 
     button {
         padding: 10px; /* Botones más compactos */
         width: 100%; /* Ocupan todo el ancho disponible */
-        margin: 5px 0; /* Espaciado vertical entre botones */
+        margin: 5px 0; /* Espaciado entre botones */
+        border: none;
+        border-radius: 5px;
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
     }
 
     .icon-cart {
-        width: 24px; /* Tamaño reducido del ícono */
+        width: 24px; /* Ícono compacto */
         height: 24px;
     }
 
     .count-products {
-        font-size: 0.9rem; /* Texto más pequeño para el contador */
+        font-size: 0.8rem; /* Texto más pequeño para contador */
         width: 20px;
         height: 20px;
         display: flex;
@@ -729,80 +750,87 @@ h2 {
     }
 
     .container-cart-products {
-        width: 100%; /* Ocupa todo el ancho de la pantalla */
-        max-height: 300px; /* Limita la altura */
-        overflow-y: auto; /* Activa scroll si excede el límite */
+        width: 100%; /* Ocupa todo el ancho en móviles */
+        max-height: 300px; /* Limita altura para evitar desbordes */
+        overflow-y: auto; /* Activa scroll para contenido largo */
         box-sizing: border-box;
         padding: 10px;
-        background-color: white; /* Fondo claro para visibilidad */
+        background-color: white; /* Fondo limpio */
         border-radius: 8px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Suaviza el diseño */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
 
     .cart-products {
-        font-size: 0.9rem; /* Ajusta el tamaño del texto */
+        font-size: 0.9rem; /* Texto del carrito ajustado */
     }
 
     .cart-total {
         display: flex;
-        justify-content: space-between; /* Separación entre total y número */
-        font-size: 1rem; /* Tamaño de texto ajustado */
+        justify-content: space-between; /* Espaciado claro entre total y número */
+        font-size: 1rem;
         padding: 10px 0;
     }
 
     .cart-button {
-        text-align: center; /* Centra el botón */
+        text-align: center;
         padding-top: 10px;
     }
 
     .cart-whatsapp-button {
-        width: 100%; /* Botón ocupa todo el ancho */
+        width: 100%;
         padding: 10px;
         font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        background-color: #25D366;
+        color: white;
+        cursor: pointer;
     }
 }
 
 /* Vista para pantallas muy pequeñas (hasta 480px) */
 @media (max-width: 480px) {
     .container-items {
-        grid-template-columns: 1fr; /* Cambia a una sola columna en pantallas más pequeñas */
-        gap: 5px; /* Espaciado más reducido entre elementos */
+        grid-template-columns: 1fr; /* Cambia a una sola columna */
+        gap: 10px; /* Espaciado reducido pero cómodo */
+        padding: 10px;
     }
 
     .item {
-        width: 100%; /* Los productos ocupan todo el ancho disponible */
-        padding: 10px; /* Espaciado interno cómodo */
-        margin-bottom: 15px; /* Espacio entre elementos */
+        width: 100%; /* Productos ocupan el ancho completo */
+        padding: 10px;
+        margin-bottom: 15px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
     }
 
     .sidebar {
-        display: visible; /* Oculta la barra lateral en pantallas muy pequeñas */
+        display: none; /* Oculta sidebar para maximizar espacio en móviles pequeños */
     }
 
     .logo {
-        width: 40px; /* Tamaño compacto para el logo */
+        width: 30px; /* Logo más pequeño para pantallas pequeñas */
         height: auto;
     }
 
     .title-image {
-        width: 80px; /* Ajusta el tamaño del título para pantallas más pequeñas */
+        width: 70px; /* Título ajustado para pantallas pequeñas */
         height: auto;
     }
 
     .icon-cart {
-        width: 20px; /* Tamaño aún más reducido */
+        width: 20px; /* Ícono compacto para pantalla pequeña */
         height: 20px;
     }
 
     .container-cart-products {
-        width: 100%; /* Sigue ocupando todo el ancho */
-        max-height: 250px; /* Altura aún más compacta */
-        overflow-y: auto; /* Scroll si hay muchos productos */
+        max-height: 250px; /* Limita altura del carrito */
+        overflow-y: auto;
         padding: 8px;
     }
 
     .cart-whatsapp-button {
-        font-size: 0.9rem; /* Texto del botón más compacto */
+        font-size: 0.9rem; /* Botón más compacto */
         padding: 8px;
     }
 }
