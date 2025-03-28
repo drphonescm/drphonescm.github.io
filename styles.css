@@ -652,90 +652,74 @@ h2 {
     top: 20px;
 }
 
-/* Media Queries para diseño responsivo */
+
 /* Media Queries para diseño responsivo */
 @media (max-width: 768px) {
     .container-items {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 10px; /* Espacio entre los elementos */
     }
     img {
         width: 100%; /* Las imágenes se ajustan al contenedor */
-        height: auto;
+        height: auto; /* Mantienen proporción */
     }
     .item {
         width: 90%; /* Ajusta el ancho al 90% del contenedor */
         margin: 10px auto; /* Centra los elementos */
-    }
-    .sidebar {
-        width: 100%; /* Ajustar el ancho para pantallas más pequeñas */
-        margin-bottom: 20px; /* Espacio inferior */
-    }
-}
-
-@media (max-width: 480px) {
-    .container-items {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5px;
-    }
-    .sidebar {
-        width: 100%; /* Ocupa todo el ancho del contenedor */
-        margin-bottom: 20px; /* Espacio inferior */
-    }
-}
-
-@media (max-width: 768px) {
-    button {
-        padding: 10px 15px;
-        font-size: 1rem;
-        margin: 5px 0; /* Espacio entre botones */
-        width: 100%; /* Que ocupen el ancho total */
-    }
-}
-
-@media (max-width: 768px) {
-    .item {
         margin-bottom: 15px; /* Espacio más amplio entre productos */
         padding: 10px; /* Espaciado interno cómodo */
     }
-}
-
-@media (max-width: 768px) {
+    .sidebar {
+        width: 100%; /* Ajusta el ancho para pantallas más pequeñas */
+        margin-bottom: 20px; /* Espacio inferior */
+    }
+    button {
+        padding: 10px 15px; /* Espaciado interno del botón */
+        font-size: 1rem; /* Tamaño de texto ajustado */
+        margin: 5px 0; /* Espacio entre botones */
+        width: 100%; /* Botones ocupan el ancho total */
+    }
     h2 {
         font-size: 1rem; /* Títulos más compactos */
     }
     .price {
         font-size: 1.2rem; /* Ajuste proporcional del precio */
     }
-}
-
-@media (max-width: 768px) {
     .logo {
-        width: 30px; /* Reduce el tamaño del logo */
-        height: auto; /* Mantiene proporciones */
+        width: 60px; /* Tamaño más manejable */
+        height: auto; /* Mantiene proporción */
     }
     .title-image {
-        width: 150px; /* Ajusta el ancho del título */
+        width: 120px; /* Reduce el título para pantallas más pequeñas */
         height: auto;
+    }
+    .derecha {
+        flex-direction: column; /* Acomoda logo y título verticalmente */
+        align-items: center;
     }
 }
 
 @media (max-width: 480px) {
+    .container-items {
+        grid-template-columns: repeat(2, 1fr); /* Mantén dos columnas */
+        gap: 5px; /* Espaciado más reducido */
+    }
+    .sidebar {
+        width: 100%; /* Ocupa todo el ancho del contenedor */
+        margin-bottom: 20px; /* Espacio inferior */
+    }
     .logo {
         width: 25px; /* Tamaño compacto para pantallas pequeñas */
-        height: auto; 
+        height: auto; /* Mantiene proporción */
     }
     .title-image {
-        width: 120px; /* Reduce el título para que se ajuste mejor */
-        height: auto; 
+        width: 120px; /* Ajusta el tamaño del título */
+        height: auto;
     }
 }
 
-@media (max-width: 768px) {
-    .derecha {
-        gap: 10px; /* Reduce el espacio entre logo y título */
-    }
-}
+
+    
 
 .close-button {
     position: absolute;
