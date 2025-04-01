@@ -426,8 +426,8 @@ h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
     transition: box-shadow 0.3s ease;
     margin: auto;
-    height: auto; /* Define una altura fija para todos los contenedores */
-    width: auto;
+    height: 480px; /* Define una altura fija para todos los contenedores */
+    width: 210px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Distribuye contenido uniformemente dentro del contenedor */

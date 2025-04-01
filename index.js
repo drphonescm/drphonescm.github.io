@@ -27,7 +27,35 @@ document.addEventListener('DOMContentLoaded', () => {
     let filteredProducts = [];
     console.log("El script está cargado correctamente");
 
+    const obtenerCotizacionDolarBlue = async () => {
+        try {
+            const respuesta = await fetch('https://api-dolar-argentina.vercel.app/v1/dolarblue'); // API de cotización
+            const datos = await respuesta.json();
+            return datos.venta; // Precio de venta del dólar blue
+        } catch (error) {
+            console.error("Error al obtener la cotización del dólar blue:", error);
+            return null; // Fallback si hay error
+        }
+    };
 
+    
+
+    const actualizarPreciosEnTiempoReal = async () => {
+        const cotizacionDolarBlue = await obtenerCotizacionDolarBlue();
+        if (!cotizacionDolarBlue) {
+            console.error("No se pudo obtener la cotización, se mantiene el precio actual.");
+            return; // No hace nada si hay error
+        }
+    
+        allProducts.forEach(producto => {
+            producto.priceInPesos = producto.priceInDollars * cotizacionDolarBlue; // Conversión
+        });
+    
+        console.log("Precios actualizados en base al dólar blue:", allProducts);
+        renderProducts(filteredProducts); // Re-renderiza con los precios actualizados
+    };
+
+    
     // Cargar productos al iniciar
     const loadProducts = () => {
        allProducts = [
@@ -300,6 +328,7 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
         }
     };
 
+    
     // Aplicar filtros
     const applyFilters = () => {
         filteredProducts = [...allProducts];
@@ -479,8 +508,14 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
         cerrarCompraButton.addEventListener('click', enviarPorWhatsApp);
     }
   
-
+    
     // Inicializar la aplicación
     loadProducts();
+
+    // Inicializar la actualización automática de precios
+setInterval(() => {
+    actualizarPreciosEnTiempoReal(); // Llama a la función para actualizar precios
+}, 60000); // Se ejecutará cada 60 segundos
+
 });
 
