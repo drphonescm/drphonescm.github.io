@@ -860,12 +860,12 @@ h2 {
 
     .header-logo {
         width: 250px; /* Ajustado */
-        height: auto;
+        height: 250px;
     }
 
     .header-title img {
-        width: 220px;
-        height: auto;
+        width: 800px;
+        height: 200px;
     }
 
     /* Barra de búsqueda */
@@ -975,7 +975,7 @@ h2 {
 
     .item {
         height: 450px; /* Más pequeño */
-        width: auto;
+        width: 300px;
         padding: 4px;
         display: flex;
         flex-direction: column;
