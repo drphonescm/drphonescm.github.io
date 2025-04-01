@@ -705,7 +705,7 @@ h2 {
     }
 
     .search-bar button {
-        padding: 5px 10px;
+        padding: 5px px;
         font-size: 0.8rem;
         border-radius: 3px;
         background-color: #6A5ACD;
@@ -844,73 +844,7 @@ h2 {
     }
 }
 
-/* Vista para pantallas pequeñas (hasta 480px) */
-@media (max-width: 480px) {
-    .container-items {
-        grid-template-columns: 2fr; /* Una sola columna */
-        gap: 10px;
-    }
-    
-    .item {
-        padding: 8px;
-        font-size: 0.8rem; /* Texto más pequeño */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
-    }
 
-
-    .sidebar-item {
-        padding: 4px 8px; /* Disminuye el relleno para reducir el tamaño visual */
-        font-size: 0.8em;  /* Ajusta la fuente del ítem individualmente si es necesario */
-      }
-      
-    
-    .sidebar,
-    .product {
-        width: 100%; /* Ocupa todo el ancho */
-        padding: 10px;
-        font-size: 0.75rem;
-    }
-
-    .product img {
-        margin-bottom: 10px;
-    }
-
-    .search-bar {
-        width: 100%; /* Más estrecho */
-        max-width: 250px;
-        padding: 5px;
-    }
-
-    .search-bar input {
-        font-size: 0.75rem;
-        padding: 3px;
-    }
-
-    .search-bar button {
-        font-size: 0.75rem;
-        padding: 4px 8px;
-    }
-
-
-    #product-modal {
-        width: 95%;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    #modal-title {
-        font-size: 1.2rem;
-    }
-
-    #modal-price {
-        font-size: 1rem;
-    }
-
-    #add-to-cart-modal-button {
-        font-size: 0.75rem;
-        padding: 5px 8px;
-    }
-}
 
 /* Vista para pantallas pequeñas (hasta 480px) */
 @media (max-width: 480px) {
@@ -1029,46 +963,6 @@ h2 {
     text-align: center; /* Centra el contenido */
 }
 
-
-@media (max-width: 768px) {
-    #product-modal {
-        width: 100%; /* Ancho completo para pantallas pequeñas */
-        max-width: none; /* Sin límite de ancho */
-        border-radius: 0; /* Elimina bordes redondeados para mejor ajuste */
-    }
-
-    #modal-img {
-        width: 80%; /* Imagen centrada y más pequeña */
-        max-width: 230px;
-        height: auto;
-        margin: 0 auto 15px; /* Centra horizontalmente */
-        border-radius: 10px; /* Bordes redondeados */
-    }
-    
-
-    #modal-title {
-        font-size: 1.6rem;
-        font-weight: bold;
-        color: #444;
-        margin-bottom: 10px;
-    }
-
-    #modal-price {
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: #6A5ACD;
-        margin-bottom: 15px;
-    }
-    
-
-    #modal-features {
-        list-style-type: none;
-        padding: 0;
-        font-size: 1rem;
-        color: #555;
-    }
-    
-}
 
 #modal-title {
     font-size: 1.8rem; /* Texto más grande */
