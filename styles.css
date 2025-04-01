@@ -982,7 +982,7 @@ h2 {
     }
 
     .item img {
-        width: 80%;
+        width: 100px;
         height: auto; /* Ajuste dinámico */
         object-fit: cover;
         margin-bottom: 1px;
@@ -1037,6 +1037,7 @@ h2 {
     #product-modal {
         width: 90%; /* Más ancho */
         max-width: 300px; /* Ajustado para pantallas pequeñas */
+        height: 500px;
         padding: 12px; /* Espaciado interno aumentado */
         background-color: #ffffff;
         border-radius: 5px;
@@ -1053,7 +1054,7 @@ h2 {
     }
 
     #modal-title {
-        font-size: 1rem; /* Título más grande */
+        font-size: 0.7rem; /* Título más grande */
         font-weight: bold;
         text-align: center; /* Centrado */
         margin-bottom: 8px;
