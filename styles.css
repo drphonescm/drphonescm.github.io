@@ -873,7 +873,7 @@ h2 {
     }
 
     .item h3 {
-        font-size: 0.7rem; /* Reduce el tamaño del texto del título */
+        font-size: 0.3rem; /* Reduce el tamaño del texto del título */
         line-height: 1.1; /* Espaciado entre líneas compacto */
         text-align: center; /* Centra el texto */
         white-space: nowrap; /* Evita saltos de línea */
