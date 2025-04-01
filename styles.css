@@ -883,11 +883,11 @@ h2 {
 
     /* Sidebar - Filtros más pequeños */
     .sidebar {
-        width: 15%; /* Sidebar aún más angosto */
+        width: 20%; /* Sidebar aún más angosto */
         padding: 3px; /* Espaciado mínimo */
         font-size: 0.2rem; /* Texto mucho más pequeño */
         background-color: #f4f4f4; /* Fondo claro */
-        margin-bottom: 8px; /* Espaciado inferior reducido */
+        margin-bottom: 3px; /* Espaciado inferior reducido */
         border-radius: 3px;
     }
 
