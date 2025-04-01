@@ -858,7 +858,7 @@ h2 {
     }
 
     .item {
-        height: 400px; /* Altura fija para todos los contenedores */
+        height: 300px; /* Altura fija para todos los contenedores */
         display: flex;
         flex-direction: column; /* Asegura un diseño vertical dentro del contenedor */
         justify-content: space-between; /* Distribuye el contenido uniformemente */
@@ -879,15 +879,15 @@ h2 {
     .sidebar {
         width: 18%; /* Sidebar más angosto */
         padding: 4px; /* Espaciado mínimo */
-        font-size: 0.5rem; /* Texto aún más pequeño */
+        font-size: 0.4rem; /* Texto aún más pequeño */
         background-color: #f4f4f4; /* Fondo claro */
-        margin-bottom: 8px; /* Espaciado inferior reducido */
+        margin-bottom: 4px; /* Espaciado inferior reducido */
         border-radius: 3px;
     }
 
     .sidebar-item {
         padding: 2px 4px; /* Espaciado muy compacto */
-        font-size: 0.55rem; /* Texto más pequeño para los ítems del sidebar */
+        font-size: 0.3rem; /* Texto más pequeño para los ítems del sidebar */
     }
 
     /* "Ordenar por" más pequeño */
