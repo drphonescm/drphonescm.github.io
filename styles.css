@@ -858,7 +858,7 @@ h2 {
     }
 
     .item {
-        height: 300px; /* Altura fija para todos los contenedores */
+        height: 400px; /* Altura fija para todos los contenedores */
         display: flex;
         flex-direction: column; /* Asegura un diseño vertical dentro del contenedor */
         justify-content: space-between; /* Distribuye el contenido uniformemente */
@@ -904,7 +904,7 @@ h2 {
     }
 
     .item h3 {
-        font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+        font-size: 0.6rem; /* Reduce el tamaño de la fuente */
         line-height: 1.2; /* Espaciado entre líneas compacto */
         text-align: center; /* Centra el texto */
         white-space: nowrap; /* Evita saltos de línea */
