@@ -321,6 +321,7 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
         renderProducts(filteredProducts);
         renderPageNumbers(filteredProducts);
     };
+    
     // Manejo del carrito
     const toggleCart = () => {
         cartContainer.classList.toggle('hidden-cart');
