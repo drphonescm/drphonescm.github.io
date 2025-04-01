@@ -1175,7 +1175,7 @@ h2 {
 }
 
 #modal-img {
-    width: 70%; /* Imagen ajustada al contenedor */
+    width: 62%; /* Imagen ajustada al contenedor */
     border-radius: 8px;
     position: relative;
     z-index: 1; /* Imagen está detrás del botón */
