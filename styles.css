@@ -859,12 +859,12 @@ h2 {
     }
 
     .header-logo {
-        width: 250px; /* Ajustado */
+        width: 400px; /* Ajustado */
         height: auto;
     }
 
     .header-title img {
-        width: 220px;
+        width: 400px;
         height: auto;
     }
 
