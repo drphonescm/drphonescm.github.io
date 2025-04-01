@@ -895,13 +895,13 @@ h2 {
     }
 
     .search-bar-container {
-        width: 60%; /* Ocupa todo el ancho */
+        width: 40%; /* Ocupa todo el ancho */
         margin: 0 auto; /* Centrado */
         padding: 5px;
     }
 
     .search-bar {
-        width: 100%; /* Barra más estrecha */
+        width: 40%; /* Barra más estrecha */
         max-width: 250px;
         padding: 5px;
     }
