@@ -871,7 +871,7 @@ h2 {
     /* Barra de búsqueda */
     .search-bar-container {
         width: 100%;
-        max-width: 180px; /* Compacto */
+        max-width: 250px; /* Compacto */
         margin: 0 auto;
         display: flex;
         justify-content: center;
