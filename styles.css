@@ -859,12 +859,12 @@ h2 {
     }
 
     .header-logo {
-        width: 180px;
+        width: 200px;
         height: auto;
     }
 
     .header-title img {
-        width: 150px; /* Ajusta al contenedor */
+        width: 180px; /* Ajusta al contenedor */
         height: auto; /* Mantén la proporción de la imagen */
     }
 
