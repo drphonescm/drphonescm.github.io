@@ -849,12 +849,9 @@ h2 {
     /* Contenedor de productos */
     .container-items {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-        display: flex;
+        display: grid;
         gap: 10px; /* Espaciado reducido */
         padding: 2px; /* Margen interno mínimo */
-        align-items: stretch; /* Asegura que todos los contenedores tengan la misma altura */
-        flex-wrap: wrap; /* Permite ajustar filas */
-
     }
 
     .item {
@@ -879,15 +876,15 @@ h2 {
     .sidebar {
         width: 18%; /* Sidebar más angosto */
         padding: 4px; /* Espaciado mínimo */
-        font-size: 0.4rem; /* Texto aún más pequeño */
+        font-size: 0.5rem; /* Texto aún más pequeño */
         background-color: #f4f4f4; /* Fondo claro */
-        margin-bottom: 4px; /* Espaciado inferior reducido */
+        margin-bottom: 8px; /* Espaciado inferior reducido */
         border-radius: 3px;
     }
 
     .sidebar-item {
         padding: 2px 4px; /* Espaciado muy compacto */
-        font-size: 0.3rem; /* Texto más pequeño para los ítems del sidebar */
+        font-size: 0.55rem; /* Texto más pequeño para los ítems del sidebar */
     }
 
     /* "Ordenar por" más pequeño */
@@ -904,7 +901,7 @@ h2 {
     }
 
     .item h3 {
-        font-size: 0.6rem; /* Reduce el tamaño de la fuente */
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente */
         line-height: 1.2; /* Espaciado entre líneas compacto */
         text-align: center; /* Centra el texto */
         white-space: nowrap; /* Evita saltos de línea */
