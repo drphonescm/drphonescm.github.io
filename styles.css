@@ -902,7 +902,7 @@ h2 {
 
     /* Sidebar - Filtros más pequeños */
     .sidebar {
-        width: 20%; /* Sidebar más estrecho */
+        width: 25%; /* Sidebar más estrecho */
         padding: 2px; /* Espaciado interno mínimo */
         font-size: 0.3rem; /* Texto mucho más compacto */
         background-color: #f4f4f4; /* Fondo claro */
@@ -912,7 +912,7 @@ h2 {
 
     .sidebar-item {
         padding: 1px 3px; /* Espaciado reducido para cada ítem */
-        font-size: 0.3rem; /* Texto compacto para los filtros individuales */
+        font-size: 0.2rem; /* Texto compacto para los filtros individuales */
         line-height: 1.2; /* Espaciado ajustado */
         text-align: left; /* Alineación izquierda para mejor legibilidad */
     }
