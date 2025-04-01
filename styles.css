@@ -895,7 +895,7 @@ h2 {
     }
 
     .search-bar-container {
-        width: 100%; /* Ocupa todo el ancho */
+        width: 60%; /* Ocupa todo el ancho */
         margin: 0 auto; /* Centrado */
         padding: 5px;
     }
