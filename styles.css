@@ -966,6 +966,7 @@ h2 {
 
     .item {
         height: 450px; /* Más pequeño */
+        width: auto;
         padding: 4px;
         display: flex;
         flex-direction: column;
@@ -985,7 +986,7 @@ h2 {
     }
 
     .item h3 {
-        font-size: 0.5rem; /* Texto reducido */
+        font-size: 0.4rem; /* Texto reducido */
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
@@ -1011,9 +1012,9 @@ h2 {
     }
 
     .remove-product-button {
-        font-size: 0.6rem; /* Compacto */
+        font-size: 0.8rem; /* Compacto */
         padding: 1px 1px;
-        width: 40%;
+        width: 20%;
         background-color: #FF5A5A;
         color: #fff;
         border: none;
