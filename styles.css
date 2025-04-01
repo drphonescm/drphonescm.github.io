@@ -848,108 +848,108 @@ h2 {
 @media (max-width: 480px) {
     /* Contenedor de productos */
     .container-items {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-        display: grid;
-        gap: 10px; /* Espaciado reducido */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas compactas */
+        gap: 4px; /* Espaciado mínimo entre ítems */
         padding: 2px; /* Margen interno mínimo */
     }
 
     .item {
-        height: 300px; /* Altura fija para todos los contenedores */
+        height: 250px; /* Ítems más pequeños */
+        padding: 4px; /* Espaciado interno más reducido */
         display: flex;
         flex-direction: column; /* Asegura un diseño vertical dentro del contenedor */
         justify-content: space-between; /* Distribuye el contenido uniformemente */
         align-items: center; /* Centra los elementos */
         overflow: hidden; /* Evita que el contenido exceda el contenedor */
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        border-radius: 3px; /* Bordes compactos */
     }
-    
 
     .item img {
         width: 100%; /* Imagen ocupa el ancho completo */
         height: auto; /* Mantiene proporciones */
         margin-bottom: 4px;
         object-fit: cover; /* Ajusta la imagen dentro del contenedor */
-
-    }
-
-    /* Sidebar - Filtros más compactos */
-    .sidebar {
-        width: 18%; /* Sidebar más angosto */
-        padding: 4px; /* Espaciado mínimo */
-        font-size: 0.5rem; /* Texto aún más pequeño */
-        background-color: #f4f4f4; /* Fondo claro */
-        margin-bottom: 8px; /* Espaciado inferior reducido */
-        border-radius: 3px;
-    }
-
-    .sidebar-item {
-        padding: 2px 4px; /* Espaciado muy compacto */
-        font-size: 0.55rem; /* Texto más pequeño para los ítems del sidebar */
-    }
-
-    /* "Ordenar por" más pequeño */
-    .dropdown {
-        font-size: 0.6rem; /* Texto aún más pequeño */
-        margin-bottom: 8px; /* Espaciado inferior más reducido */
-    }
-
-    /* Botón de buscar mucho más compacto */
-    .search-bar {
-        width: 100%; /* Barra compacta */
-        max-width: 200px; /* Máximo tamaño reducido */
-        padding: 3px; /* Espaciado más reducido */
     }
 
     .item h3 {
-        font-size: 0.9rem; /* Reduce el tamaño de la fuente */
-        line-height: 1.2; /* Espaciado entre líneas compacto */
+        font-size: 0.7rem; /* Reduce el tamaño del texto del título */
+        line-height: 1.1; /* Espaciado entre líneas compacto */
         text-align: center; /* Centra el texto */
         white-space: nowrap; /* Evita saltos de línea */
         overflow: hidden; /* Oculta el texto excedente */
         text-overflow: ellipsis; /* Muestra "..." al final si es demasiado largo */
     }
 
+    /* Sidebar - Filtros más pequeños */
+    .sidebar {
+        width: 15%; /* Sidebar aún más angosto */
+        padding: 3px; /* Espaciado mínimo */
+        font-size: 0.45rem; /* Texto mucho más pequeño */
+        background-color: #f4f4f4; /* Fondo claro */
+        margin-bottom: 8px; /* Espaciado inferior reducido */
+        border-radius: 3px;
+    }
+
+    .sidebar-item {
+        padding: 2px; /* Espaciado muy compacto */
+        font-size: 0.45rem; /* Texto mucho más reducido para los ítems del sidebar */
+    }
+
+    /* "Ordenar por" más pequeño */
+    .dropdown {
+        font-size: 0.5rem; /* Texto más compacto */
+        margin-bottom: 6px; /* Espaciado inferior más reducido */
+    }
+
+    /* Botón de buscar mucho más compacto */
+    .search-bar {
+        width: 100%; /* Barra compacta */
+        max-width: 180px; /* Tamaño reducido */
+        padding: 2px; /* Espaciado muy reducido */
+    }
+
     .search-bar input {
-        font-size: 0.6rem; /* Texto pequeño */
-        padding: 3px; /* Espaciado interno mínimo */
+        font-size: 0.5rem; /* Texto más pequeño */
+        padding: 2px; /* Espaciado interno mínimo */
     }
 
     .search-bar button {
-        font-size: 0.55rem; /* Texto compacto */
-        padding: 3px 5px; /* Botón más pequeño */
-        border-radius: 2px; /* Bordes más ajustados */
+        font-size: 0.5rem; /* Texto compacto */
+        padding: 2px 4px; /* Botón más pequeño */
+        border-radius: 2px; /* Bordes ajustados */
     }
 
     /* Modal */
     #product-modal {
-        width: 85%; /* Modal más compacto */
-        max-width: 250px; /* Tamaño reducido */
-        padding: 6px; /* Espaciado ajustado */
+        width: 80%; /* Modal más compacto */
+        max-width: 200px; /* Tamaño reducido */
+        padding: 5px; /* Espaciado ajustado */
         border-radius: 3px; /* Bordes menos pronunciados */
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra reducida */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra reducida */
     }
 
     #modal-title {
-        font-size: 1rem; /* Título más pequeño */
+        font-size: 0.9rem; /* Título más pequeño */
         margin-bottom: 5px;
     }
 
     #modal-price {
-        font-size: 0.8rem; /* Texto compacto */
+        font-size: 0.7rem; /* Texto compacto */
         margin-bottom: 6px;
     }
 
     #add-to-cart-modal-button {
-        font-size: 0.6rem; /* Texto más compacto */
-        padding: 4px 6px; /* Espaciado mínimo */
+        font-size: 0.5rem; /* Texto mucho más compacto */
+        padding: 3px 5px; /* Espaciado mínimo */
         border-radius: 2px; /* Bordes ajustados */
     }
 
     /* Botón de cerrar */
     .close-button {
-        font-size: 14px; /* Botón más pequeño */
-        top: 6px;
-        right: 8px;
+        font-size: 12px; /* Botón más pequeño */
+        top: 5px;
+        right: 6px;
     }
 }
     
