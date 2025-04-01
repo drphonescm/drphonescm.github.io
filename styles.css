@@ -926,18 +926,18 @@ h2 {
     /* Barra de búsqueda ajustada */
     .search-bar {
         width: 100%; /* Barra de búsqueda adaptativa */
-        max-width: 220px; /* Tamaño reducido */
+        max-width: 180px; /* Tamaño reducido */
         padding: 4px; /* Espaciado interno ajustado */
     }
 
     .search-bar input {
         font-size: 0.35rem; /* Texto mucho más compacto */
-        padding: 2px; /* Espaciado interno ajustado */
+        padding: 4px; /* Espaciado interno ajustado */
     }
 
     .search-bar button {
         font-size: 0.35rem; /* Texto más compacto */
-        padding: 2px 4px; /* Tamaño reducido */
+        padding: 4px 2px; /* Tamaño reducido */
         border-radius: 2px; /* Bordes ajustados */
     }
 
