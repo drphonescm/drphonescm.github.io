@@ -644,10 +644,10 @@ h2 {
     display: none; /* Ocultar el checkbox */
 }
 
+/* Estilo del botón de 3 líneas */
 .toggle-label {
-    display: inline-flex;
+    display: none; /* Por defecto, el botón está oculto en pantallas grandes */
     align-items: center;
-    justify-content: center;
     background-color: #6A5ACD;
     color: white;
     padding: 8px 12px;
@@ -657,26 +657,28 @@ h2 {
     font-size: 0.9rem;
     transition: background-color 0.3s ease;
     margin-bottom: 10px;
+    justify-content: center;
 }
 
 .toggle-label:hover {
-    background-color: #5a4ac0; /* Cambia el color al pasar el mouse */
+    background-color: #5a4ac0; /* Cambiar color al pasar el ratón */
 }
 
-
-/* Estilos de la barra lateral */
+/* Filtros inicialmente ocultos */
 .sidebar {
-    width: 22%;
-    padding: 20px;
-    margin-bottom: 20px;
+    display: none; /* Ocultos por defecto */
+    transition: max-height 0.3s ease;
     background-color: #f4f4f4;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    font-size: 1rem;
-    border-radius: 8px;
-    transition: max-height 0.3s ease; /* Suaviza el efecto de apertura/cierre */
-    overflow: hidden; /* Ocultar el contenido cuando el contenedor está cerrado */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+/* Mostrar filtros cuando el checkbox está marcado */
+.toggle-checkbox:checked + .toggle-label + .sidebar {
+    display: block; /* Mostrar los filtros */
+}
+
 
 /* Media Queries para diseño responsivo */
 
@@ -762,24 +764,39 @@ h2 {
         padding: 10px;
         box-sizing: border-box;
         gap: 15px; /* Espaciado entre cada bloque */
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
     }
 
-    .toggle-checkbox:checked + .toggle-label + .sidebar {
-        display: block; /* Despliega los filtros solo cuando el checkbox está marcado */
+    
+    .toggle-label {
+        display: flex; /* Asegura que sea visible */
+        align-items: center;
+        justify-content: center;
+        background-color: #6A5ACD;
+        color: white;
+        padding: 8px 12px;
+        cursor: pointer;
+        border-radius: 4px;
+        text-align: center;
+        font-size: 0.9rem;
+        margin-bottom: 10px;
     }
 
+    .toggle-label:hover {
+        background-color: #5a4ac0; /* Efecto hover */
+    }
 
+    /* Sidebar oculta por defecto */
     .sidebar {
-        width: 100%; /* Barra de filtros ocupa el 30% del ancho */
-        padding: 15px;
-        background-color: #f4f4f4;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        font-size: 0.6rem; /* Texto compacto */
-        border-radius: 5px;
-        margin-bottom: 20px;
-        display: none; /* Oculta los filtros por defecto */
+        display: none;
     }
+
+    /* Mostrar el menú al marcar el checkbox */
+    .toggle-checkbox:checked + .toggle-label + .sidebar {
+        display: block;
+    }
+
+
 
     .item {
         padding: 10px;
@@ -874,6 +891,13 @@ h2 {
 
     #add-to-cart-modal-button:hover {
         background: #5638d3;
+    }
+}
+
+/* Mantener la barra lateral visible en pantallas grandes */
+@media (min-width: 769px) {
+    .sidebar {
+        display: block; /* Barra lateral siempre visible */
     }
 }
 

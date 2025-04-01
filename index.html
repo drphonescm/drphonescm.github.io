@@ -59,32 +59,31 @@
         </div>
     </header>
 
-    
+
     <div class="container">
-        <!-- Botón de filtros controlado por checkbox -->
-        <input type="checkbox" id="toggle-filters" class="toggle-checkbox" />
-        <label for="toggle-filters" class="toggle-label">
-            <svg width="24" height="24" fill="white" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 6h18M3 12h12M3 18h6"/> <!-- Tres líneas como el ícono de filtro -->
-            </svg>
-            <span>Filtros</span>
-        </label>
-        
-        <!-- Barra lateral con filtros -->
-        <aside class="sidebar">
-            <h3>Filtros</h3>
-            <div class="filter-group">
-                <h4>Marca</h4>
-                <label><input type="checkbox" value="Motorola" class="filter-checkbox"> Motorola</label>
-                <label><input type="checkbox" value="Xiaomi" class="filter-checkbox"> Xiaomi</label>
-                <label><input type="checkbox" value="Samsung" class="filter-checkbox"> Samsung</label>
-            </div>
-            <div class="filter-group">
-                <h4>Precio</h4>
-                <label for="priceRange">Rango de precio: <span id="priceRangeValue">200000 - 1600000</span></label>
-                <input type="range" id="priceRange" min="200000" max="1600000" step="1000" value="1600000">
-            </div>                                  
-        </aside>
+    <!-- Toggle para filtros en pantallas medianas y pequeñas -->
+    <input type="checkbox" id="toggle-filters" class="toggle-checkbox" />
+    <label for="toggle-filters" class="toggle-label">
+        <img src="./img/iconofiltros.png" alt="Ícono de Filtros" width="24" height="24">
+        <span>Filtros</span>
+    </label>
+
+    <!-- Barra lateral de filtros -->
+    <aside class="sidebar">
+        <h3>Filtros</h3>
+        <div class="filter-group">
+            <h4>Marca</h4>
+            <label><input type="checkbox" value="Motorola" class="filter-checkbox"> Motorola</label>
+            <label><input type="checkbox" value="Xiaomi" class="filter-checkbox"> Xiaomi</label>
+            <label><input type="checkbox" value="Samsung" class="filter-checkbox"> Samsung</label>
+        </div>
+        <div class="filter-group">
+            <h4>Precio</h4>
+            <label for="priceRange">Rango de precio: <span id="priceRangeValue">200000 - 1600000</span></label>
+            <input type="range" id="priceRange" min="200000" max="1600000" step="1000" value="1600000">
+        </div>                                  
+    </aside>
+
     
     
         <main class="main-content">
