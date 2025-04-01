@@ -849,12 +849,12 @@ h2 {
     /* Contenedor de productos */
     .container-items {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas compactas */
-        gap: 4px; /* Espaciado mínimo entre ítems */
+        gap: 8px; /* Espaciado mínimo entre ítems */
         padding: 2px; /* Margen interno mínimo */
     }
 
     .item {
-        height: 250px; /* Ítems más pequeños */
+        height: 400px; /* Ítems más pequeños */
         padding: 4px; /* Espaciado interno más reducido */
         display: flex;
         flex-direction: column; /* Asegura un diseño vertical dentro del contenedor */
