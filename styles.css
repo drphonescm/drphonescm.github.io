@@ -860,12 +860,12 @@ h2 {
 
     .header-logo {
         width: 400px; /* Ajustado */
-        height: auto;
+        height: 100px;
     }
 
     .header-title img {
         width: 400px;
-        height: auto;
+        height: 100px;
     }
 
     /* Barra de búsqueda */
