@@ -857,13 +857,12 @@ h2 {
     }
 
     .header-logo {
-        width: 150px; /* Tamaño más proporcional */
+        width: 180px; /* Tamaño más proporcional */
         height: auto; /* Mantén proporción */
     }
 
     .header-title {
-        font-size: 1.5em; /* Ajuste a un tamaño más proporcional */
-        font-weight: bold;
+        font-size: 2em; /* Ajuste a un tamaño más proporcional */
     }
 
     .search-bar-container {
