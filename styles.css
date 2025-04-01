@@ -846,21 +846,20 @@ h2 {
 
 
 
-/* Vista para pantallas pequeñas (hasta 480px) */
 @media (max-width: 480px) {
     /* Contenedor de productos */
     .container-items {
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas para los ítems */
-        gap: 8px; /* Espaciado reducido */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 8px; /* Espacio reducido entre ítems */
         padding: 5px;
     }
 
     .item {
         width: 100%; /* Ajusta al tamaño de la columna */
-        padding: 5px; /* Espaciado interno reducido */
+        padding: 6px; /* Espaciado interno reducido */
         font-size: 0.7rem; /* Texto más pequeño */
         margin-bottom: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
         border-radius: 4px; /* Bordes suaves */
     }
 
@@ -870,39 +869,31 @@ h2 {
         margin-bottom: 6px;
     }
 
-    /* Sidebar */
+    /* Sidebar - Filtros más pequeños */
     .sidebar {
-        width: 20%; /* Sidebar más compacto */
-        padding: 8px; /* Espaciado reducido */
-        font-size: 0.65rem; /* Texto más pequeño */
+        width: 20%; /* Sidebar compacto */
+        padding: 6px; /* Espaciado reducido */
+        font-size: 0.6rem; /* Texto más pequeño */
         background-color: #f4f4f4; /* Fondo claro */
         margin-bottom: 10px; /* Espaciado inferior */
         border-radius: 4px;
     }
 
     .sidebar-item {
-        padding: 3px 6px; /* Espaciado interno reducido */
-        font-size: 0.65rem; /* Texto más pequeño para los ítems del sidebar */
+        padding: 3px 5px; /* Espaciado más compacto */
+        font-size: 0.65rem; /* Texto pequeño para los ítems del sidebar */
     }
 
-    /* Header */
-    .logo {
-        width: 40px; /* Logo compacto */
+    /* "Ordenar por" más pequeño */
+    .dropdown {
+        font-size: 0.7rem; /* Texto más compacto */
+        margin-bottom: 10px; /* Espaciado inferior más reducido */
     }
 
-    .header-title {
-        width: 30px;
-    }
-
-    .search-bar-container {
-        width: 40%; /* Ocupa todo el ancho */
-        margin: 0 auto; /* Centrado */
-        padding: 5px;
-    }
-
+    /* Botón de buscar más pequeño */
     .search-bar {
-        width: 40%; /* Barra más estrecha */
-        max-width: 170px;
+        width: 100%; /* Ocupa todo el ancho */
+        max-width: 250px; /* Barra más estrecha */
         padding: 5px;
     }
 
@@ -912,8 +903,9 @@ h2 {
     }
 
     .search-bar button {
-        font-size: 0.7rem; /* Texto más pequeño */
-        padding: 4px 8px;
+        font-size: 0.65rem; /* Texto más compacto para el botón */
+        padding: 4px 8px; /* Botón más pequeño */
+        border-radius: 3px; /* Bordes ajustados */
     }
 
     /* Modal */
