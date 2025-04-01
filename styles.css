@@ -849,23 +849,28 @@ h2 {
     /* Contenedor de productos */
     .container-items {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas */
-        gap: 5px; /* Espaciado reducido */
+        display: grid;
+        gap: 10px; /* Espaciado reducido */
         padding: 2px; /* Margen interno mínimo */
+        align-items: stretch; /* Asegura que todos los contenedores tengan la misma altura */
     }
 
     .item {
-        width: 100%; /* Ajusta al tamaño de la columna */
-        padding: 4px; /* Espaciado interno más reducido */
-        font-size: 0.6rem; /* Texto mucho más pequeño */
-        margin-bottom: 5px;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra mínima */
-        border-radius: 3px; /* Bordes compactos */
+        height: 300px; /* Altura fija para todos los contenedores */
+        display: flex;
+        flex-direction: column; /* Asegura un diseño vertical dentro del contenedor */
+        justify-content: space-between; /* Distribuye el contenido uniformemente */
+        align-items: center; /* Centra los elementos */
+        overflow: hidden; /* Evita que el contenido exceda el contenedor */
     }
+    
 
     .item img {
         width: 100%; /* Imagen ocupa el ancho completo */
         height: auto; /* Mantiene proporciones */
         margin-bottom: 4px;
+        object-fit: cover; /* Ajusta la imagen dentro del contenedor */
+
     }
 
     /* Sidebar - Filtros más compactos */
@@ -894,6 +899,15 @@ h2 {
         width: 100%; /* Barra compacta */
         max-width: 200px; /* Máximo tamaño reducido */
         padding: 3px; /* Espaciado más reducido */
+    }
+
+    .item h3 {
+        font-size: 0.9rem; /* Reduce el tamaño de la fuente */
+        line-height: 1.2; /* Espaciado entre líneas compacto */
+        text-align: center; /* Centra el texto */
+        white-space: nowrap; /* Evita saltos de línea */
+        overflow: hidden; /* Oculta el texto excedente */
+        text-overflow: ellipsis; /* Muestra "..." al final si es demasiado largo */
     }
 
     .search-bar input {
