@@ -848,7 +848,7 @@ h2 {
     /* Header */
     header {
         width: 100%;
-        padding: 8px; /* Compacto para pantallas pequeñas */
+        padding: 8px; /* Más compacto para pantallas pequeñas */
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -857,18 +857,18 @@ h2 {
     }
 
     .header-logo {
-        width: 180px; /* Tamaño proporcional */
+        width: 150px; /* Tamaño más proporcional */
         height: auto; /* Mantén proporción */
     }
 
     .header-title {
-        font-size: 2em; /* Título más compacto */
+        font-size: 1.5em; /* Ajuste a un tamaño más proporcional */
         font-weight: bold;
     }
 
     .search-bar-container {
         width: 100%;
-        max-width: 280px; /* Tamaño ajustado */
+        max-width: 250px; /* Tamaño ajustado */
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -878,7 +878,7 @@ h2 {
     .search-bar {
         display: flex;
         width: 100%;
-        max-width: 220px; /* Ancho máximo reducido */
+        max-width: 220px; /* Tamaño compacto */
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra ligera */
         border-radius: 4px;
         overflow: hidden;
@@ -886,16 +886,16 @@ h2 {
 
     .search-bar input {
         flex: 1;
-        padding: 4px;
-        font-size: 0.3rem; /* Texto más compacto */
+        padding: 3px; /* Espaciado más reducido */
+        font-size: 0.4rem; /* Texto más compacto */
         border: none;
         outline: none;
     }
 
     .search-bar button {
-        padding: 2px 4px; /* Ajustado para pantallas pequeñas */
-        font-size: 0.3rem; /* Botón más compacto */
-        border-radius: 2px;
+        padding: 2px 3px; /* Ajustado para pantallas pequeñas */
+        font-size: 0.35rem; /* Botón más pequeño */
+        border-radius: 3px;
         background-color: #6A5ACD;
         color: #fff;
         border: none;
@@ -910,31 +910,31 @@ h2 {
     /* Contenedor de productos */
     .container-items {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas compactas */
-        gap: 6px; /* Espaciado reducido */
+        gap: 8px; /* Espaciado más cómodo */
         padding: 5px;
     }
 
     .item {
-        height: 400px; /* Altura adecuada */
-        padding: 4px;
+        height: 450px; /* Altura mejorada */
+        padding: 5px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         overflow: hidden;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-        border-radius: 4px;
+        border-radius: 5px;
     }
 
     .item img {
         width: 100%;
-        height: 70%; /* Proporciones visuales equilibradas */
+        height: 70%; /* Proporciones ajustadas */
         object-fit: cover;
         margin-bottom: 6px;
     }
 
     .item h3 {
-        font-size: 0.3rem; /* Uniforme con los filtros */
+        font-size: 0.3rem; /* Texto uniforme */
         line-height: 1.2;
         text-align: center;
         white-space: nowrap;
@@ -943,16 +943,16 @@ h2 {
     }
 
     .add-to-cart-button {
-        font-size: 0.25rem; /* Texto reducido */
-        padding: 2px 4px; /* Espaciado compacto */
-        width: 90%; /* Ocupa el 90% del contenedor */
+        font-size: 0.3rem; /* Texto más compacto */
+        padding: 3px 4px; /* Espaciado compacto */
+        width: 85%; /* Tamaño proporcional al contenedor */
         background-color: #6A5ACD; /* Color consistente */
         color: #fff;
         border: none;
         border-radius: 3px;
         text-align: center;
         cursor: pointer;
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra ligera */
         transition: background-color 0.3s ease;
     }
 
@@ -962,9 +962,9 @@ h2 {
 
     /* Sidebar - Filtros más compactos */
     .sidebar {
-        width: 20%;
+        width: 25%; /* Más ancho para mejor legibilidad */
         padding: 4px;
-        font-size: 0.3rem; /* Texto uniforme */
+        font-size: 0.25rem; /* Texto compacto */
         background-color: #f4f4f4;
         margin-bottom: 6px;
         border-radius: 4px;
@@ -972,30 +972,30 @@ h2 {
 
     .sidebar-item {
         padding: 2px;
-        font-size: 0.3rem; /* Compacto */
+        font-size: 0.25rem; /* Compacto pero legible */
     }
 
-    /* "Ordenar por" */
+    /* Dropdown */
     .dropdown {
-        font-size: 0.25rem; /* Tamaño más reducido */
+        font-size: 0.25rem; /* Tamaño proporcional */
         margin-bottom: 4px;
     }
 
     /* Barra de búsqueda */
     .search-bar {
         width: 100%;
-        max-width: 200px;
+        max-width: 220px; /* Tamaño más compacto */
         padding: 4px;
     }
 
     .search-bar input {
-        font-size: 0.5rem;
+        font-size: 0.3rem; /* Texto más proporcional */
         padding: 2px;
     }
 
     .search-bar button {
-        font-size: 0.5rem;
-        padding: 2px 2px;
+        font-size: 0.3rem;
+        padding: 2px 4px;
     }
 
     /* Modal */
@@ -1004,21 +1004,21 @@ h2 {
         max-width: 240px;
         padding: 8px;
         border-radius: 4px;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Sombra reducida */
     }
 
     #modal-title {
-        font-size: 0.6rem;
+        font-size: 0.6rem; /* Tamaño ajustado */
         margin-bottom: 4px;
     }
 
     #modal-price {
-        font-size: 0.5rem;
+        font-size: 0.5rem; /* Texto más compacto */
         margin-bottom: 3px;
     }
 
     #add-to-cart-modal-button {
-        font-size: 0.3rem;
+        font-size: 0.3rem; /* Texto más compacto */
         padding: 2px 4px;
         border-radius: 3px;
     }
@@ -1130,7 +1130,7 @@ h2 {
     font-weight: bold; /* Negrita para destacar el texto */
     padding: 12px 25px; /* Espaciado interno */
     border: none; /* Sin bordes */
-    border-radius: 30px; /* Bordes redondeados completos */
+    border-radius: 10px; /* Bordes redondeados completos */
     cursor: pointer; /* Indicador de clic */
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra ligera */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Animaciones suaves */
