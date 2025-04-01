@@ -666,12 +666,12 @@ h2 {
 
         /* Incrementar el tamaño del logo y del título en el header */
     .header-logo {
-        width: 200px; /* Aumenta el tamaño del logo */
+        width: 300px; /* Aumenta el tamaño del logo */
         height: auto; /* Mantén la proporción */
     }
     
     .header-title {
-        font-size: 200px; /* Aumenta el tamaño de la fuente del título */
+        font-size: 300px; /* Aumenta el tamaño de la fuente del título */
         font-weight: bold; /* Resalta más el título */
     }
   
