@@ -854,7 +854,7 @@ h2 {
     }
 
     .item {
-        height: 380px; /* Más altura para los ítems */
+        height: 450px; /* Más altura para los ítems */
         padding: 6px; /* Espaciado interno más generoso */
         display: flex;
         flex-direction: column; /* Diseño vertical */
@@ -867,7 +867,7 @@ h2 {
 
     .item img {
         width: 100%; /* Imagen ocupa todo el ancho */
-        height: 70%; /* Ajuste proporcional con más espacio */
+        height: auto; /* Ajuste proporcional con más espacio */
         object-fit: cover; /* Ajusta imagen dentro del contenedor */
         margin-bottom: 8px; /* Espaciado debajo de la imagen */
     }
