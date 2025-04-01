@@ -1031,13 +1031,13 @@ h2 {
     /* Mensaje de Carrito */
     #add-to-cart-message {
         position: fixed;
-        top: 10%;
-        right: 10%;
+        top: 5%;
+        right: 5%;
         background-color: #7B68EE;
         color: white;
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         font-weight: bold;
-        padding: 6px 10px;
+        padding: 1px 2px;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         z-index: 1000;
