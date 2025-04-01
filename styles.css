@@ -971,7 +971,7 @@ h2 {
     .item {
         height: 380px; /* Altura ajustada */
         width: auto;
-        padding: 4px;
+        padding: 2px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -982,7 +982,7 @@ h2 {
     }
 
     .item img {
-        width: 100%;
+        width: 90%;
         height: auto; /* Ajuste dinámico */
         object-fit: cover;
         margin-bottom: 4px;
@@ -990,7 +990,7 @@ h2 {
     }
 
     .item h3 {
-        font-size: 0.4rem; /* Texto compacto */
+        font-size: 0.3rem; /* Texto compacto */
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
@@ -1114,12 +1114,12 @@ h2 {
 #image-container {
     position: relative;
     width: 100%;
-    max-width: 370px;
+    max-width: 450px;
     margin: 0 auto;
 }
 
 #modal-img {
-    width: 70%; /* Imagen ajustada al contenedor */
+    width: 90%; /* Imagen ajustada al contenedor */
     border-radius: 8px;
     position: relative;
     z-index: 1; /* Imagen está detrás del botón */
