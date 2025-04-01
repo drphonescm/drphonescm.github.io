@@ -931,7 +931,7 @@ h2 {
 
     .item img {
         width: 100%;
-        height: auto;
+        height: 95%;
         object-fit: cover;
         margin-bottom: 6px;
     }
