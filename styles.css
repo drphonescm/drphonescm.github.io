@@ -651,6 +651,7 @@ h2 {
     font-size: 1rem;
     border-radius: 8px;
 }
+
 /* Media Queries para diseño responsivo */
 
 /* Vista para pantallas medianas (hasta 768px) */
@@ -844,6 +845,7 @@ h2 {
     }
 }
 
+
 @media (max-width: 480px) {
     /* Header */
     header {
@@ -857,14 +859,14 @@ h2 {
     }
 
     .header-logo {
-        width: 120px;
+        width: 180px;
         height: auto;
     }
 
-    .header-title {
-        font-size: 1.8em;
-        font-weight: bold;
-        text-align: center; /* Centra el título */
+    .header-title img {
+        width: 100%; /* Ajusta al contenedor */
+        max-width: 200px; /* Limita su tamaño máximo */
+        height: auto; /* Mantén la proporción de la imagen */
     }
 
     /* Barra de búsqueda */
