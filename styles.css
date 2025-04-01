@@ -867,7 +867,7 @@ h2 {
 
     .item img {
         width: 100%; /* Imagen ocupa todo el ancho */
-        height: 70%; /* Altura dinámica en relación con el ítem */
+        height: 100%; /* Altura dinámica en relación con el ítem */
         object-fit: cover; /* Ajusta imagen dentro del contenedor */
         margin-bottom: 6px; /* Espaciado debajo de la imagen */
     }
