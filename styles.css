@@ -984,18 +984,18 @@ h2 {
     /* Barra de búsqueda */
     .search-bar {
         width: 100%;
-        max-width: 220px;
+        max-width: 200px;
         padding: 4px;
     }
 
     .search-bar input {
-        font-size: 0.3rem;
+        font-size: 0.5rem;
         padding: 2px;
     }
 
     .search-bar button {
-        font-size: 0.3rem;
-        padding: 2px 4px;
+        font-size: 0.5rem;
+        padding: 2px 2px;
     }
 
     /* Modal */
