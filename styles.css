@@ -642,7 +642,7 @@ h2 {
 
 /* Estilos de la barra lateral */
 .sidebar {
-    width: 15%;
+    width: 22%;
     padding: 20px;
     margin-bottom: 20px;
     background-color: #f4f4f4;
@@ -951,7 +951,7 @@ h2 {
     }
 
     #priceRange {
-        width: 100%; /* Ocupa el ancho del contenedor */
+        width: 83%; /* Ocupa el ancho del contenedor */
         margin: 3px auto; /* Centrado */
     }
 
