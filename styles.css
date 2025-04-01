@@ -867,7 +867,7 @@ h2 {
 
     .search-bar-container {
         width: 100%;
-        max-width: 250px; /* Tamaño ajustado */
+        max-width: 200px; /* Tamaño ajustado */
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -877,7 +877,7 @@ h2 {
     .search-bar {
         display: flex;
         width: 100%;
-        max-width: 220px; /* Tamaño compacto */
+        max-width: 100px; /* Tamaño compacto */
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra ligera */
         border-radius: 4px;
         overflow: hidden;
@@ -885,8 +885,8 @@ h2 {
 
     .search-bar input {
         flex: 1;
-        padding: 3px; /* Espaciado más reducido */
-        font-size: 0.4rem; /* Texto más compacto */
+        padding: 5px; /* Espaciado más reducido */
+        font-size: 0.7rem; /* Texto más compacto */
         border: none;
         outline: none;
     }
@@ -914,7 +914,7 @@ h2 {
     }
 
     .item {
-        height: 450px; /* Altura mejorada */
+        height: 480px; /* Altura mejorada */
         padding: 5px;
         display: flex;
         flex-direction: column;
@@ -927,7 +927,7 @@ h2 {
 
     .item img {
         width: 100%;
-        height: 70%; /* Proporciones ajustadas */
+        height: auto; /* Proporciones ajustadas */
         object-fit: cover;
         margin-bottom: 6px;
     }
@@ -944,7 +944,7 @@ h2 {
     .add-to-cart-button {
         font-size: 0.3rem; /* Texto más compacto */
         padding: 3px 4px; /* Espaciado compacto */
-        width: 85%; /* Tamaño proporcional al contenedor */
+        width: 100%; /* Tamaño proporcional al contenedor */
         background-color: #6A5ACD; /* Color consistente */
         color: #fff;
         border: none;
@@ -962,15 +962,15 @@ h2 {
     /* Sidebar - Filtros más compactos */
     .sidebar {
         width: 25%; /* Más ancho para mejor legibilidad */
-        padding: 4px;
-        font-size: 0.25rem; /* Texto compacto */
+        padding: 1px;
+        font-size: 0.2rem; /* Texto compacto */
         background-color: #f4f4f4;
         margin-bottom: 6px;
         border-radius: 4px;
     }
 
     .sidebar-item {
-        padding: 2px;
+        padding: 1px;
         font-size: 0.25rem; /* Compacto pero legible */
     }
 
