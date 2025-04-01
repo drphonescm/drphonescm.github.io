@@ -642,7 +642,7 @@ h2 {
 
 /* Estilos de la barra lateral */
 .sidebar {
-    width: 20%;
+    width: 22%;
     padding: 15px;
     margin-bottom: 20px;
     background-color: #f4f4f4;
@@ -666,18 +666,18 @@ h2 {
 
         /* Incrementar el tamaño del logo y del título en el header */
     .header-logo {
-        width: 150px; /* Aumenta el tamaño del logo */
+        width: 200px; /* Aumenta el tamaño del logo */
         height: auto; /* Mantén la proporción */
     }
     
     .header-title {
-        font-size: 1.8em; /* Aumenta el tamaño de la fuente del título */
+        font-size: 200px; /* Aumenta el tamaño de la fuente del título */
         font-weight: bold; /* Resalta más el título */
     }
   
 
     .search-bar-container {
-        width: 100%;
+        width: 80%;
         margin: 0 auto;
         display: flex;
         justify-content: center;
