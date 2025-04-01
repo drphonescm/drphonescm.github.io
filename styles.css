@@ -871,7 +871,7 @@ h2 {
     /* Barra de búsqueda */
     .search-bar-container {
         width: 100%;
-        max-width: 200px; /* Amplía ligeramente el máximo */
+        max-width: 180px; /* Amplía ligeramente el máximo */
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -881,7 +881,7 @@ h2 {
     .search-bar {
         display: flex;
         width: 100%;
-        max-width: 190px;
+        max-width: 160px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         overflow: hidden;
@@ -948,8 +948,9 @@ h2 {
 
     .add-to-cart-button {
         font-size: 0.3rem; /* Texto ajustado */
-        padding: 4px 6px;
-        width: 85%; /* Proporcional al contenedor */
+        padding: 1px 2px;
+        width: 95%; /* Proporcional al contenedor */
+        height: auto;
         background-color: #6A5ACD;
         color: #fff;
         border: none;
