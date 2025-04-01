@@ -910,12 +910,12 @@ h2 {
         background-color: #5638d3;
     }
 
-    
+
     /* Sidebar (Filtros) */
     /* Sidebar (Filtros) */
     .sidebar {
         width: 90%; /* Ancho definido proporcional a la pantalla */
-        max-width: 250px; /* Máximo ajustado */
+        max-width: 200px; /* Máximo ajustado */
         padding: 6px; /* Espaciado interno compacto */
         background-color: #f4f4f4;
         margin: 0 auto 10px; /* Centrado horizontal y margen inferior */
@@ -952,7 +952,7 @@ h2 {
     }
 
     #priceRange {
-        width: 100%; /* Ancho máximo para ocupar espacio disponible */
+        width: 60%; /* Ancho máximo para ocupar espacio disponible */
         margin-top: 4px;
     }
 
