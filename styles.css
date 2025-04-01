@@ -871,7 +871,7 @@ h2 {
     /* Barra de búsqueda */
     .search-bar-container {
         width: 100%;
-        max-width: 250px; /* Compacto */
+        max-width: 180px; /* Compacto */
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -914,7 +914,7 @@ h2 {
     /* Sidebar (Filtros) */
     .sidebar {
         width: 100%; /* Ocupa todo el ancho disponible */
-        max-width: 200px; /* Ancho máximo reducido */
+        max-width: 180px; /* Ancho máximo reducido */
         padding: 4px; /* Espaciado interno compacto */
         background-color: #f4f4f4;
         margin: 0 auto 8px; /* Centrado horizontal con margen inferior */
@@ -975,7 +975,7 @@ h2 {
 
     .item {
         height: 450px; /* Más pequeño */
-        width: 100%;
+        width: auto;
         padding: 4px;
         display: flex;
         flex-direction: column;
@@ -1023,7 +1023,7 @@ h2 {
     .remove-product-button {
         font-size: 0.8rem; /* Compacto */
         padding: 1px 1px;
-        width: 20%;
+        width: 18%;
         background-color: #FF5A5A;
         color: #fff;
         border: none;
