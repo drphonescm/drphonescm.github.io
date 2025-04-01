@@ -850,7 +850,7 @@ h2 {
     /* Header */
     header {
         width: 100%;
-        padding: 10px 8px;
+        padding: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -859,19 +859,19 @@ h2 {
     }
 
     .header-logo {
-        width: 160px; /* Ajuste proporcional */
+        width: 140px; /* Tamaño optimizado para pantallas pequeñas */
         height: auto;
     }
 
     .header-title img {
-        width: 140px; /* Más compacto para pantallas pequeñas */
+        width: 120px;
         height: auto;
     }
 
     /* Barra de búsqueda */
     .search-bar-container {
         width: 100%;
-        max-width: 180px; /* Amplía ligeramente el máximo */
+        max-width: 200px;
         margin: 0 auto;
         display: flex;
         justify-content: center;
@@ -881,8 +881,8 @@ h2 {
     .search-bar {
         display: flex;
         width: 100%;
-        max-width: 160px;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        max-width: 180px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         border-radius: 5px;
         overflow: hidden;
     }
@@ -890,7 +890,7 @@ h2 {
     .search-bar input {
         flex: 1;
         padding: 3px;
-        font-size: 0.6rem; /* Tamaño más compacto */
+        font-size: 0.6rem; /* Fuente compacta */
         border: none;
         outline: none;
     }
@@ -910,15 +910,62 @@ h2 {
         background-color: #5638d3;
     }
 
+    /* Sidebar (Filtros) */
+    .sidebar {
+        width: 100%;
+        padding: 8px;
+        background-color: #f4f4f4;
+        margin-bottom: 12px;
+        font-size: 0.75rem; /* Fuente más pequeña */
+        border-radius: 5px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar h3 {
+        font-size: 0.9rem; /* Título compacto */
+        margin-bottom: 6px;
+    }
+
+    .filter-group {
+        margin-bottom: 10px;
+    }
+
+    .filter-group h4 {
+        font-size: 0.8rem; /* Encabezados más pequeños */
+        margin-bottom: 4px;
+    }
+
+    .filter-group label {
+        display: flex;
+        align-items: center;
+        font-size: 0.75rem; /* Texto más compacto */
+        margin-bottom: 4px;
+    }
+
+    .filter-group input[type="checkbox"] {
+        margin-right: 6px;
+        accent-color: #6A5ACD;
+    }
+
+    #priceRange {
+        width: 100%;
+        margin-top: 6px;
+    }
+
+    #priceRangeValue {
+        font-size: 0.75rem;
+    }
+
     /* Contenedor de productos */
     .container-items {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px; /* Espaciado mejorado */
-        padding: 6px;
+        gap: 12px; /* Espaciado más amplio entre tarjetas */
+        padding: 10px;
     }
 
     .item {
-        height: 450px; /* Altura ajustada */
+        height: 400px; /* Más compacto para evitar saturación */
         padding: 6px;
         display: flex;
         flex-direction: column;
@@ -931,15 +978,14 @@ h2 {
 
     .item img {
         width: 100%;
-        height: 70%;
+        height: 65%; /* Mantén proporción adecuada */
         object-fit: cover;
         margin-bottom: 6px;
-        border-radius: 3px; /* Bordes suaves */
+        border-radius: 3px;
     }
 
     .item h3 {
-        font-size: 0.3rem;
-        line-height: 1.2;
+        font-size: 0.8rem; /* Texto reducido pero legible */
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
@@ -947,10 +993,9 @@ h2 {
     }
 
     .add-to-cart-button {
-        font-size: 0.3rem; /* Texto ajustado */
-        padding: 1px 2px;
-        width: 95%; /* Proporcional al contenedor */
-        height: 100%;
+        font-size: 0.7rem; /* Botón proporcional */
+        padding: 6px 8px;
+        width: 90%;
         background-color: #6A5ACD;
         color: #fff;
         border: none;
@@ -966,9 +1011,9 @@ h2 {
     }
 
     .remove-product-button {
-        font-size: 0.3rem;
-        padding: 3px 5px;
-        width: 85%;
+        font-size: 0.7rem; /* Botón proporcional */
+        padding: 6px 8px;
+        width: 90%;
         background-color: #FF5A5A;
         color: #fff;
         border: none;
@@ -983,89 +1028,7 @@ h2 {
         background-color: #CC4949;
     }
 
-    /* Sidebar */
-    .sidebar {
-        width: 100%; /* Ocupa todo el ancho disponible */
-        padding: 10px;
-        font-size: 0.3rem; /* Compacto pero legible */
-        background-color: #f4f4f4;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        text-align: left;
-    }
-
-    .sidebar-item {
-        padding: 3px;
-        font-size: 0.3rem;
-        line-height: 1.4;
-    }
-
-    /* Dropdown */
-    .dropdown {
-        font-size: 0.3rem;
-        margin-bottom: 6px;
-    }
-
-    /* Botón de WhatsApp */
-    .whatsapp-button {
-        position: fixed;
-        bottom: 15px;
-        right: 20px;
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        background-color: #25d366;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-        cursor: pointer;
-        transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-    .whatsapp-button:hover {
-        background-color: #1da851;
-        transform: scale(1.1);
-    }
-
-    .whatsapp-button img {
-        width: 70%;
-        height: 70%;
-        object-fit: contain;
-    }
-
-    /* Modal */
-    #product-modal {
-        width: 85%;
-        max-width: 240px;
-        padding: 10px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    }
-
-    #modal-title {
-        font-size: 0.6rem;
-        margin-bottom: 6px;
-    }
-
-    #modal-price {
-        font-size: 0.5rem;
-        margin-bottom: 5px;
-    }
-
-    #add-to-cart-modal-button {
-        font-size: 0.3rem;
-        padding: 3px 5px;
-        border-radius: 4px;
-    }
-
-    .close-button {
-        font-size: 12px;
-        top: 6px;
-        right: 6px;
-    }
-
-    /* Mensaje de carrito */
+    /* Mensaje de Carrito */
     #add-to-cart-message {
         position: fixed;
         top: 10%;
@@ -1074,7 +1037,7 @@ h2 {
         color: white;
         font-size: 0.8rem;
         font-weight: bold;
-        padding: 8px 12px;
+        padding: 6px 10px;
         border-radius: 5px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         z-index: 1000;
