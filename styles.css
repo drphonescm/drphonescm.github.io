@@ -911,38 +911,38 @@ h2 {
     }
 
 
-    /* Sidebar (Filtros) */
-    .sidebar {
+     /* Sidebar (Filtros) */
+     .sidebar {
         width: 100%; /* Ocupa todo el ancho disponible */
-        max-width: 180px; /* Ancho máximo reducido */
+        max-width: 180px; /* Compacto para liberar espacio */
         padding: 4px; /* Espaciado interno compacto */
         background-color: #f4f4f4;
-        margin: 0 auto 8px; /* Centrado horizontal con margen inferior */
-        font-size: 0.55rem; /* Fuente aún más pequeña */
+        margin: 0 auto 8px; /* Centrado horizontal con un pequeño margen inferior */
+        font-size: 0.5rem; /* Fuente más pequeña */
         border-radius: 3px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
     .sidebar h3 {
-        font-size: 0.65rem; /* Título compacto */
+        font-size: 0.6rem; /* Título compacto */
         margin-bottom: 3px;
-        text-align: center; /* Centrado */
+        text-align: center; /* Alineado centrado */
     }
 
     .filter-group {
-        margin-bottom: 6px; /* Espaciado reducido entre grupos */
+        margin-bottom: 5px; /* Espaciado más reducido entre grupos */
     }
 
     .filter-group h4 {
-        font-size: 0.55rem; /* Encabezado aún más pequeño */
+        font-size: 0.5rem; /* Encabezado más pequeño */
         margin-bottom: 3px;
     }
 
     .filter-group label {
         display: flex;
         align-items: center;
-        font-size: 0.55rem; /* Texto reducido */
-        margin-bottom: 2px;
+        font-size: 0.5rem; /* Texto reducido */
+        margin-bottom: 3px;
     }
 
     .filter-group input[type="checkbox"] {
@@ -951,16 +951,16 @@ h2 {
     }
 
     #priceRange {
-        width: 95%; /* Más estrecho */
-        margin: 3px auto;
-        display: block; /* Centrado */
+        width: 100%; /* Ocupa el ancho del contenedor */
+        margin: 3px auto; /* Centrado */
     }
 
     #priceRangeValue {
-        font-size: 0.55rem; /* Texto reducido */
-        text-align: center; /* Centrado */
+        font-size: 0.5rem; /* Texto más pequeño */
+        text-align: center; /* Alineado centrado */
         margin-top: 2px;
     }
+
 
 
 
