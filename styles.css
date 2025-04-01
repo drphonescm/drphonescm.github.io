@@ -988,7 +988,7 @@ h2 {
 
     .item img {
         width: 100%;
-        height: 90%; /* Proporción ajustada */
+        height: 100%; /* Proporción ajustada */
         object-fit: cover;
         margin-bottom: 4px;
         border-radius: 3px;
