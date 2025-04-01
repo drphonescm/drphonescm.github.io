@@ -902,23 +902,25 @@ h2 {
 
     /* Sidebar - Filtros más pequeños */
     .sidebar {
-        width: 20%; /* Sidebar un poco más ancho */
-        padding: 4px; /* Espaciado interno ajustado */
-        font-size: 0.3rem; /* Texto más pequeño */
+        width: 20%; /* Sidebar más estrecho */
+        padding: 2px; /* Espaciado interno mínimo */
+        font-size: 0.3rem; /* Texto mucho más compacto */
         background-color: #f4f4f4; /* Fondo claro */
-        margin-bottom: 6px; /* Espaciado inferior */
-        border-radius: 4px;
+        margin-bottom: 4px; /* Espaciado inferior ajustado */
+        border-radius: 3px; /* Bordes más suaves */
     }
 
     .sidebar-item {
-        padding: 2px; /* Espaciado reducido */
-        font-size: 0.3rem; /* Texto mucho más reducido */
+        padding: 1px 3px; /* Espaciado reducido para cada ítem */
+        font-size: 0.3rem; /* Texto compacto para los filtros individuales */
+        line-height: 1.2; /* Espaciado ajustado */
+        text-align: left; /* Alineación izquierda para mejor legibilidad */
     }
 
     /* "Ordenar por" más pequeño */
     .dropdown {
-        font-size: 0.35rem; /* Texto más compacto */
-        margin-bottom: 6px; /* Espaciado inferior ajustado */
+        font-size: 0.25rem; /* Texto más compacto */
+        margin-bottom: 3px; /* Espaciado inferior ajustado */
     }
 
     /* Barra de búsqueda ajustada */
