@@ -860,12 +860,12 @@ h2 {
 
     .header-logo {
         width: 250px; /* Ajustado */
-        height: 250px;
+        height: auto;
     }
 
     .header-title img {
-        width: 800px;
-        height: 200px;
+        width: 220px;
+        height: auto;
     }
 
     /* Barra de búsqueda */
@@ -975,7 +975,7 @@ h2 {
 
     .item {
         height: 450px; /* Más pequeño */
-        width: 300px;
+        width: 90%;
         padding: 4px;
         display: flex;
         flex-direction: column;
@@ -988,7 +988,7 @@ h2 {
 
     .item img {
         width: 100%;
-        height: auto; /* Proporción ajustada */
+        height: 90%; /* Proporción ajustada */
         object-fit: cover;
         margin-bottom: 4px;
         border-radius: 3px;
