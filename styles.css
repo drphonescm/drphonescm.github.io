@@ -406,9 +406,9 @@ h3 {
 
 /* Ajuste para mostrar 3 filas de celulares */
 .container-items {
-    width: 80%; 
+    width: 100%; 
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    grid-template-columns: repeat(4, 1fr); /* 3 columnas */
     gap: 15px;
     padding: 15px;
     max-height: auto; 
@@ -421,13 +421,13 @@ h3 {
     position: relative; /* Permite ajustar capas */
     overflow: visible; /* Evita que los bordes de la imagen sobresalgan */
     border-radius: 8px; /* Bordes redondeados del contenedor */
-    padding: 5px; /* Espaciado interno */
-    background-color: #fff; /* Fondo neutro para destacar las imágenes PNG */
+    padding: 15px; /* Espaciado interno */
+    background-color: #ffffff; /* Fondo neutro para destacar las imágenes PNG */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
     transition: box-shadow 0.3s ease;
     margin: auto;
     height: auto; /* Define una altura fija para todos los contenedores */
-    width: 100%;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Distribuye contenido uniformemente dentro del contenedor */
@@ -643,11 +643,13 @@ h2 {
 /* Estilos de la barra lateral */
 .sidebar {
     width: 22%;
-    padding: 15px;
+    padding: 20px;
     margin-bottom: 20px;
     background-color: #f4f4f4;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: sticky;
+    font-size: 1rem;
+    border-radius: 8px;
 }
 /* Media Queries para diseño responsivo */
 
@@ -656,7 +658,7 @@ h2 {
     /* Header */
     header {
         width: 100%;
-        padding: 5px;
+        padding: 10px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -677,10 +679,12 @@ h2 {
   
 
     .search-bar-container {
-        width: 100%;
+        width: 80%;
         margin: 0 auto;
         display: flex;
         justify-content: center;
+        max-width: 300px;
+
     }
 
     .search-bar {
@@ -694,14 +698,14 @@ h2 {
 
     .search-bar input {
         flex: 1;
-        padding: 4px;
+        padding: 5px;
         font-size: 0.8rem;
         border: none;
         outline: none;
     }
 
     .search-bar button {
-        padding: 4px 8px;
+        padding: 5px 10px;
         font-size: 0.8rem;
         border-radius: 3px;
         background-color: #6A5ACD;
@@ -730,17 +734,26 @@ h2 {
         width: 100%;
         padding: 10px;
         box-sizing: border-box;
-        gap: 2%; /* Espaciado entre cada bloque */
+        gap: 15px; /* Espaciado entre cada bloque */
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .sidebar {
-        width: 30%; /* Barra de filtros ocupa el 30% del ancho */
-        padding: 10px;
+        width: 100%; /* Barra de filtros ocupa el 30% del ancho */
+        padding: 15px;
         background-color: #f4f4f4;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        font-size: 0.5rem; /* Texto compacto */
+        font-size: 0.6rem; /* Texto compacto */
         border-radius: 5px;
+        margin-bottom: 20px;
     }
+
+    .item {
+        padding: 10px;
+        font-size: 0.9rem; /* Texto más compacto */
+    }
+
+
 
     .product {
         width: 30%; /* Cada producto ocupa el 30% */
@@ -833,13 +846,20 @@ h2 {
 
 /* Vista para pantallas pequeñas (hasta 480px) */
 @media (max-width: 480px) {
-    .container-bottom {
-        flex-direction: column; /* Cambia a una columna */
+    .container-items {
+        grid-template-columns: 2fr; /* Una sola columna */
         gap: 10px;
     }
     
+    .item {
+        padding: 8px;
+        font-size: 0.8rem; /* Texto más pequeño */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+    }
+
+
     .sidebar-item {
-        padding: 5px 10px; /* Disminuye el relleno para reducir el tamaño visual */
+        padding: 4px 8px; /* Disminuye el relleno para reducir el tamaño visual */
         font-size: 0.8em;  /* Ajusta la fuente del ítem individualmente si es necesario */
       }
       
@@ -847,6 +867,8 @@ h2 {
     .sidebar,
     .product {
         width: 100%; /* Ocupa todo el ancho */
+        padding: 10px;
+        font-size: 0.75rem;
     }
 
     .product img {
@@ -854,13 +876,26 @@ h2 {
     }
 
     .search-bar {
-        width: 80%; /* Más estrecho */
+        width: 100%; /* Más estrecho */
         max-width: 250px;
+        padding: 5px;
     }
 
+    .search-bar input {
+        font-size: 0.75rem;
+        padding: 3px;
+    }
+
+    .search-bar button {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+    }
+
+
     #product-modal {
-        width: 100%;
-        padding: 8px;
+        width: 95%;
+        padding: 10px;
+        border-radius: 5px;
     }
 
     #modal-title {
