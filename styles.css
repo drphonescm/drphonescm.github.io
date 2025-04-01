@@ -864,8 +864,10 @@ h2 {
     .header-title {
         font-size: 1.8em;
         font-weight: bold;
+        text-align: center; /* Centra el título */
     }
 
+    /* Barra de búsqueda */
     .search-bar-container {
         width: 100%;
         max-width: 250px;
@@ -893,7 +895,7 @@ h2 {
     }
 
     .search-bar button {
-        padding: 3px 5px;
+        padding: 3px 6px;
         font-size: 0.35rem;
         border-radius: 3px;
         background-color: #6A5ACD;
@@ -986,17 +988,47 @@ h2 {
         background-color: #f4f4f4;
         margin-bottom: 6px;
         border-radius: 5px;
+        text-align: left; /* Ajustar texto del sidebar */
     }
 
     .sidebar-item {
         padding: 2px;
         font-size: 0.25rem;
+        line-height: 1.5; /* Mejorar espacio entre líneas */
     }
 
     /* Dropdown */
     .dropdown {
         font-size: 0.25rem;
         margin-bottom: 4px;
+    }
+
+    /* WhatsApp Button */
+    .whatsapp-button {
+        position: fixed;
+        bottom: 10px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #25d366;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .whatsapp-button:hover {
+        background-color: #1da851;
+        transform: scale(1.1);
+    }
+
+    .whatsapp-button img {
+        width: 70%;
+        height: 70%;
+        object-fit: contain;
     }
 
     /* Modal */
@@ -1028,6 +1060,23 @@ h2 {
         font-size: 10px;
         top: 4px;
         right: 4px;
+    }
+
+    #add-to-cart-message {
+        position: fixed;
+        top: 10%;
+        right: 10%;
+        background-color: #7B68EE;
+        color: white;
+        font-size: 0.8rem;
+        font-weight: bold;
+        padding: 6px 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        opacity: 1;
+        transform: translateY(-15px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
     }
 }
     
