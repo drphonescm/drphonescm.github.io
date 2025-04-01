@@ -64,7 +64,7 @@ header {
     align-items: center;
     width: 100%;
     padding: 10px 15px;
-    background-color: #f8f8f8;
+    background-color: #fff;
     border-bottom: 2px solid #333; /* Línea más delgada */
     margin-bottom: 2px; /* Espacio inferior reducido */
 }
@@ -716,11 +716,11 @@ h2 {
     }
 
     .logo {
-        width: 20px; /* Más pequeño */
+        width: 40px; /* Más pequeño */
     }
 
     .title-image {
-        width: 50px; /* Más compacto */
+        width: 60px; /* Más compacto */
     }
 
     /* Parte inferior: distribución 30% - 30% - 30% */
@@ -854,7 +854,7 @@ h2 {
     }
 
     .search-bar {
-        width: 80%; /* Más estrecho */
+        width: 50%; /* Más estrecho */
         max-width: 250px;
     }
 
@@ -887,7 +887,7 @@ h2 {
     }
 
     .item {
-        width: 100%;
+        width: 80%;
         padding: 5px;
         margin-bottom: 10px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
@@ -898,7 +898,7 @@ h2 {
         width: 100%;
         height: auto;
     }
-
+a
     /* Header */
     .logo {
         width: 15px; /* Muy compacto */
