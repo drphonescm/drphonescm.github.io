@@ -850,96 +850,100 @@ h2 {
 @media (max-width: 480px) {
     /* Contenedor de productos */
     .container-items {
-        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas para los ítems */
         gap: 8px; /* Espaciado reducido */
         padding: 5px;
     }
 
     .item {
-        width: 100%; /* Ocupa todo el ancho */
-        padding: 8px; /* Espaciado interno reducido */
-        font-size: 0.8rem; /* Texto más pequeño */
-        margin-bottom: 10px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-        border-radius: 5px; /* Bordes suaves */
+        width: 100%; /* Ajusta al tamaño de la columna */
+        padding: 5px; /* Espaciado interno reducido */
+        font-size: 0.7rem; /* Texto más pequeño */
+        margin-bottom: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+        border-radius: 4px; /* Bordes suaves */
     }
 
     .item img {
-        width: 100%; /* Imagen ocupa todo el ancho disponible */
+        width: 100%; /* Imagen ocupa el ancho completo */
         height: auto; /* Mantiene proporciones */
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
 
     /* Sidebar */
     .sidebar {
-        width: 100%; /* Ocupa todo el ancho */
-        padding: 10px; /* Espaciado interno */
-        font-size: 0.75rem; /* Texto compacto */
-        margin-bottom: 15px; /* Espacio inferior */
-        background-color: #f4f4f4;
-        border-radius: 5px;
+        width: 20%; /* Sidebar más compacto */
+        padding: 8px; /* Espaciado reducido */
+        font-size: 0.65rem; /* Texto más pequeño */
+        background-color: #f4f4f4; /* Fondo claro */
+        margin-bottom: 10px; /* Espaciado inferior */
+        border-radius: 4px;
     }
 
     .sidebar-item {
-        padding: 4px 8px; /* Espaciado reducido */
-        font-size: 0.8rem; /* Texto pequeño */
+        padding: 3px 6px; /* Espaciado interno reducido */
+        font-size: 0.65rem; /* Texto más pequeño para los ítems del sidebar */
     }
 
     /* Header */
     .logo {
-        width: 30px; /* Tamaño compacto */
+        width: 40px; /* Logo compacto */
+    }
+
+    .header-title {
+        width: 30px;
     }
 
     .search-bar-container {
         width: 100%; /* Ocupa todo el ancho */
-        padding: 5px;
         margin: 0 auto; /* Centrado */
+        padding: 5px;
     }
 
     .search-bar {
-        width: 100%; /* Ocupa todo el ancho */
-        max-width: 300px;
+        width: 100%; /* Barra más estrecha */
+        max-width: 250px;
         padding: 5px;
     }
 
     .search-bar input {
-        font-size: 0.75rem; /* Texto más pequeño */
-        padding: 5px;
+        font-size: 0.7rem; /* Texto más pequeño */
+        padding: 4px; /* Espaciado interno reducido */
     }
 
     .search-bar button {
-        font-size: 0.75rem; /* Texto más pequeño */
-        padding: 5px 10px;
+        font-size: 0.7rem; /* Texto más pequeño */
+        padding: 4px 8px;
     }
 
     /* Modal */
     #product-modal {
-        width: 90%; /* Ocupa casi todo el ancho */
-        max-width: 300px;
-        padding: 10px;
+        width: 90%; /* Modal ocupa casi todo el ancho */
+        max-width: 300px; /* Tamaño compacto */
+        padding: 8px; /* Espaciado reducido */
         border-radius: 5px; /* Bordes menos pronunciados */
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Sombra elegante */
     }
 
     #modal-title {
-        font-size: 1.2rem; /* Título un poco más pequeño */
-        margin-bottom: 8px;
+        font-size: 1.1rem; /* Título más pequeño */
+        margin-bottom: 6px;
     }
 
     #modal-price {
-        font-size: 1rem;
-        margin-bottom: 10px;
+        font-size: 0.9rem; /* Texto compacto */
+        margin-bottom: 8px;
     }
 
     #add-to-cart-modal-button {
-        font-size: 0.8rem; /* Texto más compacto */
-        padding: 6px 10px;
-        border-radius: 4px;
+        font-size: 0.7rem; /* Texto más compacto */
+        padding: 5px 8px;
+        border-radius: 3px; /* Bordes ajustados */
     }
 
     /* Botón de cerrar */
     .close-button {
-        font-size: 18px; /* Más pequeño */
+        font-size: 16px; /* Botón más pequeño */
         top: 8px;
         right: 10px;
     }
