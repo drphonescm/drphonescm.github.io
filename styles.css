@@ -873,7 +873,7 @@ h2 {
     }
 
     .item h3 {
-        font-size: 0.6rem; /* Texto más compacto pero legible */
+        font-size: 0.4rem; /* Texto más compacto pero legible */
         line-height: 1.2; /* Espaciado entre líneas ajustado */
         text-align: center; /* Centra el texto */
         white-space: nowrap; /* Evita saltos de línea */
@@ -883,7 +883,7 @@ h2 {
 
     /* Botón "Añadir al carrito" */
     .add-to-cart-button {
-        font-size: 0.55rem; /* Texto compacto */
+        font-size: 0.3rem; /* Texto compacto */
         padding: 4px 8px; /* Espaciado reducido pero funcional */
         width: 85%; /* Botón ocupa el 85% del ancho del ítem */
         background-color: #6A5ACD; /* Color principal */
