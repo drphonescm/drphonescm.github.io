@@ -859,12 +859,12 @@ h2 {
     }
 
     .header-logo {
-        width: 120px; /* Ajustado */
+        width: 160px; /* Ajustado */
         height: auto;
     }
 
     .header-title img {
-        width: 100px;
+        width: 140px;
         height: auto;
     }
 
@@ -948,7 +948,7 @@ h2 {
     }
 
     #priceRange {
-        width: 100%;
+        width: 70%;
         margin-top: 4px;
     }
 
