@@ -912,7 +912,7 @@ h2 {
 
     /* Sidebar (Filtros) */
     .sidebar {
-        width: 100%;
+        width: 80%;
         padding: 6px;
         background-color: #f4f4f4;
         margin-bottom: 10px;
@@ -922,23 +922,23 @@ h2 {
     }
 
     .sidebar h3 {
-        font-size: 0.8rem; /* Título compacto */
+        font-size: 0.6rem; /* Título compacto */
         margin-bottom: 4px;
     }
 
     .filter-group {
-        margin-bottom: 8px;
+        margin-bottom: 6px;
     }
 
     .filter-group h4 {
-        font-size: 0.7rem; /* Compacto */
+        font-size: 0.5rem; /* Compacto */
         margin-bottom: 4px;
     }
 
     .filter-group label {
         display: flex;
         align-items: center;
-        font-size: 0.7rem; /* Más reducido */
+        font-size: 0.5rem; /* Más reducido */
         margin-bottom: 3px;
     }
 
@@ -965,7 +965,7 @@ h2 {
     }
 
     .item {
-        height: 360px; /* Más pequeño */
+        height: 450px; /* Más pequeño */
         padding: 4px;
         display: flex;
         flex-direction: column;
@@ -978,14 +978,14 @@ h2 {
 
     .item img {
         width: 100%;
-        height: 60%; /* Proporción ajustada */
+        height: auto; /* Proporción ajustada */
         object-fit: cover;
         margin-bottom: 4px;
         border-radius: 3px;
     }
 
     .item h3 {
-        font-size: 0.7rem; /* Texto reducido */
+        font-size: 0.5rem; /* Texto reducido */
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
@@ -994,8 +994,8 @@ h2 {
 
     .add-to-cart-button {
         font-size: 0.6rem;
-        padding: 3px 4px; /* Más pequeño */
-        width: 85%; /* Proporcional al contenedor */
+        padding: 2px 3px; /* Más pequeño */
+        width: 95%; /* Proporcional al contenedor */
         background-color: #6A5ACD;
         color: #fff;
         border: none;
@@ -1012,8 +1012,8 @@ h2 {
 
     .remove-product-button {
         font-size: 0.6rem; /* Compacto */
-        padding: 2px 4px;
-        width: 85%;
+        padding: 1px 1px;
+        width: 40%;
         background-color: #FF5A5A;
         color: #fff;
         border: none;
