@@ -912,56 +912,56 @@ h2 {
 
 
     /* Sidebar (Filtros) */
-    /* Sidebar (Filtros) */
     .sidebar {
-        width: 90%; /* Ancho definido proporcional a la pantalla */
-        max-width: 200px; /* Máximo ajustado */
-        padding: 6px; /* Espaciado interno compacto */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        max-width: 200px; /* Ancho máximo reducido */
+        padding: 4px; /* Espaciado interno compacto */
         background-color: #f4f4f4;
-        margin: 0 auto 10px; /* Centrado horizontal y margen inferior */
-        font-size: 0.7rem; /* Fuente más pequeña */
-        border-radius: 4px;
+        margin: 0 auto 8px; /* Centrado horizontal con margen inferior */
+        font-size: 0.55rem; /* Fuente aún más pequeña */
+        border-radius: 3px;
         box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     }
 
     .sidebar h3 {
-        font-size: 0.8rem; /* Título compacto */
-        margin-bottom: 4px;
+        font-size: 0.65rem; /* Título compacto */
+        margin-bottom: 3px;
         text-align: center; /* Centrado */
     }
 
     .filter-group {
-        margin-bottom: 8px; /* Espaciado reducido entre grupos */
+        margin-bottom: 6px; /* Espaciado reducido entre grupos */
     }
 
     .filter-group h4 {
-        font-size: 0.6rem; /* Encabezado compacto */
-        margin-bottom: 4px;
+        font-size: 0.55rem; /* Encabezado aún más pequeño */
+        margin-bottom: 3px;
     }
 
     .filter-group label {
         display: flex;
         align-items: center;
-        font-size: 0.6rem; /* Texto compacto */
-        margin-bottom: 4px;
+        font-size: 0.55rem; /* Texto reducido */
+        margin-bottom: 2px;
     }
 
     .filter-group input[type="checkbox"] {
-        margin-right: 4px;
+        margin-right: 3px;
         accent-color: #6A5ACD;
     }
 
     #priceRange {
-        width: 60%; /* Ancho máximo para ocupar espacio disponible */
-        margin-top: 4px;
+        width: 95%; /* Más estrecho */
+        margin: 3px auto;
+        display: block; /* Centrado */
     }
 
     #priceRangeValue {
-        font-size: 0.6rem; /* Texto reducido */
-        display: block;
+        font-size: 0.55rem; /* Texto reducido */
         text-align: center; /* Centrado */
-        margin-top: 3px;
+        margin-top: 2px;
     }
+
 
 
 
