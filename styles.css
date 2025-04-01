@@ -869,22 +869,22 @@ h2 {
         width: 100%; /* Imagen ocupa todo el ancho */
         height: 70%; /* Altura dinámica en relación con el ítem */
         object-fit: cover; /* Ajusta imagen dentro del contenedor */
-        margin-bottom: 4px; /* Espaciado debajo de la imagen */
+        margin-bottom: 6px; /* Espaciado debajo de la imagen */
     }
 
     .item h3 {
-        font-size: 0.35rem; /* Texto más pequeño y compacto */
-        line-height: 1.1; /* Espaciado entre líneas ajustado */
+        font-size: 0.2rem; /* Texto más pequeño */
+        line-height: 1; /* Espaciado compacto */
         text-align: center; /* Centra el texto */
         white-space: nowrap; /* Evita saltos de línea */
-        overflow: hidden; /* Oculta el texto excedente */
-        text-overflow: ellipsis; /* Muestra "..." si el texto es demasiado largo */
+        overflow: hidden; /* Oculta texto excedente */
+        text-overflow: ellipsis; /* Muestra "..." si el texto es largo */
     }
 
     /* Botón "Añadir al carrito" */
     .add-to-cart-button {
-        font-size: 0.35rem; /* Texto más compacto */
-        padding: 2px 5px; /* Espaciado muy reducido */
+        font-size: 0.25rem; /* Texto más compacto */
+        padding: 2px 4px; /* Espaciado muy reducido */
         width: 80%; /* Botón ocupa el 80% del ancho del ítem */
         background-color: #6A5ACD; /* Color principal */
         color: #fff; /* Texto blanco */
