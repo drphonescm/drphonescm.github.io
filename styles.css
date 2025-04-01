@@ -1176,9 +1176,9 @@ h2 {
 .add-to-cart-button {
     background: linear-gradient(90deg, #8A2BE2, #BA55D3); /* Degradado en tonos lilas */
     color: white; /* Texto blanco */
-    font-size: 0.7rem; /* Tamaño del texto */
+    font-size: 0.6rem; /* Tamaño del texto */
     font-weight: bold; /* Negrita */
-    padding: 12px 20px; /* Espaciado interno */
+    padding: 10px 30px; /* Espaciado interno */
     border: none; /* Sin bordes visibles */
     border-radius: 10px; /* Bordes completamente redondeados */
     cursor: pointer; /* Indicador de clic */
