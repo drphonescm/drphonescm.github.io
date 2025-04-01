@@ -913,7 +913,7 @@ h2 {
 
      /* Sidebar (Filtros) */
      .sidebar {
-        width: 100%; /* Ocupa todo el ancho disponible */
+        width: 60%; /* Ocupa todo el ancho disponible */
         max-width: 180px; /* Compacto para liberar espacio */
         padding: 4px; /* Espaciado interno compacto */
         background-color: #f4f4f4;
