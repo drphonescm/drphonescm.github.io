@@ -975,7 +975,7 @@ h2 {
 
     .item {
         height: 450px; /* Más pequeño */
-        width: 90%;
+        width: 100%;
         padding: 4px;
         display: flex;
         flex-direction: column;
