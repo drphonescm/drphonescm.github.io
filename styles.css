@@ -640,52 +640,62 @@ h2 {
     color: #333; 
 }
 
-/* Ocultar el checkbox (controlador del toggle) */
+/* Ocultar el checkbox */
 .toggle-checkbox {
     display: none;
 }
 
-/* Botón del toggle estilizado */
+/* Botón del toggle */
 .toggle-label {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #B399D4; /* Lila claro similar al del ícono */
-    padding: 1px;
+    background-color: #6A5ACD; /* Color lila */
+    padding: 10px;
     cursor: pointer;
-    border-radius: 70%;
-    width: 37px;
-    height: 37px; /* Botón circular */
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
+    border-radius: 50%; /* Botón circular */
+    width: 50px;
+    height: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .toggle-label:hover {
-    background-color: #b399d4be; /* Un lila más oscuro al pasar el ratón */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Incrementar la sombra */
+    background-color: #5A4CBC;
+    transform: scale(1.05);
 }
 
-/* Imagen del ícono */
 .toggle-label img {
     width: 24px;
     height: 24px;
 }
 
-/* Ocultar la barra lateral por defecto */
+/* Barra lateral oculta por defecto */
 .sidebar {
-    display: none;
-    transition: all 0.3s ease;
-    background-color: #F9F9F9; /* Fondo neutro */
+    display: none; /* Oculta la barra inicialmente */
+    background-color: #F4F4F4;
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-/* Mostrar la barra lateral al marcar el checkbox */
+/* Mostrar barra lateral al marcar el checkbox */
 .toggle-checkbox:checked + .toggle-label + .sidebar {
-    display: block; /* Mostrar filtros */
+    display: block; /* Barra visible */
+    animation: fadeIn 0.3s ease; /* Animación suave */
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 
 
@@ -980,78 +990,87 @@ h2 {
         display: none;
     }
 
-    /* Botón para mostrar filtros */
+    /* Mostrar el botón de filtros */
     .toggle-label {
-        display: none;
-        background-color: #9e92eb;
-        color: white;
-        padding: 8px 12px;
+        display: flex; /* El botón es visible */
+        align-items: center;
+        justify-content: center;
+        background-color: #6A5ACD; /* Color lila */
+        padding: 10px;
         cursor: pointer;
-        border-radius: 4px;
-        text-align: center;
-        font-size: 0.9rem;
-        margin-bottom: 10px;
-        transition: background-color 0.3s ease;
+        border-radius: 50%;
+        width: 40px; /* Tamaño compacto para pantallas pequeñas */
+        height: 40px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
     }
+
 
     .toggle-label:hover {
-        background-color: #9e92eb;
+        background-color: #5A4CBC;
+        transform: scale(1.05); /* Efecto de hover */
     }
 
-    /* Ocultar los filtros por defecto */
+    .toggle-label img {
+        width: 20px;
+        height: 20px; /* Ajustar el tamaño del ícono para pantallas pequeñas */
+    }
+
+
+    /* Ocultar la barra lateral por defecto */
     .sidebar {
-        display: block; /* Siempre visible */
-        max-height: none; /* Sin restricciones de altura */
+        display: none; /* Inicialmente oculta */
         transition: max-height 0.3s ease;
-        background-color: #f4f4f4;
+        background-color: #F4F4F4;
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* Mostrar los filtros cuando el checkbox está marcado */
+
+    /* Mostrar los filtros al activar el toggle */
     .toggle-checkbox:checked + .toggle-label + .sidebar {
-        display: none; /* Muestra los filtros */
+        display: block; /* Se despliega al hacer clic */
+        max-height: 100%; /* Ajusta la altura del contenido */
+        overflow-y: auto; /* Permitir scroll si el contenido crece */
     }
+
 
 
     .sidebar h3 {
-        font-size: 0.8rem; /* Título reducido */
-        margin-bottom: 3px;
-        text-align: center;
+        font-size: 0.8rem; /* Texto reducido para pantallas pequeñas */
+        margin-bottom: 5px;
     }
 
     .filter-group {
-        margin-bottom: 10px; /* Espaciado reducido */
+        margin-bottom: 10px;
     }
 
     .filter-group h4 {
-        font-size: 0.7rem;
-        margin-bottom: 3px;
+        font-size: 0.7rem; /* Tamaño de título ajustado */
     }
 
     .filter-group label {
         display: flex;
         align-items: center;
-        font-size: 0.5rem;
-        margin-bottom: 3px;
+        font-size: 0.6rem;
+        margin-bottom: 5px;
     }
 
     .filter-group input[type="checkbox"] {
-        margin-right: 3px;
-        accent-color: #6A5ACD;
+        margin-right: 5px; /* Espacio entre checkbox y texto */
     }
 
     #priceRange {
-        width: 95%; /* Ancho total del contenedor */
-        margin: 3px auto;
+        width: 95%; /* Ancho completo del contenedor */
+        margin: 0 auto;
     }
 
     #priceRangeValue {
-        font-size: 0.3rem;
+        font-size: 0.6rem;
         text-align: center;
-        margin-top: 2px;
+        margin-top: 5px;
     }
+
 
     /* Contenedor de productos */
     .container-items {
