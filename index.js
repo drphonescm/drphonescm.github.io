@@ -38,6 +38,32 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    document.addEventListener('DOMContentLoaded', () => {
+        // Seleccionar la barra lateral
+        const sidebar = document.querySelector('.sidebar');
+        
+        // Configurar el estado inicial para que esté oculta
+        sidebar.style.display = 'none';
+    
+        console.log("Barra lateral oculta al cargar la página");
+    });
+    
+    // Vincular el toggle para controlar la visibilidad de la barra lateral
+    const toggleFilters = () => {
+        const checkbox = document.querySelector('.toggle-checkbox');
+        const sidebar = document.querySelector('.sidebar');
+        
+        // Detectar el estado del checkbox
+        if (checkbox.checked) {
+            sidebar.style.display = 'block'; // Mostrar barra lateral
+        } else {
+            sidebar.style.display = 'none'; // Ocultar barra lateral
+        }
+    };
+    
+    // Escuchar cambios en el checkbox
+    document.querySelector('.toggle-checkbox').addEventListener('change', toggleFilters);
+
     
 
     const actualizarPreciosEnTiempoReal = async () => {

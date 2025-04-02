@@ -645,24 +645,19 @@ h2 {
     display: none;
 }
 
-/* Botón del toggle */
+/* Botón del toggle (siempre visible en pantallas pequeñas y medianas) */
 .toggle-label {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #6A5ACD; /* Color lila */
     padding: 10px;
-    cursor: pointer;
-    border-radius: 50%; /* Botón circular */
+    border-radius: 50%;
     width: 50px;
     height: 50px;
+    cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-.toggle-label:hover {
-    background-color: #5A4CBC;
-    transform: scale(1.05);
 }
 
 .toggle-label img {
@@ -670,9 +665,14 @@ h2 {
     height: 24px;
 }
 
-/* Barra lateral oculta por defecto */
+.toggle-label:hover {
+    background-color: #5A4CBC;
+    transform: scale(1.05);
+}
+
+/* Barra lateral inicialmente oculta */
 .sidebar {
-    display: none; /* Oculta la barra inicialmente */
+    display: none; /* Oculta en la primera carga */
     background-color: #F4F4F4;
     padding: 10px;
     border-radius: 5px;
@@ -680,12 +680,13 @@ h2 {
     transition: all 0.3s ease;
 }
 
-/* Mostrar barra lateral al marcar el checkbox */
+/* Mostrar barra lateral al activar el toggle */
 .toggle-checkbox:checked + .toggle-label + .sidebar {
-    display: block; /* Barra visible */
-    animation: fadeIn 0.3s ease; /* Animación suave */
+    display: block;
 }
 
+
+/* Animación para apertura suave */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -696,6 +697,8 @@ h2 {
         transform: translateY(0);
     }
 }
+
+
 
 
 
