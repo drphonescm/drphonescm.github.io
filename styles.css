@@ -646,7 +646,7 @@ h2 {
 
 /* Estilo del botón de 3 líneas */
 .toggle-label {
-    display: none; /* Por defecto, el botón está oculto en pantallas grandes */
+    display: inline-block; /* Por defecto, el botón está oculto en pantallas grandes */
     align-items: center;
     background-color: #6A5ACD;
     color: white;
@@ -658,6 +658,8 @@ h2 {
     transition: background-color 0.3s ease;
     margin-bottom: 10px;
     justify-content: center;
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
 .toggle-label:hover {
@@ -974,7 +976,7 @@ h2 {
     /* Botón para mostrar filtros */
     .toggle-label {
         display: inline-block;
-        background-color: #6A5ACD;
+        background-color: #9e92eb;
         color: white;
         padding: 8px 12px;
         cursor: pointer;
@@ -986,7 +988,7 @@ h2 {
     }
 
     .toggle-label:hover {
-        background-color: #5a4ac0;
+        background-color: #9e92eb;
     }
 
     /* Ocultar los filtros por defecto */
