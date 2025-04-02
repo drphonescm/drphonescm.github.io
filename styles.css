@@ -640,46 +640,53 @@ h2 {
     color: #333; 
 }
 
+/* Ocultar el checkbox (controlador del toggle) */
 .toggle-checkbox {
-    display: none; /* Ocultar el checkbox */
+    display: none;
 }
 
-/* Estilo del botón de 3 líneas */
+/* Botón del toggle estilizado */
 .toggle-label {
-    display: inline-block; /* Por defecto, el botón está oculto en pantallas grandes */
+    display: flex;
     align-items: center;
-    background-color: #6A5ACD;
-    color: white;
-    padding: 8px 12px;
-    cursor: pointer;
-    border-radius: 4px;
-    text-align: center;
-    font-size: 0.9rem;
-    transition: background-color 0.3s ease;
-    margin-bottom: 10px;
     justify-content: center;
-    vertical-align: middle;
-    margin-right: 8px;
+    background-color: #B399D4; /* Lila claro similar al del ícono */
+    padding: 1px;
+    cursor: pointer;
+    border-radius: 70%;
+    width: 37px;
+    height: 37px; /* Botón circular */
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para dar profundidad */
 }
 
 .toggle-label:hover {
-    background-color: #5a4ac0; /* Cambiar color al pasar el ratón */
+    background-color: #b399d4be; /* Un lila más oscuro al pasar el ratón */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Incrementar la sombra */
 }
 
-/* Filtros inicialmente ocultos */
+/* Imagen del ícono */
+.toggle-label img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Ocultar la barra lateral por defecto */
 .sidebar {
-    display: none; /* Ocultos por defecto */
-    transition: max-height 0.3s ease;
-    background-color: #f4f4f4;
+    display: none;
+    transition: all 0.3s ease;
+    background-color: #F9F9F9; /* Fondo neutro */
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Mostrar filtros cuando el checkbox está marcado */
+/* Mostrar la barra lateral al marcar el checkbox */
 .toggle-checkbox:checked + .toggle-label + .sidebar {
-    display: block; /* Mostrar los filtros */
+    display: block; /* Mostrar filtros */
 }
+
+
 
 
 /* Media Queries para diseño responsivo */
@@ -975,7 +982,7 @@ h2 {
 
     /* Botón para mostrar filtros */
     .toggle-label {
-        display: inline-block;
+        display: none;
         background-color: #9e92eb;
         color: white;
         padding: 8px 12px;
