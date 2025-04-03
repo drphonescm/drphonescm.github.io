@@ -959,7 +959,7 @@ h4 {
     /* Header */
     header {
         width: 100%;
-        padding: 20px; /* Compacto */
+        padding: 10px; /* Compacto */
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -1107,7 +1107,7 @@ h4 {
         grid-template-columns: repeat(2, 1fr); /* Dos columnas flexibles */
         column-gap: 10px; /* Espacio horizontal entre columnas */
         row-gap: 10px; /* Espacio vertical entre filas */
-        width: 200px; /* Ocupa todo el ancho del viewport */
+        width: 100px; /* Ocupa todo el ancho del viewport */
         margin: 0 auto; /* Centrado */
         padding: 10px; /* Espaciado interno */
         box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
