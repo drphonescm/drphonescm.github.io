@@ -135,7 +135,7 @@ h1 {
 .container {
     display: flex;
     justify-content: center; /* Centra el contenido principal */
-    margin-bottom: 10px; /* Espacio extra para acomodar la paginación */
+    margin-bottom: 0; /* Espacio extra para acomodar la paginación */
 
 }
 
@@ -299,7 +299,7 @@ h1 {
 /* Estilos del contenido principal */
 .main-content {
     width: 75%;
-    padding: 20px;
+    padding: 10px;
     margin-bottom: 60px;
 }
 
@@ -409,6 +409,8 @@ h3 {
 
 /* Ajuste para mostrar 3 filas de celulares */
 .container-items {
+    margin: 0; /* Elimina márgenes externos */
+    padding: 0; /* Elimina espacios internos */
     width: 100%; 
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 3 columnas */
@@ -417,20 +419,20 @@ h3 {
     max-height: auto; 
     overflow-y: visible;
     justify-items: center;
-    margin-bottom: 5px;  
+    margin-bottom: 5px; 
+    box-sizing: border-box; 
 }
 
 .item {
     position: relative; /* Permite ajustar capas */
     overflow: visible; /* Evita que los bordes de la imagen sobresalgan */
     border-radius: 8px; /* Bordes redondeados del contenedor */
-    padding: 15px; /* Espaciado interno */
+    padding: 10px; /* Espaciado interno */
     background-color: #ffffff; /* Fondo neutro para destacar las imágenes PNG */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
     transition: box-shadow 0.3s ease;
-    margin: auto;
-    height: 480px; /* Define una altura fija para todos los contenedores */
-    width: 210px;
+    margin: 0;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Distribuye contenido uniformemente dentro del contenedor */
@@ -674,6 +676,10 @@ h4 {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
     z-index: 1100; /* Asegura estar sobre otros elementos */
+    margin: 0; /* Elimina cualquier margen sobrante */
+    padding: 0; /* Elimina padding interno no deseado */
+
+
 }
 
 .toggle-label:hover {
@@ -738,223 +744,6 @@ h4 {
 }
 
 
-/* Media Queries para diseño responsivo */
-
-/* Vista para pantallas medianas (hasta 768px) */
-@media (max-width: 768px) {
-    /* Header */
-    header {
-        width: 100%;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #ffffff; /* Fondo blanco para el header */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-    }
-
-        /* Incrementar el tamaño del logo y del título en el header */
-    .header-logo {
-        width: 150px; /* Aumenta el tamaño del logo */
-        height: auto; /* Mantén la proporción */
-    }
-    
-    .header-title {
-        font-size: 1.8em; /* Aumenta el tamaño de la fuente del título */
-        font-weight: bold; /* Resalta más el título */
-    }
-  
-
-    .search-bar-container {
-        width: 80%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        max-width: 300px;
-
-    }
-
-    .search-bar {
-        display: flex;
-        width: 60%; /* Reduce el largo de la barra de búsqueda */
-        max-width: 300px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-        border-radius: 5px;
-        overflow: hidden; /* Quita bordes sobrantes */
-    }
-
-    .search-bar input {
-        flex: 1;
-        padding: 5px;
-        font-size: 0.8rem;
-        border: none;
-        outline: none;
-    }
-
-    .search-bar button {
-        padding: 5px px;
-        font-size: 0.8rem;
-        border-radius: 3px;
-        background-color: #6A5ACD;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .search-bar button:hover {
-        background-color: #5638d3; /* Cambio en hover */
-    }
-
-    .logo {
-        width: 20px; /* Más pequeño */
-    }
-
-    .title-image {
-        width: 50px; /* Más compacto */
-    }
-
-    /* Parte inferior: distribución 30% - 30% - 30% */
-    .container-bottom {
-        display: flex;
-        justify-content: space-between; /* Espaciado entre columnas */
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-        gap: 15px; /* Espaciado entre cada bloque */
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    
-    .toggle-label {
-        display: flex; /* Asegura que sea visible */
-        align-items: center;
-        justify-content: center;
-        background-color: #6A5ACD;
-        color: white;
-        padding: 8px 12px;
-        cursor: pointer;
-        border-radius: 4px;
-        text-align: center;
-        font-size: 0.9rem;
-        margin-bottom: 10px;
-    }
-
-    .toggle-label:hover {
-        background-color: #5a4ac0; /* Efecto hover */
-    }
-
-    /* Sidebar oculta por defecto */
-    .sidebar {
-        display: none;
-        width: 250px;
-
-    }
-
-    /* Mostrar el menú al marcar el checkbox */
-    .toggle-checkbox:checked + .toggle-label + .sidebar {
-        display: block;
-    }
-
-
-
-    .item {
-        padding: 10px;
-        font-size: 0.9rem; /* Texto más compacto */
-    }
-
-
-
-    .product {
-        width: 30%; /* Cada producto ocupa el 30% */
-        padding: 8px;
-        background-color: #ffffff;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        text-align: center;
-    }
-
-    .product img {
-        width: 100%;
-        height: auto; /* Mantiene proporciones */
-        margin-bottom: 8px;
-        border-radius: 5px;
-    }
-
-    .product h2 {
-        font-size: 0.9rem;
-        margin-bottom: 5px;
-    }
-
-    .product .price {
-        font-size: 1rem;
-        color: #6A5ACD;
-        font-weight: bold;
-        margin-bottom: 8px;
-    }
-
-    button {
-        padding: 6px;
-        font-size: 0.8rem;
-        width: 100%;
-        margin: 4px 0;
-        border-radius: 3px;
-        border: none;
-        background-color: #007BFF;
-        color: white;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
-
-    button:hover {
-        background-color: #0056b3;
-    }
-
-    /* Modal */
-    #product-modal {
-        width: 90%;
-        max-width: 300px; /* Reduce el tamaño del modal */
-        padding: 10px;
-        border-radius: 8px;
-        background: #ffffff;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
-    }
-
-    #modal-img {
-        width: 60%;
-        max-width: 180px;
-        margin: 0 auto 10px;
-        border-radius: 8px;
-    }
-
-    #modal-title {
-        font-size: 1.3rem;
-        margin-bottom: 8px;
-    }
-
-    #modal-price {
-        font-size: 1rem;
-        margin-bottom: 10px;
-    }
-
-    #add-to-cart-modal-button {
-        font-size: 0.8rem;
-        padding: 6px 10px;
-        border-radius: 4px;
-        background: #6A5ACD;
-        color: white;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    #add-to-cart-modal-button:hover {
-        background: #5638d3;
-    }
-}
-
-
 
 
 @media (max-width: 480px) {
@@ -973,55 +762,80 @@ h4 {
     /* Header */
     header {
         width: 100%;
-        padding: 10px;
+        padding: 8px; /* Espaciado interno ajustado */
         display: flex;
-        justify-content: space-between;
-        align-items: center;
+        justify-content: space-between; /* Distribución horizontal de los elementos */
+        align-items: center; /* Alineación vertical */
         background-color: #ffffff;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        position: relative;
     }
 
-    .header-logo {
-        width: 200px;
-        height: auto;
+    /* Logo y título más compactos */
+    .derecha-hover {
+        display: flex;
+        align-items: center;
+        gap: 5px; /* Menor espacio entre elementos */
+        transition: transform 0.3s ease; /* Suave para hover */
     }
 
-    .header-title img {
-        width: 200px;
+    .derecha-hover .derecha {
+        display: flex;
+        align-items: center;
+        gap: 5px; /* Espacio entre imágenes */
+    }
+
+    .derecha-hover .logo{
+        width: 25px; /* Valor ajustado para ambos elementos */
         height: auto;
+        border-radius: 0; /* Bordes redondeados uniformes */
+        transition: transform 0.3s ease; /* Transición suave */
+
+
+    }
+    .derecha-hover .title-image {
+        width: 50px; /* Valor ajustado para ambos elementos */
+        height: auto;
+        border-radius: 0; /* Bordes redondeados uniformes */
+        transition: transform 0.3s ease; /* Transición suave */
+    }
+
+    .derecha-hover:hover .logo,
+    .derecha-hover:hover .title-image {
+        transform: scale(1.05); /* Hover solo aplicado aquí */
     }
 
     /* Barra de búsqueda */
     .search-bar-container {
         width: 100%;
-        max-width: 180px;
-        margin: 0 auto;
+        max-width: 200px; /* Más compacto */
+        margin: 5px auto; /* Reducción del margen */
         display: flex;
         justify-content: center;
-        padding: 4px;
+        padding: 3px; /* Menor espaciado interno */
     }
 
     .search-bar {
         display: flex;
         width: 100%;
-        max-width: 160px;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        border-radius: 4px;
+        max-width: 200px; /* Más reducido */
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        border-radius: 4px; /* Menos redondeo */
         overflow: hidden;
     }
 
     .search-bar input {
         flex: 1;
-        padding: 2px;
-        font-size: 0.5rem;
+        padding: 4px; /* Más compacto */
+        font-size: 0.4rem; /* Fuente reducida */
         border: none;
         outline: none;
     }
 
     .search-bar button {
-        padding: 3px 5px;
-        font-size: 0.5rem;
-        border-radius: 3px;
+        padding: 4px 6px; /* Proporciones más pequeñas */
+        font-size: 0.6rem; /* Fuente aún más compacta */
+        border-radius: 4px; /* Menos redondeo */
         background-color: #6A5ACD;
         color: #fff;
         border: none;
@@ -1030,22 +844,24 @@ h4 {
     }
 
     .search-bar button:hover {
-        background-color: #5638d3;
+        background-color: #5638d3; /* Hover más sutil */
     }
 
     /* Botón de filtros */
     .toggle-label {
         display: flex;
+        top: 60px; /* Ajusta la distancia desde arriba */
+        left: 15px; /* Pega al borde izquierdo */
         align-items: center;
         justify-content: center;
         background-color: #6A5ACD;
         padding: 10px;
         cursor: pointer;
         border-radius: 50%;
-        width: 30px;
-        height: 30px;
+        width: 40px; /* Proporción más adecuada */
+        height: 40px;
         transition: background-color 0.3s ease, transform 0.3s ease;
-        z-index: 2000; /* Asegura que esté visible y no afecte el contenido */
+        z-index: 2000;
     }
 
     .toggle-label:hover {
@@ -1054,120 +870,119 @@ h4 {
     }
 
     .toggle-label img {
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
     }
 
     /* Filtros */
     .sidebar {
-        display: none; /* Oculto por defecto */
-        position: fixed; /* Fuera del flujo normal */
+        display: none;
+        position: fixed;
         top: 0;
-        left: -200px; /* Coloca el sidebar completamente fuera del viewport */
-        width: 200px;
+        left: -250px; /* Mejor ajuste fuera del viewport */
+        width: 250px;
         max-height: 100%;
         background-color: #F4F4F4;
         padding: 10px;
-        border-radius: 5px;
+        border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow-y: auto;
-        transition: left 0.3s ease; /* Entrada suave */
-        z-index: 2000; /* Evitar conflictos con el contenido principal */
+        transition: left 0.3s ease;
+        z-index: 2000;
     }
 
     .toggle-checkbox:checked + .toggle-label + .sidebar {
         display: block;
-        left: 0; /* Sidebar entra al viewport al activarse */
+        left: 0;
     }
 
     .sidebar h3 {
-        font-size: 0.8rem;
-        margin-bottom: 5px;
-    }
-
-    .filter-group {
+        font-size: 1rem;
         margin-bottom: 10px;
     }
 
+    .filter-group {
+        margin-bottom: 20px;
+    }
+
     .filter-group h4 {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     .filter-group label {
         display: flex;
         align-items: center;
-        font-size: 0.6rem;
-        margin-bottom: 5px;
+        font-size: 0.8rem;
+        margin-bottom: 10px;
     }
 
     .filter-group input[type="checkbox"] {
-        margin-right: 5px;
+        margin-right: 8px;
     }
 
     #priceRange {
-        width: 95%;
+        width: 90%;
         margin: 0 auto;
     }
 
     #priceRangeValue {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         text-align: center;
-        margin-top: 5px;
+        margin-top: 10px;
     }
 
     /* Contenedor de productos */
     .container-items {
+        margin: 0 auto;
+        padding: 10px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 10px;
+        column-gap: 12px;
         row-gap: 15px;
-        width: 100%; /* Usar todo el ancho disponible */
-        padding: 10px;
+        width: 100%;
         box-sizing: border-box;
-        margin: 0 auto; /* Centrar el contenedor */
     }
 
     .item {
         background-color: #ffffff;
-        border-radius: 5px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 10px;
+        padding: 12px;
         text-align: center;
         height: auto;
-        margin: 0; /* Evitar desplazamiento adicional */
     }
 
     .item img {
         width: 100%;
-        max-width: 100px;
+        max-width: 160px; /* Mejora visual para móviles */
         height: auto;
-        border-radius: 4px;
-        margin-bottom: 8px;
+        border-radius: 8px;
+        margin-bottom: 10px;
     }
 
     .item h3 {
-        font-size: 0.85rem;
+        font-size: 1.2rem; /* Tamaño mejorado */
         font-weight: bold;
-        margin-bottom: 6px;
+        margin-bottom: 10px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
     }
 
     .add-to-cart-button {
-        font-size: 0.75rem;
-        padding: 8px 12px;
-        border-radius: 4px;
+        font-size: 1rem;
+        padding: 10px 15px;
+        border-radius: 8px;
         background-color: #6A5ACD;
         color: #fff;
         border: none;
         cursor: pointer;
         width: 100%;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
         transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
@@ -1175,7 +990,67 @@ h4 {
         background-color: #5A4CBC;
         transform: scale(1.05);
     }
+
+    /* Ajustes para el contenido principal */
+    .main-content {
+        width: 100%;
+        padding: 0 1px;
+        margin-bottom: 0;
+    }
+
+    .dropdown {
+        margin-left: 70px;
+        padding: 10px;
+    }
+
+    /* Botón de WhatsApp */
+    .whatsapp-button {
+        position: fixed; /* Fijo para estar siempre visible */
+        bottom: 20px; /* Separación desde la parte inferior */
+        right: 20px; /* Separación desde el lado derecho */
+        width: 45px; /* Tamaño reducido */
+        height: 45px; /* Tamaño reducido */
+        background-color: #25D366; /* Color verde de WhatsApp */
+        border-radius: 50%; /* Forma circular */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efectos suaves */
+    }
+
+    .whatsapp-button img {
+        width: 30px; /* Tamaño compacto del ícono */
+        height: 30px;
+    }
+
+    .whatsapp-button:hover {
+        transform: scale(1.1); /* Efecto de hover */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    }
 }
+
+
+
+/* Tablets: 3 columnas */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container-items {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    }
+}
+
+
+/* Laptops pequeños y PCs estándar (1025px en adelante): 4 columnas */
+@media (min-width: 1025px) {
+    .container-items {
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+    }
+}
+
+
+
+
 
     
 
