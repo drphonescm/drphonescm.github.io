@@ -8,11 +8,14 @@
 }
 
 body {
+    font-family: Arial, sans-serif; /* Tipografía limpia y moderna */
+    background-color: #F8F9FA; /* Fondo suave para mejor contraste */
+    color: #333; /* Color de texto principal */
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     box-sizing: border-box;
 }
+
 
 img {
     max-width: 100%;
@@ -470,7 +473,22 @@ h3 {
     gap: 0.5rem;
     flex-grow: 1;
     justify-content: space-between;
+
+    /* Ajuste para igualar el ancho con figure */
+    width: 100%; /* Ocupar el ancho completo del contenedor */
+    max-width: 300px; /* Coincide con el ancho máximo de figure */
+    box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho */
+    margin: 0 auto; /* Centra el contenido horizontalmente si es necesario */
 }
+
+figure {
+    width: 100%; /* Asegura que también ocupe el ancho completo del contenedor */
+    max-width: 300px; /* Ancho máximo para coincidir con info-product */
+    box-sizing: border-box; /* Consistencia en el cálculo del ancho */
+    margin: 0 auto; /* Centra el contenido si es necesario */
+}
+
+
 
 .price {
     font-size: 1.2rem;
@@ -564,30 +582,46 @@ h3 {
 
 
 
-/* Estilos para el control deslizante */
-
-.filter-group {
-    height: auto; /* Ajuste dinámico */
-    overflow: visible; /* Permite que el contenido crezca */
-    margin-bottom: 15px; /* Separación inferior */
-}
-
-.filter-group h4 {
-    font-size: 1.3rem;
-    color: #6A5ACD;
+/* ===== Títulos ===== */
+h2, h4 {
+    font-weight: bold;
     margin-bottom: 10px;
 }
+
+h2 {
+    font-size: 1.2rem;
+    color: #000000; /* Color lila elegante */
+}
+
+h4 {
+    font-size: 1rem;
+    color: #5638D3; /* Tono más oscuro */
+}
+
+/* ===== Controles de Filtros ===== */
+.filter-group {
+    height: auto;
+    overflow: visible;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #FFFFFF; /* Fondo blanco para resaltar */
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Espaciado adicional entre grupos */
+
+}
+
 
 .filter-group label {
     display: flex;
     align-items: center;
     font-size: 0.9rem;
-    color: #333;
     margin-bottom: 10px;
+    color: #444;
 }
 
 .filter-group input[type="checkbox"] {
-    margin-right: 10px;
+    margin-right: 8px;
     accent-color: #9932CC;
 }
 
@@ -596,95 +630,98 @@ h3 {
     -webkit-appearance: none;
     appearance: none;
     height: 8px;
-    background: #ddd;
+    background: #E4E4E4; /* Color de la pista */
     border-radius: 5px;
     outline: none;
     transition: background 0.3s ease-in-out;
 }
 
-.filter-group input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #A7A6D9;
-    border-radius: 100%;
-    cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.filter-group input[type="range"]::-webkit-slider-thumb:hover {
-    background-color: #8684B1;
-    transform: scale(1.1);
-}
-
+.filter-group input[type="range"]::-webkit-slider-thumb,
 .filter-group input[type="range"]::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background: #A7A6D9;
-    border-radius: 100%;
+    background: #6A5ACD;
+    border-radius: 50%;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.filter-group input[type="range"]::-webkit-slider-thumb:hover,
 .filter-group input[type="range"]::-moz-range-thumb:hover {
-    background-color: #8684B1;
-    transform: scale(1.1);
+    background-color: #5A4CBC;
+    transform: scale(1.1); /* Animación suave */
 }
 
-h2 {
-    font-size: 1rem; 
-    font-weight: bold; 
-    color: #333; 
-}
-
-/* Ocultar el checkbox */
+/* ===== Botón de Toggle ===== */
 .toggle-checkbox {
-    display: none;
+    display: none; /* Oculta el checkbox */
 }
 
-/* Botón del toggle (siempre visible en pantallas pequeñas y medianas) */
+/* Botón */
 .toggle-label {
+    position: fixed; /* Fija el botón */
+    top: 70px; /* Ajusta la distancia desde arriba */
+    left: 20px; /* Pega al borde izquierdo */
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6A5ACD; /* Color lila */
-    padding: 10px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    background-color: #6A5ACD;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Botón circular */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1100; /* Asegura estar sobre otros elementos */
 }
+
+.toggle-label:hover {
+    background-color: #5A4CBC; /* Cambia el color en hover */
+    transform: scale(1.1); /* Efecto de agrandamiento */
+}
+
 
 .toggle-label img {
     width: 24px;
     height: 24px;
 }
 
-.toggle-label:hover {
-    background-color: #5A4CBC;
-    transform: scale(1.05);
-}
-
-/* Barra lateral inicialmente oculta */
+/* ===== Barra Lateral ===== */
 .sidebar {
-    display: none; /* Oculta en la primera carga */
-    background-color: #F4F4F4;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    position: fixed;
+    top: 0;
+    right: -300px; /* Fuera de la pantalla inicialmente */
+    width: 300px;
+    height: auto; /* Ajuste dinámico basado en contenido */
+    background-color: #FFFFFF;
+    box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: 8px 0 0 8px; /* Esquinas redondeadas */
+    transition: right 0.3s ease; /* Animación al abrir/cerrar */
+    z-index: 1000;
 }
 
-/* Mostrar barra lateral al activar el toggle */
+
+.sidebar.open {
+    right: 10px; /* Aparece en la vista */
+}
+
+/* Espaciado del título "Filtros" */
+.sidebar h3 {
+    margin-top: 40px; /* Baja el título para darle espacio al botón */
+    font-size: 1.1rem;
+    color: #6A5ACD;
+}
+
+
+
+
 .toggle-checkbox:checked + .toggle-label + .sidebar {
-    display: block;
+    left: 15px;
+    top: 60px;
 }
-
 
 /* Animación para apertura suave */
 @keyframes fadeIn {
@@ -697,9 +734,6 @@ h2 {
         transform: translateY(0);
     }
 }
-
-
-
 
 
 /* Media Queries para diseño responsivo */
@@ -811,6 +845,8 @@ h2 {
     /* Sidebar oculta por defecto */
     .sidebar {
         display: none;
+        width: 250px;
+
     }
 
     /* Mostrar el menú al marcar el checkbox */
@@ -916,12 +952,7 @@ h2 {
     }
 }
 
-/* Mantener la barra lateral visible en pantallas grandes */
-@media (min-width: 769px) {
-    .sidebar {
-        display: block; /* Barra lateral siempre visible */
-    }
-}
+
 
 
 @media (max-width: 480px) {
@@ -1027,6 +1058,8 @@ h2 {
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 200px;
+
     }
 
 
