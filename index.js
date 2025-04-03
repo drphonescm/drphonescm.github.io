@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const obtenerCotizacionDolarBlue = async () => {
         try {
-            const respuesta = await fetch('https://api-dolar-argentina.vercel.app/v1/dolarblue'); // API de cotización
+            const respuesta = await fetch('https://dolarapi.com/v1/dolares'); // API de cotización
             const datos = await respuesta.json();
             return datos.venta; // Precio de venta del dólar blue
         } catch (error) {
