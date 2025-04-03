@@ -850,7 +850,7 @@ h4 {
     /* Botón de filtros */
     .toggle-label {
         display: flex;
-        top: 60px; /* Ajusta la distancia desde arriba */
+        top: 65px; /* Ajusta la distancia desde arriba */
         left: 15px; /* Pega al borde izquierdo */
         align-items: center;
         justify-content: center;
