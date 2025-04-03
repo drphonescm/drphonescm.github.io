@@ -1038,7 +1038,6 @@ h4 {
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-
     .toggle-label:hover {
         background-color: #5A4CBC;
         transform: scale(1.05); /* Efecto de hover */
@@ -1049,7 +1048,6 @@ h4 {
         height: 20px; /* Ajustar el tamaño del ícono para pantallas pequeñas */
     }
 
-
     /* Ocultar la barra lateral por defecto */
     .sidebar {
         display: none; /* Inicialmente oculta */
@@ -1059,9 +1057,7 @@ h4 {
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         width: 200px;
-
     }
-
 
     /* Mostrar los filtros al activar el toggle */
     .toggle-checkbox:checked + .toggle-label + .sidebar {
@@ -1069,8 +1065,6 @@ h4 {
         max-height: 100%; /* Ajusta la altura del contenido */
         overflow-y: auto; /* Permitir scroll si el contenido crece */
     }
-
-
 
     .sidebar h3 {
         font-size: 0.8rem; /* Texto reducido para pantallas pequeñas */
@@ -1107,38 +1101,39 @@ h4 {
         margin-top: 5px;
     }
 
-
     /* Contenedor de productos */
     .container-items {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-        gap: 8px; /* Espaciado compacto */
-        padding: 6px;
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas flexibles */
+        column-gap: 16px; /* Espacio entre las columnas */
+        row-gap: 12px; /* Espacio entre filas */
+        width: 100%; /* Ocupar el ancho completo */
+        padding: 10px; /* Espaciado interno */
     }
 
     .item {
-        height: 420px; /* Altura ajustada */
-        width: auto;
-        padding: 2px;
+        height: auto; /* Ajuste dinámico según el contenido */
+        padding: 8px; /* Espaciado interno */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         overflow: hidden;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        border-radius: 3px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Sombra más marcada */
+        border-radius: 5px; /* Bordes redondeados */
+        background-color: #ffffff; /* Fondo blanco */
     }
 
     .item img {
-        width: 100px;
-        height: auto; /* Ajuste dinámico */
+        width: 100%; /* Ajuste dinámico */
+        height: auto; /* Mantener proporciones */
         object-fit: cover;
-        margin-bottom: 1px;
-        border-radius: 1px;
+        margin-bottom: 8px;
+        border-radius: 4px;
     }
 
     .item h3 {
-        font-size: 0.rem; /* Texto compacto */
+        font-size: 0.8rem; /* Texto ajustado para pantallas pequeñas */
         text-align: center;
         white-space: nowrap;
         overflow: hidden;
@@ -1146,96 +1141,23 @@ h4 {
     }
 
     .add-to-cart-button {
-        font-size: 0.5rem;
-        padding: 2px 3px; /* Compacto */
+        font-size: 0.7rem;
+        padding: 6px 10px; /* Botón cómodo */
         width: 100%;
         background-color: #6A5ACD;
         color: #fff;
         border: none;
-        border-radius: 3px;
+        border-radius: 4px;
         text-align: center;
         cursor: pointer;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para destacarlo */
+        transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     .add-to-cart-button:hover {
         background-color: #5A4CBC;
+        transform: scale(1.05); /* Efecto de agrandamiento */
     }
-
-    .remove-product-button {
-        font-size: 0.7rem; /* Ajustado */
-        padding: 2px 3px;
-        width: 20%;
-        background-color: #FF5A5A;
-        color: #fff;
-        border: none;
-        border-radius: 3px;
-        text-align: center;
-        cursor: pointer;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        transition: background-color 0.3s ease;
-    }
-
-    .remove-product-button:hover {
-        background-color: #CC4949;
-    }
-
-    /* Modal */
-    #product-modal {
-        width: 90%; /* Más ancho */
-        max-width: 450px; /* Ajustado para pantallas pequeñas */
-        height: 600px;
-        padding: 12px; /* Espaciado interno aumentado */
-        background-color: #ffffff;
-        border-radius: 5px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #modal-icon {
-        width: 80px; /* Tamaño más grande del ícono */
-        height: 80px; /* Mantener proporción */
-        margin-bottom: 10px; /* Separación del título */
-    }
-
-    #modal-title {
-        font-size: 0.5rem; /* Título más grande */
-        font-weight: bold;
-        text-align: center; /* Centrado */
-        margin-bottom: 8px;
-    }
-
-    #modal-content {
-        font-size: 0.7rem; /* Texto del contenido ajustado */
-        text-align: center; /* Centrado */
-        margin-bottom: 10px;
-    }
-
-    #modal-buttons {
-        display: flex;
-        justify-content: space-between;
-        gap: 8px; /* Espaciado entre botones */
-        width: 100%; /* Ocupa el ancho completo del modal */
-    }
-
-    .modal-button {
-        font-size: 0.8rem; /* Tamaño de fuente aumentado */
-        padding: 6px 12px; /* Botón más amplio */
-        border-radius: 4px;
-        background-color: #6A5ACD;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .modal-button:hover {
-        background-color: #5638d3;
-    }
-
 }
 
     
