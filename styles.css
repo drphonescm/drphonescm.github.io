@@ -956,10 +956,22 @@ h4 {
 
 
 @media (max-width: 480px) {
+    /* Reset general para evitar desplazamientos y desbordamientos */
+    body, html {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden; /* Evita cualquier desplazamiento horizontal */
+    }
+
+    *, *::before, *::after {
+        box-sizing: inherit; /* Asegura que padding y borde no afecten el tamaño */
+    }
+
     /* Header */
     header {
         width: 100%;
-        padding: 6px; /* Compacto */
+        padding: 6px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -968,12 +980,12 @@ h4 {
     }
 
     .header-logo {
-        width: 200px; /* Ajustado para pantallas pequeñas */
+        width: 200px;
         height: auto;
     }
 
     .header-title img {
-        width: 200px; /* Proporción reducida */
+        width: 200px;
         height: auto;
     }
 
@@ -1019,38 +1031,33 @@ h4 {
         background-color: #5638d3;
     }
 
-    /* Oculta el checkbox de control en pantallas grandes */
-    .toggle-checkbox {
-        display: none;
-    }
-
-    /* Mostrar el botón de filtros */
+    /* Botón de filtros */
     .toggle-label {
-        display: flex; /* El botón es visible */
+        display: flex;
         align-items: center;
         justify-content: center;
-        background-color: #6A5ACD; /* Color lila */
+        background-color: #6A5ACD;
         padding: 10px;
         cursor: pointer;
         border-radius: 50%;
-        width: 40px; /* Tamaño compacto para pantallas pequeñas */
+        width: 40px;
         height: 40px;
         transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
     .toggle-label:hover {
         background-color: #5A4CBC;
-        transform: scale(1.05); /* Efecto de hover */
+        transform: scale(1.05);
     }
 
     .toggle-label img {
         width: 20px;
-        height: 20px; /* Ajustar el tamaño del ícono para pantallas pequeñas */
+        height: 20px;
     }
 
-    /* Ocultar la barra lateral por defecto */
+    /* Filtros */
     .sidebar {
-        display: none; /* Inicialmente oculta */
+        display: none;
         transition: max-height 0.3s ease;
         background-color: #F4F4F4;
         padding: 10px;
@@ -1059,15 +1066,14 @@ h4 {
         width: 200px;
     }
 
-    /* Mostrar los filtros al activar el toggle */
     .toggle-checkbox:checked + .toggle-label + .sidebar {
-        display: block; /* Se despliega al hacer clic */
-        max-height: 100%; /* Ajusta la altura del contenido */
-        overflow-y: auto; /* Permitir scroll si el contenido crece */
+        display: block;
+        max-height: 100%;
+        overflow-y: auto;
     }
 
     .sidebar h3 {
-        font-size: 0.8rem; /* Texto reducido para pantallas pequeñas */
+        font-size: 0.8rem;
         margin-bottom: 5px;
     }
 
@@ -1076,7 +1082,7 @@ h4 {
     }
 
     .filter-group h4 {
-        font-size: 0.7rem; /* Tamaño de título ajustado */
+        font-size: 0.7rem;
     }
 
     .filter-group label {
@@ -1087,11 +1093,11 @@ h4 {
     }
 
     .filter-group input[type="checkbox"] {
-        margin-right: 5px; /* Espacio entre checkbox y texto */
+        margin-right: 5px;
     }
 
     #priceRange {
-        width: 95%; /* Ancho completo del contenedor */
+        width: 95%;
         margin: 0 auto;
     }
 
@@ -1104,60 +1110,62 @@ h4 {
     /* Contenedor de productos */
     .container-items {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
-        column-gap: 10px; /* Espaciado horizontal entre columnas */
-        row-gap: 15px; /* Espaciado vertical entre filas */
-        width: 100%; /* Ocupar todo el ancho disponible */
-        padding: 10px; /* Espaciado interno */
-        box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 10px;
+        row-gap: 15px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin: 0 auto;
     }
 
     .item {
-        background-color: #ffffff; /* Fondo blanco para contraste limpio */
-        border-radius: 5px; /* Bordes suaves */
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 10px; /* Espaciado interno */
-        text-align: center; /* Centrar contenido */
-        height: auto; /* Ajuste dinámico según el contenido */
+        padding: 10px;
+        text-align: center;
+        height: auto;
+        margin: 0;
     }
 
     .item img {
-        width: 100%; /* Imagen ocupa el ancho del contenedor */
-        max-width: 120px; /* Límite máximo para evitar distorsión */
-        height: auto; /* Mantener proporciones */
-        border-radius: 4px; /* Bordes suaves para la imagen */
-        margin-bottom: 8px; /* Separación de otros elementos */
+        width: 100%;
+        max-width: 120px;
+        height: auto;
+        border-radius: 4px;
+        margin-bottom: 8px;
     }
 
     .item h3 {
-        font-size: 0.85rem; /* Tamaño ajustado para móviles */
-        font-weight: bold; /* Título destacado */
-        margin-bottom: 6px; /* Separación con el texto siguiente */
-        overflow: hidden; /* Evita que el texto sobresalga */
-        text-overflow: ellipsis; /* Agrega "..." si es muy largo */
-        white-space: nowrap; /* Texto en una línea */
+        font-size: 0.85rem;
+        font-weight: bold;
+        margin-bottom: 6px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 
     .add-to-cart-button {
-        font-size: 0.75rem; /* Botón pequeño y limpio */
-        padding: 8px 12px; /* Espaciado cómodo */
-        border-radius: 4px; /* Bordes redondeados */
+        font-size: 0.75rem;
+        padding: 8px 12px;
+        border-radius: 4px;
         background-color: #6A5ACD;
         color: #fff;
         border: none;
         cursor: pointer;
-        width: 100%; /* Botón ocupa el ancho del contenedor */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-        transition: transform 0.3s ease, background-color 0.3s ease; /* Interactividad */
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, background-color 0.3s ease;
     }
 
     .add-to-cart-button:hover {
-        background-color: #5A4CBC; /* Color más oscuro al pasar el cursor */
-        transform: scale(1.05); /* Agrandamiento leve */
+        background-color: #5A4CBC;
+        transform: scale(1.05);
     }
 }
 
