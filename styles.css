@@ -1104,59 +1104,60 @@ h4 {
     /* Contenedor de productos */
     .container-items {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Dos columnas flexibles */
-        column-gap: 16px; /* Espacio entre las columnas */
-        row-gap: 12px; /* Espacio entre filas */
-        width: 100%; /* Ocupar el ancho completo */
+        grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
+        column-gap: 10px; /* Espaciado horizontal entre columnas */
+        row-gap: 15px; /* Espaciado vertical entre filas */
+        width: 100%; /* Ocupar todo el ancho disponible */
         padding: 10px; /* Espaciado interno */
+        box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
     }
 
     .item {
-        height: auto; /* Ajuste dinámico según el contenido */
-        padding: 8px; /* Espaciado interno */
+        background-color: #ffffff; /* Fondo blanco para contraste limpio */
+        border-radius: 5px; /* Bordes suaves */
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        overflow: hidden;
-        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Sombra más marcada */
-        border-radius: 5px; /* Bordes redondeados */
-        background-color: #ffffff; /* Fondo blanco */
+        padding: 10px; /* Espaciado interno */
+        text-align: center; /* Centrar contenido */
+        height: auto; /* Ajuste dinámico según el contenido */
     }
 
     .item img {
-        width: 100%; /* Ajuste dinámico */
+        width: 100%; /* Imagen ocupa el ancho del contenedor */
+        max-width: 120px; /* Límite máximo para evitar distorsión */
         height: auto; /* Mantener proporciones */
-        object-fit: cover;
-        margin-bottom: 8px;
-        border-radius: 4px;
+        border-radius: 4px; /* Bordes suaves para la imagen */
+        margin-bottom: 8px; /* Separación de otros elementos */
     }
 
     .item h3 {
-        font-size: 0.8rem; /* Texto ajustado para pantallas pequeñas */
-        text-align: center;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        font-size: 0.85rem; /* Tamaño ajustado para móviles */
+        font-weight: bold; /* Título destacado */
+        margin-bottom: 6px; /* Separación con el texto siguiente */
+        overflow: hidden; /* Evita que el texto sobresalga */
+        text-overflow: ellipsis; /* Agrega "..." si es muy largo */
+        white-space: nowrap; /* Texto en una línea */
     }
 
     .add-to-cart-button {
-        font-size: 0.7rem;
-        padding: 6px 10px; /* Botón cómodo */
-        width: 100%;
+        font-size: 0.75rem; /* Botón pequeño y limpio */
+        padding: 8px 12px; /* Espaciado cómodo */
+        border-radius: 4px; /* Bordes redondeados */
         background-color: #6A5ACD;
         color: #fff;
         border: none;
-        border-radius: 4px;
-        text-align: center;
         cursor: pointer;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra para destacarlo */
-        transition: background-color 0.3s ease, transform 0.3s ease;
+        width: 100%; /* Botón ocupa el ancho del contenedor */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        transition: transform 0.3s ease, background-color 0.3s ease; /* Interactividad */
     }
 
     .add-to-cart-button:hover {
-        background-color: #5A4CBC;
-        transform: scale(1.05); /* Efecto de agrandamiento */
+        background-color: #5A4CBC; /* Color más oscuro al pasar el cursor */
+        transform: scale(1.05); /* Agrandamiento leve */
     }
 }
 
