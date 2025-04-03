@@ -1104,16 +1104,17 @@ h4 {
     /* Contenedor de productos */
     .container-items {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Dos columnas de igual ancho */
-        column-gap: 10px; /* Espaciado horizontal entre columnas */
-        row-gap: 15px; /* Espaciado vertical entre filas */
-        width: 100%; /* Ocupar todo el ancho disponible */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas flexibles */
+        column-gap: 10px; /* Espacio horizontal entre columnas */
+        row-gap: 15px; /* Espacio vertical entre filas */
+        width: 100%; /* Ocupa todo el ancho del viewport */
+        margin: 0 auto; /* Centrado */
         padding: 10px; /* Espaciado interno */
         box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
     }
 
     .item {
-        background-color: #ffffff; /* Fondo blanco para contraste limpio */
+        background-color: #ffffff; /* Fondo limpio */
         border-radius: 5px; /* Bordes suaves */
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
         display: flex;
@@ -1123,14 +1124,15 @@ h4 {
         padding: 10px; /* Espaciado interno */
         text-align: center; /* Centrar contenido */
         height: auto; /* Ajuste dinámico según el contenido */
+        margin: 0; /* Asegura que no haya desplazamiento adicional */
     }
 
     .item img {
         width: 100%; /* Imagen ocupa el ancho del contenedor */
-        max-width: 120px; /* Límite máximo para evitar distorsión */
+        max-width: 120px; /* Límite máximo */
         height: auto; /* Mantener proporciones */
         border-radius: 4px; /* Bordes suaves para la imagen */
-        margin-bottom: 8px; /* Separación de otros elementos */
+        margin-bottom: 8px; /* Separación con otros elementos */
     }
 
     .item h3 {
@@ -1151,6 +1153,7 @@ h4 {
         border: none;
         cursor: pointer;
         width: 100%; /* Botón ocupa el ancho del contenedor */
+        box-sizing: border-box; /* Incluye padding en el cálculo del ancho */
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
         transition: transform 0.3s ease, background-color 0.3s ease; /* Interactividad */
     }
