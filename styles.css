@@ -861,7 +861,7 @@ h4 {
         width: 40px; /* Proporción más adecuada */
         height: 40px;
         transition: background-color 0.3s ease, transform 0.3s ease;
-        z-index: 2000;
+        z-index: 3000;
     }
 
     .toggle-label:hover {
@@ -892,7 +892,7 @@ h4 {
     }
 
     .toggle-checkbox:checked + .toggle-label + .sidebar {
-        display: block;
+        display: visible;
         left: 0;
     }
 
