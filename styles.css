@@ -689,6 +689,7 @@ h4 {
 
 /* ===== Barra Lateral ===== */
 .sidebar {
+    display: none;
     position: fixed;
     top: 0;
     right: -300px; /* Fuera de la pantalla inicialmente */
@@ -721,6 +722,7 @@ h4 {
 .toggle-checkbox:checked + .toggle-label + .sidebar {
     left: 15px;
     top: 60px;
+    display: block; 
 }
 
 /* Animación para apertura suave */
