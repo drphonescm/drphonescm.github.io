@@ -967,7 +967,7 @@ h4 {
     }
 
     *, *::before, *::after {
-        box-sizing: inherit; /* Asegura que padding y borde no afecten el tamaño */
+        box-sizing: inherit; /* Consistencia en el cálculo del tamaño */
     }
 
     /* Header */
@@ -1045,6 +1045,7 @@ h4 {
         width: 30px;
         height: 30px;
         transition: background-color 0.3s ease, transform 0.3s ease;
+        z-index: 2000; /* Asegura que esté visible y no afecte el contenido */
     }
 
     .toggle-label:hover {
@@ -1059,19 +1060,24 @@ h4 {
 
     /* Filtros */
     .sidebar {
-        display: none;
-        transition: max-height 0.3s ease;
+        display: none; /* Oculto por defecto */
+        position: fixed; /* Fuera del flujo normal */
+        top: 0;
+        left: -200px; /* Coloca el sidebar completamente fuera del viewport */
+        width: 200px;
+        max-height: 100%;
         background-color: #F4F4F4;
-        padding: 0;
+        padding: 10px;
         border-radius: 5px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 200px;
+        overflow-y: auto;
+        transition: left 0.3s ease; /* Entrada suave */
+        z-index: 2000; /* Evitar conflictos con el contenido principal */
     }
 
     .toggle-checkbox:checked + .toggle-label + .sidebar {
         display: block;
-        max-height: 100%;
-        overflow-y: auto;
+        left: 0; /* Sidebar entra al viewport al activarse */
     }
 
     .sidebar h3 {
@@ -1115,10 +1121,10 @@ h4 {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 10px;
         row-gap: 15px;
-        width: 100%;
+        width: 100%; /* Usar todo el ancho disponible */
         padding: 10px;
         box-sizing: border-box;
-        margin: 0 auto;
+        margin: 0 auto; /* Centrar el contenedor */
     }
 
     .item {
@@ -1132,7 +1138,7 @@ h4 {
         padding: 10px;
         text-align: center;
         height: auto;
-        margin: 0;
+        margin: 0; /* Evitar desplazamiento adicional */
     }
 
     .item img {
