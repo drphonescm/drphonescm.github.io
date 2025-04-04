@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const obtenerCotizacionDolarBlue = async () => {
         try {
-            const respuesta = await fetch('https://dolarapi.com/v1/dolares');
+            const respuesta = await fetch('https://dolarapi.com/v1/dolares/blue'); 
             const datos = await respuesta.json();
             return datos.venta; 
         } catch (error) {
