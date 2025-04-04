@@ -29,14 +29,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const obtenerCotizacionDolarBlue = async () => {
         try {
-            const respuesta = await fetch('https://dolarapi.com/v1/dolares/blue'); 
+            const respuesta = await fetch('https://dolarapi.com/v1/dolares/blue');
+            if (!respuesta.ok) {
+                throw new Error(`Error HTTP: ${respuesta.status}`);
+            }
             const datos = await respuesta.json();
-            return datos.venta; 
+            return datos.venta; // Precio de venta del dólar blue
         } catch (error) {
-            console.error("Error al obtener la cotización del dólar blue:", error);
-            return null; 
+            console.error("Error al obtener la cotización del dólar blue:", error.message);
+            return null;
         }
     };
+    
+    const actualizarPrecios = async () => {
+        const cotizacionDolarBlue = await obtenerCotizacionDolarBlue();
+        if (!cotizacionDolarBlue) {
+            console.error("No se pudo obtener la cotización del dólar blue.");
+            return;
+        }
+    
+        // Iterar sobre los productos y calcular precios en dólares
+        productos.forEach(producto => {
+            const precioEnDolares = producto.precio / cotizacionDolarBlue;
+            producto.precioActualizadoEnPesos = precioEnDolares * cotizacionDolarBlue; // Recalcular en pesos
+        });
+    
+        // Mostrar los productos actualizados en la página
+        const contenedorProductos = document.getElementById('productos');
+        contenedorProductos.innerHTML = ''; // Limpiar contenido previo
+        productos.forEach(producto => {
+            const productoElemento = document.createElement('div');
+            productoElemento.innerHTML = `
+                <p>${producto.nombre}</p>
+                <p>Precio original en pesos: ${producto.precio}</p>
+                <p>Precio actualizado en pesos: ${producto.precioActualizadoEnPesos.toFixed(2)}</p>
+            `;
+            contenedorProductos.appendChild(productoElemento);
+        });
+    };
+    
+    // Llamar a la función para iniciar la actualización
+    actualizarPrecios();
 
     document.addEventListener('DOMContentLoaded', () => {
         
