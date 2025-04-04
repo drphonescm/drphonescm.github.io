@@ -27,8 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let filteredProducts = [];
     console.log("El script está cargado correctamente");
 
-    
-
     document.addEventListener('DOMContentLoaded', () => {
         
         const sidebar = document.querySelector('.sidebar');
@@ -76,37 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
 
-    const actualizarPreciosEnTiempoReal = async () => {
-        const cotizacionDolarBlue = await obtenerCotizacionDolarBlue();
-        if (!cotizacionDolarBlue) {
-            console.error("No se pudo obtener la cotización, se mantiene el precio actual.");
-            return; 
-        }
-    
-        allProducts.forEach(producto => {
-            producto.priceInPesos = producto.priceInDollars * cotizacionDolarBlue; 
-        });
-    
-        console.log("Precios actualizados en base al dólar blue:", allProducts);
-        renderProducts(filteredProducts); 
-    };
-
-    const obtenerCotizacionDolarBlue = async () => {
-        try {
-            const respuesta = await fetch('https://dolarapi.com/v1/dolares/blue');
-            if (!respuesta.ok) {
-                throw new Error(`Error HTTP: ${respuesta.status}`);
-            }
-            const datos = await respuesta.json();
-            return datos.venta; // Precio de venta del dólar blue
-        } catch (error) {
-            console.error("Error al obtener la cotización del dólar blue:", error.message);
-            return null;
-        }
-    };
-    
-    
-    
     
     const loadProducts = () => {
        allProducts = [
@@ -166,40 +133,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderProducts(filteredProducts);
         renderPageNumbers(filteredProducts);
     };
-
-    // Mostrar productos con precios actualizados
-const mostrarProductosActualizados = async () => {
-    const cotizacionDolarBlue = await obtenerCotizacionDolarBlue();
-    if (!cotizacionDolarBlue) {
-        console.error("No se pudo obtener la cotización del dólar blue.");
-        return;
-    }
-
-    // Iterar sobre los productos y actualizar precios directamente en el array
-    allProducts.forEach(producto => {
-        const precioEnDolares = producto.price / cotizacionDolarBlue;
-        producto.precioActualizadoEnPesos = precioEnDolares * cotizacionDolarBlue; // Actualizar el precio en pesos
-        producto.price = producto.precioActualizadoEnPesos; // Modificar el precio original directamente en el array
-    });
-
-    // Mostrar los productos actualizados en la página
-    const contenedorProductos = document.getElementById('productos');
-    contenedorProductos.innerHTML = ''; // Limpiar contenido previo
-    allProducts.forEach(producto => {
-        const productoElemento = document.createElement('div');
-        productoElemento.innerHTML = `
-            <img src="${producto.img}" alt="${producto.name}" style="width: 150px;">
-            <h3>${producto.name}</h3>
-            <p>Características: ${producto.features.join(', ')}</p>
-            <p>Precio original en pesos: $${producto.price.toFixed(2)}</p>
-        `;
-        contenedorProductos.appendChild(productoElemento);
-    });
-};
-
-// Llamar a la función para iniciar la actualización
-document.addEventListener("DOMContentLoaded", mostrarProductosActualizados);
-
 
           
     window.openModal = function(id) {
@@ -596,11 +529,6 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
     
     
     loadProducts();
-
-    
-setInterval(() => {
-    actualizarPreciosEnTiempoReal(); 
-}, 60000); 
 
 });
 
