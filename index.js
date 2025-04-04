@@ -29,58 +29,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const obtenerCotizacionDolarBlue = async () => {
         try {
-            const respuesta = await fetch('https://dolarapi.com/v1/dolares'); // API de cotización
+            const respuesta = await fetch('https://dolarapi.com/v1/dolares'); 
             const datos = await respuesta.json();
-            return datos.venta; // Precio de venta del dólar blue
+            return datos.venta; 
         } catch (error) {
             console.error("Error al obtener la cotización del dólar blue:", error);
-            return null; // Fallback si hay error
+            return null; 
         }
     };
 
     document.addEventListener('DOMContentLoaded', () => {
-        // Seleccionar elementos necesarios
+        
         const sidebar = document.querySelector('.sidebar');
         const toggleCheckbox = document.querySelector('.toggle-checkbox');
-        const toggleLabel = document.querySelector('.toggle-label'); // Etiqueta asociada al botón
+        const toggleLabel = document.querySelector('.toggle-label'); 
     
-        // Verificar que los elementos existen
+        
         if (!sidebar || !toggleCheckbox || !toggleLabel) {
             console.error("Error: No se encontraron los elementos necesarios en el DOM.");
             return;
         }
     
-        // Función para alternar la visibilidad de la barra lateral
+        
         const toggleSidebar = () => {
             if (sidebar.classList.contains('open')) {
-                sidebar.classList.remove('open'); // Cierra la barra lateral
-                toggleCheckbox.checked = false; // Asegura que el checkbox vuelva a estar desmarcado
+                sidebar.classList.remove('open'); 
+                toggleCheckbox.checked = false; 
                 console.log("Sidebar cerrada");
             } else {
-                sidebar.classList.add('open'); // Abre la barra lateral
-                toggleCheckbox.checked = true; // Marca el checkbox para mantener el estado sincronizado
+                sidebar.classList.add('open'); 
+                toggleCheckbox.checked = true; 
                 console.log("Sidebar abierta");
             }
         };
     
-        // Escuchar clics en la etiqueta (ícono de filtros)
+        
         toggleLabel.addEventListener('click', (event) => {
-            event.preventDefault(); // Evitar comportamiento por defecto
-            toggleSidebar(); // Alterna la barra lateral
+            event.preventDefault(); 
+            toggleSidebar(); 
         });
     
-        // Cierra la barra lateral al hacer clic fuera de ella
+        
         document.addEventListener('click', (event) => {
             if (sidebar.classList.contains('open') && !sidebar.contains(event.target) && !toggleLabel.contains(event.target)) {
-                sidebar.classList.remove('open'); // Cierra la barra lateral
-                toggleCheckbox.checked = false; // Asegura que el checkbox vuelva a estar desmarcado
+                sidebar.classList.remove('open'); 
+                toggleCheckbox.checked = false; 
                 console.log("Sidebar cerrada por clic fuera de la barra");
             }
         });
     
-        // Configuración inicial: Asegura que la barra esté cerrada al cargar
-        sidebar.classList.remove('open'); // Cierra la barra lateral
-        toggleCheckbox.checked = false; // Asegura que el checkbox esté desmarcado
+        
+        sidebar.classList.remove('open'); 
+        toggleCheckbox.checked = false; 
         console.log("Configuración inicial: Sidebar cerrada");
     });
     
@@ -89,19 +89,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const cotizacionDolarBlue = await obtenerCotizacionDolarBlue();
         if (!cotizacionDolarBlue) {
             console.error("No se pudo obtener la cotización, se mantiene el precio actual.");
-            return; // No hace nada si hay error
+            return; 
         }
     
         allProducts.forEach(producto => {
-            producto.priceInPesos = producto.priceInDollars * cotizacionDolarBlue; // Conversión
+            producto.priceInPesos = producto.priceInDollars * cotizacionDolarBlue; 
         });
     
         console.log("Precios actualizados en base al dólar blue:", allProducts);
-        renderProducts(filteredProducts); // Re-renderiza con los precios actualizados
+        renderProducts(filteredProducts); 
     };
 
     
-    // Cargar productos al iniciar
+    
     const loadProducts = () => {
        allProducts = [
         
@@ -187,43 +187,43 @@ document.addEventListener('DOMContentLoaded', () => {
     const img = event.target;
     const lens = document.getElementById("zoom-lens");
     const rect = img.getBoundingClientRect();
-    const lensSize = 100; // Tamaño del lente
+    const lensSize = 100; 
 
-    // Calcula la posición del lente
+    
     const x = event.clientX - rect.left - lensSize / 2;
     const y = event.clientY - rect.top - lensSize / 2;
 
-    // Restricción de los límites del lente
+    
     if (x >= 0 && x <= rect.width - lensSize && y >= 0 && y <= rect.height - lensSize) {
         lens.style.left = `${x}px`;
         lens.style.top = `${y}px`;
         lens.style.display = "block";
 
-        // Ampliar la imagen
+        
         img.style.transformOrigin = `${(x / rect.width) * 100}% ${(y / rect.height) * 100}%`;
-        img.style.transform = "scale(1.8)"; // Ajusta el nivel de zoom
+        img.style.transform = "scale(1.8)"; 
     } else {
         lens.style.display = "none";
-        img.style.transform = "scale(1)"; // Restablecer la escala
+        img.style.transform = "scale(1)"; 
     }
 });
 
 document.getElementById("modal-img").addEventListener("mouseleave", () => {
     const lens = document.getElementById("zoom-lens");
     lens.style.display = "none";
-    document.getElementById("modal-img").style.transform = "scale(1)"; // Restablecer escala
+    document.getElementById("modal-img").style.transform = "scale(1)"; 
 });
 
-  // Modifica `closeModal` para ocultar el fondo oscuro:
+  
   window.closeModal = function() {
       console.log("Cerrando modal...");
       document.getElementById("product-modal").style.display = "none";
-      document.getElementById("modal-overlay").style.display = "none"; // Ocultar el fondo oscuro
+      document.getElementById("modal-overlay").style.display = "none"; 
       document.body.classList.remove('modal-open');
       document.body.style.overflow = "auto";
   };
 
-// Detectar clic fuera del modal
+
 document.addEventListener('click', (event) => {
   const modal = document.getElementById("product-modal");
   if (modal.style.display === "flex" && !modal.contains(event.target) && !event.target.closest(".item")) {
@@ -231,7 +231,7 @@ document.addEventListener('click', (event) => {
   }
 });
 
-// Renderizar productos
+
 const renderProducts = (productsToRender) => {
   const start = (currentPage - 1) * productsPerPage;
   const end = start + productsPerPage;
@@ -254,7 +254,7 @@ const renderProducts = (productsToRender) => {
       `;
       productsContainer.appendChild(productElement);
 
-      // Agregar evento de clic a la imagen
+      
       const img = productElement.querySelector('img');
       img.addEventListener('click', () => openModal(product.id));
   });
@@ -271,9 +271,9 @@ const renderProducts = (productsToRender) => {
             } else {
                 cart.push({ ...product, quantity: 1 });
             }
-            updateCart(); // Actualiza el carrito
+            updateCart(); 
             console.log("Producto añadido al carrito:", product);
-            showAddToCartMessage(); // Llama a la función para mostrar el mensaje
+            showAddToCartMessage(); 
         } else {
             console.error("Producto no encontrado al intentar añadir al carrito. ID:", productId);
         }
@@ -293,12 +293,12 @@ function showAddToCartMessage() {
         return;
     }
 
-    // Mostrar el mensaje
+    
     message.style.display = "block";
     message.style.opacity = "1";
     message.style.transform = "translateY(0)";
 
-    // Ocultar automáticamente después de 3 segundos
+    
     setTimeout(() => {
         message.style.opacity = "0";
         message.style.transform = "translateY(-20px)";
@@ -307,7 +307,7 @@ function showAddToCartMessage() {
         }, 500);
     }, 800);
 }
-// Botón de "Añadir al carrito" con el mensaje
+
 document.getElementById("add-to-cart-modal-button").addEventListener('click', () => {
     const productId = parseInt(document.getElementById("modal-title").getAttribute('data-id'), 10);
     const product = allProducts.find(p => p.id === productId);
@@ -319,17 +319,17 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
         } else {
             cart.push({ ...product, quantity: 1 });
         }
-        updateCart(); // Actualiza la visualización del carrito
+        updateCart(); 
         console.log("Producto añadido al carrito:", product);
-        closeModal(); // Cierra el modal automáticamente
-        showAddToCartMessage(); // Muestra el mensaje de confirmación
+        closeModal(); 
+        showAddToCartMessage(); 
     } else {
         console.error("Producto no encontrado al intentar añadir al carrito. ID:", productId);
     }
 });
 
 
-    // Renderizar números de páginas
+    
     const renderPageNumbers = (productsToPaginate) => {
         pageNumbersContainer.innerHTML = '';
         const totalPages = Math.ceil(productsToPaginate.length / productsPerPage);
@@ -358,7 +358,7 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
         });
     };
 
-    // Búsqueda de productos
+    
     const searchProducts = () => {
         const searchTerm = searchInput.value.toLowerCase();
         filteredProducts = allProducts.filter(product =>
@@ -374,7 +374,7 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
     };
 
     
-    // Aplicar filtros
+    
     const applyFilters = () => {
         filteredProducts = [...allProducts];
 
@@ -398,18 +398,18 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
     
     const toggleCart = () => {
         const cartContainer = document.querySelector('.container-cart-products');
-        cartContainer.classList.toggle('hidden-cart'); // Afecta solo al carrito
+        cartContainer.classList.toggle('hidden-cart'); 
     };
 
     const addEventListenersToCartButtons = () => {
         document.querySelectorAll('.add-to-cart-button').forEach(button => {
-            button.removeEventListener('click', handleAddToCart); // Elimina eventos duplicados
-            button.addEventListener('click', handleAddToCart); // Añade un solo evento
+            button.removeEventListener('click', handleAddToCart); 
+            button.addEventListener('click', handleAddToCart); 
         });
     };
 
     const handleAddToCart = (event) => {
-        event.stopPropagation(); // Evita que el evento se propague a otros elementos
+        event.stopPropagation(); 
         const productElement = event.target.closest('.item');
         const productId = parseInt(productElement.getAttribute('data-product-id'), 10);
         const product = allProducts.find(p => p.id === productId);
@@ -425,7 +425,7 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
     const handleRemoveFromCart = (event) => {
         const productId = parseInt(event.target.getAttribute('data-id'), 10);
         cart = cart.filter(product => product.id !== productId);
-        updateCart(); // Actualiza la vista del carrito
+        updateCart(); 
     };
     
     const addEventListenersToRemoveButtons = () => {
@@ -454,11 +454,11 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
         totalPriceElement.innerText = `$${totalPrice.toLocaleString('es-AR')}`;
         countProductsElement.innerText = cart.reduce((total, item) => total + item.quantity, 0);
     
-        addEventListenersToRemoveButtons(); // Llama para añadir eventos
+        addEventListenersToRemoveButtons(); 
     };
 
     const UpdateCart = () => {
-        cartProductsContainer.innerHTML = ''; // Limpia el carrito
+        cartProductsContainer.innerHTML = ''; 
         let totalPrice = 0;
     
         cart.forEach(product => {
@@ -477,36 +477,36 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
         totalPriceElement.innerText = `$${totalPrice.toLocaleString('es-AR')}`;
         countProductsElement.innerText = cart.reduce((total, item) => total + item.quantity, 0);
     
-        addEventListenersToRemoveButtons(); // Asignar eventos a los botones de "Quitar"
+        addEventListenersToRemoveButtons(); 
     };
 
     
 
     const enviarPorWhatsApp = () => {
-        const total = totalPriceElement.innerText; // Obtén el total del carrito
-        const numeroTelefono = "+54 9 3512 53-6346"; // Número de WhatsApp
+        const total = totalPriceElement.innerText; 
+        const numeroTelefono = "+54 9 3512 53-6346"; 
         let detalleProductos = "";
     
-        // Construir el detalle de productos en el carrito
+        
         cart.forEach(product => {
             detalleProductos += `${product.name} (${product.quantity})\n`;
         });
     
-        // Crear el mensaje codificado para WhatsApp
+        
         const mensaje = encodeURIComponent(`Hola, deseo cerrar mi compra. El total es: ${total}. Productos:\n${detalleProductos}`);
     
-        // Detectar el dispositivo del usuario
+        
         const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
         const url = isMobile 
             ? `https://api.whatsapp.com/send?phone=${numeroTelefono}&text=${mensaje}` // Aplicación móvil
             : `https://web.whatsapp.com/send?phone=${numeroTelefono}&text=${mensaje}`; // Navegador
     
-        // Abrir WhatsApp en una nueva pestaña
+        
         window.open(url, "_blank");
     };
     
 
-    // Ordenar productos
+   
     const sortProducts = () => {
         if (sortOrder === 'lowest-price') {
             filteredProducts.sort((a, b) => a.price - b.price);
@@ -516,7 +516,7 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
         renderProducts(filteredProducts);
     };
 
-    // Inicializar
+    
     cartIcon.addEventListener('click', toggleCart);
     searchButton.addEventListener('click', searchProducts);
     searchInput.addEventListener('keyup', searchProducts);
@@ -527,8 +527,8 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
     filterCheckboxes.forEach(checkbox => checkbox.addEventListener('change', applyFilters));
 
     priceRange.addEventListener('input', () => {
-        const minPrice = 200000; // Precio mínimo predeterminado
-        const maxPrice = priceRange.value; // Precio máximo actual del rango
+        const minPrice = 200000; 
+        const maxPrice = priceRange.value; 
         priceRangeValue.innerText = `${minPrice.toLocaleString('es-AR')} - ${parseInt(maxPrice, 10).toLocaleString('es-AR')}`;
         applyFilters();
     });
@@ -554,13 +554,13 @@ document.getElementById("add-to-cart-modal-button").addEventListener('click', ()
     }
   
     
-    // Inicializar la aplicación
+    
     loadProducts();
 
-    // Inicializar la actualización automática de precios
+    
 setInterval(() => {
-    actualizarPreciosEnTiempoReal(); // Llama a la función para actualizar precios
-}, 60000); // Se ejecutará cada 60 segundos
+    actualizarPreciosEnTiempoReal(); 
+}, 60000); 
 
 });
 

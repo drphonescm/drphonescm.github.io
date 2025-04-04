@@ -1,4 +1,3 @@
-/* Globales */
 *::after,
 *::before,
 * {
@@ -8,9 +7,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif; /* Tipografía limpia y moderna */
-    background-color: #F8F9FA; /* Fondo suave para mejor contraste */
-    color: #333; /* Color de texto principal */
+    font-family: Arial, sans-serif; 
+    background-color: #F8F9FA; 
+    color: #333; 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,47 +18,47 @@ body {
 
 img {
     max-width: 100%;
-    border-radius: 50px; /* Ajusta los bordes de la imagen */
+    border-radius: 50px; 
 }
 
-/* Logo y título más compactos */
+
 .derecha-hover {
     display: flex;
     align-items: center;
-    gap: 15px; /* Menor espacio entre elementos */
+    gap: 15px; 
 }
 
 .derecha {
     display: flex;
     align-items: center;
-    gap: 20px; /* Espacio entre las imágenes */
-    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+    gap: 20px; 
+    transition: transform 0.3s ease; 
 }
 
 .logo,
 .title-image {
-    width: 80px; /* Ajusta este valor al tamaño deseado */
+    width: 80px; 
     height: auto;
-    border-radius: 10px; /* Bordes redondeados */
-    transition: transform 0.3s ease; /* Transición suave para transformaciones */
+    border-radius: 10px; 
+    transition: transform 0.3s ease; 
 }
 
 .logo {
-    width: 40px; /* Reducir tamaño del logo */
+    width: 40px; 
     height: auto;
-    border-radius: 5px; /* Ajustar bordes */
+    border-radius: 5px; 
 }
 
 .title-image {
-    width: 200px; /* Reducir ancho del título */
+    width: 200px; 
     height: auto;
 }
 
 .derecha-hover:hover .derecha {
-    transform: scale(1.05); /* Agranda las imágenes al pasar el cursor */
+    transform: scale(1.05); 
 }
 
-/* Header */
+
 header {
     display: flex;
     flex-wrap: wrap;
@@ -68,11 +67,11 @@ header {
     width: 100%;
     padding: 10px 15px;
     background-color: #ffffff;
-    border-bottom: 2px solid #333; /* Línea más delgada */
-    margin-bottom: 2px; /* Espacio inferior reducido */
+    border-bottom: 2px solid #333; 
+    margin-bottom: 2px; 
 }
 
-/* Contenedor para centrar el buscador */
+
 .search-bar-container {
     flex: 1;
     display: flex;
@@ -99,82 +98,81 @@ header {
 }
 
 .search-bar button {
-    background: linear-gradient(90deg, #8A2BE2, #BA55D3); /* Degradado en tonos lilas */
-    color: white; /* Texto blanco */
-    font-size: 0.8rem; /* Tamaño de fuente */
-    font-weight: bold; /* Texto en negrita */
+    background: linear-gradient(90deg, #8A2BE2, #BA55D3); 
+    color: white; 
+    font-size: 0.8rem; 
+    font-weight: bold; 
     padding: 8px 15px;
     border: none;
     border-radius: 0 5px 5px 0;
     cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra suave */
-    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .search-bar button:hover {
-    background: linear-gradient(90deg, #7B68EE, #DDA0DD); /* Degradado más claro en hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-    transform: scale(1.05); /* Zoom ligero al pasar el ratón */
+    background: linear-gradient(90deg, #7B68EE, #DDA0DD); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05); 
 }
 
 .search-bar button:active {
-    background: linear-gradient(90deg, #6A5ACD, #9932CC); /* Tonos más intensos en clic */
-    transform: scale(0.95); /* Efecto de hundimiento al hacer clic */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Sombra reducida */
+    background: linear-gradient(90deg, #6A5ACD, #9932CC); 
+    transform: scale(0.95); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
 }
 
 
 h1 {
     text-align: right;
-    font-family: 'Magneto-Bold', sans-serif; /* Usa el nombre correcto aquí */
+    font-family: 'Magneto-Bold', sans-serif; 
 }
 
 
 
-/* Estilos del contenedor principal */
 .container {
     display: flex;
-    justify-content: center; /* Centra el contenido principal */
-    margin-bottom: 0; /* Espacio extra para acomodar la paginación */
+    justify-content: center; 
+    margin-bottom: 0; 
 
 }
 
-/* Barra de paginación */
+
 .pagination {
-    display: flex; /* Activar Flexbox */
-    align-items: center; /* Alinear elementos verticalmente */
-    justify-content: center; /* Centrar los botones horizontalmente */
-    gap: 10px; /* Separar uniformemente entre botones */
-    padding: 10px 0; /* Espaciado interno */
-    background-color: #f1f1f1; /* Fondo claro */
-    border-top: 1px solid #ddd; /* Línea separadora superior */
-    position: relative; /* Asegura que no quede detrás de otros elementos */
-    bottom: 0; /* Mantén la paginación al fondo si usas posición fija */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    padding: 10px 0; 
+    background-color: #f1f1f1; 
+    border-top: 1px solid #ddd; 
+    position: relative; 
+    bottom: 0; 
 
 
 }
 
-/* Números de página */
+
 .pagination button,
 .page-number {
-    background: linear-gradient(90deg, #8A2BE2, #BA55D3); /* Degradado en tonos lilas */
-    color: white; /* Texto blanco */
-    font-size: 1rem; /* Tamaño de texto */
-    font-weight: bold; /* Negrita */
-    padding: 5px 10px; /* Espaciado interno */
-    border: none; /* Sin bordes */
-    border-radius: 30px; /* Bordes redondeados completos */
-    cursor: pointer; /* Indicador de clic */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra ligera */
-    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
+    background: linear-gradient(90deg, #8A2BE2, #BA55D3); 
+    color: white; 
+    font-size: 1rem; 
+    font-weight: bold; 
+    padding: 5px 10px; 
+    border: none; 
+    border-radius: 30px; 
+    cursor: pointer; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; 
 }
 
 
 .pagination button:hover,
 .page-number:hover {
-    background: linear-gradient(90deg, #7B68EE, #DDA0DD); /* Degradado más claro en hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-    transform: scale(1.05); /* Zoom ligero */
+    background: linear-gradient(90deg, #7B68EE, #DDA0DD); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05); 
 }
 
 
@@ -182,30 +180,30 @@ h1 {
 
 
 .page-number.active {
-    background: linear-gradient(90deg, #433984, #702595); /* Fondo más oscuro para la página activa */
-    color: white; /* Texto blanco */
-    font-weight: bold; /* Texto destacado */
+    background: linear-gradient(90deg, #433984, #702595); 
+    color: white; 
+    font-weight: bold; 
 }
 
-/* Botones "Anterior" y "Siguiente" */
+
 .pagination button {
     background-color: #A7A6D9;
     color: #fff;
     border: none;
-    padding: 8px 15px; /* Tamaño consistente con los números de página */
-    border-radius: 5px; /* Bordes redondeados */
+    padding: 8px 15px; 
+    border-radius: 5px; 
     font-size: 14px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s; /* Suavizar cambios */
+    transition: background-color 0.3s, transform 0.2s; 
 }
 
 .pagination button:hover {
-    background-color: #8684B1; /* Fondo más oscuro al pasar el cursor */
-    transform: scale(1.05); /* Efecto visual */
+    background-color: #8684B1; 
+    transform: scale(1.05); 
 }
 
 
-/* Ícono del carrito más pequeño */
+
 .container-icon {
     display: flex;
     align-items: center;
@@ -213,20 +211,20 @@ h1 {
 }
 
 .icon-cart {
-    width: 25px; /* Reducir tamaño del ícono */
+    width: 25px; 
     height: 25px;
     stroke: #6A5ACD;
     transition: transform 0.3s ease;
 }
 
 .icon-cart:hover {
-    transform: scale(1.1); /* Mantener efecto al pasar el cursor */
+    transform: scale(1.1); 
 }
 
 .count-products {
-    top: 50%; /* Ajuste de posición */
+    top: 50%; 
     right: 0;
-    width: 18px; /* Contador más pequeño */
+    width: 18px; 
     height: 18px;
     font-size: 10px;
 }
@@ -250,7 +248,7 @@ h1 {
     border-radius: 15px;
     overflow: hidden;
     padding: 15px;
-    max-width: 400px; /* Limita su tamaño en pantallas más grandes */
+    max-width: 400px; 
     max-height: 100%;
     overflow-y: auto;
     display: flex;
@@ -259,18 +257,18 @@ h1 {
 }
 
 .cart-product {
-    margin-bottom: 15px; /* Mayor espacio entre productos */
-    padding: 15px 20px; /* Espacio interno más cómodo */
+    margin-bottom: 15px; 
+    padding: 15px 20px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 
 }
 
 .cart-product:hover {
-    transform: scale(1.02); /* Efecto sutil al pasar el cursor */
+    transform: scale(1.02); 
 }
 
 .cantidad-producto-carrito {
@@ -296,14 +294,14 @@ h1 {
 }
 
 
-/* Estilos del contenido principal */
+
 .main-content {
     width: 75%;
     padding: 10px;
     margin-bottom: 60px;
 }
 
-/* Estilos de la sección de ordenamiento */
+
 .dropdown {
     display: flex;
     align-items: center;
@@ -315,8 +313,8 @@ h1 {
     border-radius: 5px;
     border: 1px solid #ddd;
     max-width: 240px;
-    margin-left: 15px; /* Alinear a la izquierda */
-    font-size: 0.5rem; /* Reduce el tamaño del texto */
+    margin-left: 15px; 
+    font-size: 0.5rem; 
     margin-top: 0;
 }
 
@@ -382,38 +380,38 @@ h3 {
 
 
 .remove-product-button {
-    background: linear-gradient(90deg, #8A2BE2, #BA55D3); /* Degradado en tonos lilas */
-    color: white; /* Texto blanco */
-    font-size: 0.8rem; /* Tamaño más pequeño del texto */
-    font-weight: bold; /* Negrita */
-    padding: 5px 10px; /* Espaciado interno reducido */
-    border: none; /* Sin bordes visibles */
-    border-radius: 20px; /* Bordes redondeados */
-    cursor: pointer; /* Indicador de clic */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra ligera */
-    margin-left: 10px; /* Margen a la izquierda */
-    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
+    background: linear-gradient(90deg, #8A2BE2, #BA55D3); 
+    color: white; 
+    font-size: 0.8rem; 
+    font-weight: bold; 
+    padding: 5px 10px;
+    border: none; 
+    border-radius: 20px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); 
+    margin-left: 10px; 
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .remove-product-button:hover {
-    background: linear-gradient(90deg, #7B68EE, #DDA0DD); /* Degradado más claro en hover */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-    transform: scale(1.05); /* Zoom ligero */
+    background: linear-gradient(90deg, #7B68EE, #DDA0DD); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05); 
 }
 
 .remove-product-button:active {
-    background: linear-gradient(90deg, #6A5ACD, #9932CC); /* Degradado más intenso al hacer clic */
-    transform: scale(0.95); /* Efecto de hundimiento */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Sombra reducida */
+    background: linear-gradient(90deg, #6A5ACD, #9932CC); 
+    transform: scale(0.95); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
 }
 
-/* Ajuste para mostrar 3 filas de celulares */
+
 .container-items {
-    margin: 0; /* Elimina márgenes externos */
-    padding: 0; /* Elimina espacios internos */
+    margin: 0; 
+    padding: 0; 
     width: 100%; 
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 3 columnas */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 15px;
     padding: 15px;
     max-height: auto; 
@@ -424,19 +422,19 @@ h3 {
 }
 
 .item {
-    position: relative; /* Permite ajustar capas */
-    overflow: visible; /* Evita que los bordes de la imagen sobresalgan */
-    border-radius: 8px; /* Bordes redondeados del contenedor */
-    padding: 10px; /* Espaciado interno */
-    background-color: #ffffff; /* Fondo neutro para destacar las imágenes PNG */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+    position: relative; 
+    overflow: visible; 
+    border-radius: 8px; 
+    padding: 10px; 
+    background-color: #ffffff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
     margin: 0;
     max-width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribuye contenido uniformemente dentro del contenedor */
-    align-items: center; /* Centra los elementos */
+    justify-content: space-between; 
+    align-items: center; 
     border: 1px solid #ddd;
     text-align: center;
 
@@ -445,7 +443,7 @@ h3 {
 }
 
 .item:hover {
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Efecto al pasar el cursor */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); 
 }
 
 .item img {
@@ -476,18 +474,18 @@ h3 {
     flex-grow: 1;
     justify-content: space-between;
 
-    /* Ajuste para igualar el ancho con figure */
-    width: 100%; /* Ocupar el ancho completo del contenedor */
-    max-width: 300px; /* Coincide con el ancho máximo de figure */
-    box-sizing: border-box; /* Incluye padding y borde en el cálculo del ancho */
-    margin: 0 auto; /* Centra el contenido horizontalmente si es necesario */
+    
+    width: 100%; 
+    max-width: 300px; 
+    box-sizing: border-box; 
+    margin: 0 auto; 
 }
 
 figure {
-    width: 100%; /* Asegura que también ocupe el ancho completo del contenedor */
-    max-width: 300px; /* Ancho máximo para coincidir con info-product */
-    box-sizing: border-box; /* Consistencia en el cálculo del ancho */
-    margin: 0 auto; /* Centra el contenido si es necesario */
+    width: 100%; 
+    max-width: 300px; 
+    box-sizing: border-box; 
+    margin: 0 auto; 
 }
 
 
@@ -503,8 +501,8 @@ figure {
 
 .cart-button {
     display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente si es necesario */
+    justify-content: center; 
+    align-items: center; 
     padding: 15px;
 }
 
@@ -552,39 +550,39 @@ figure {
     right: 0;
 }
 
-/* WhatsApp Button */
+
 .whatsapp-button {
     position: fixed;
-    bottom: 10px; /* Reducir más la separación del borde inferior */
-    right: 20px; /* Separación estándar del lado derecho */
-    width: 60px; /* Tamaño del botón */
+    bottom: 10px; 
+    right: 20px; 
+    width: 60px; 
     height: 60px;
     border-radius: 50%;
-    background-color: #25d366; /* Color verde de WhatsApp */
+    background-color: #25d366; 
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para mejor visibilidad */
-    z-index: 100; /* Siempre visible encima de otros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    z-index: 100; 
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .whatsapp-button:hover {
-    background-color: #1da851; /* Color más oscuro al pasar el cursor */
-    transform: scale(1.1); /* Efecto de agrandamiento */
+    background-color: #1da851; 
+    transform: scale(1.1); 
 }
 
 .whatsapp-button img {
-    width: 70%; /* Tamaño ajustado del logo dentro del botón */
+    width: 70%; 
     height: 70%;
     object-fit: contain;
-    border-radius: 50%; /* Bordes redondeados */
+    border-radius: 50%; 
 }
 
 
 
-/* ===== Títulos ===== */
+
 h2, h4 {
     font-weight: bold;
     margin-bottom: 10px;
@@ -592,24 +590,24 @@ h2, h4 {
 
 h2 {
     font-size: 1.2rem;
-    color: #000000; /* Color lila elegante */
+    color: #000000; 
 }
 
 h4 {
     font-size: 1rem;
-    color: #5638D3; /* Tono más oscuro */
+    color: #5638D3; 
 }
 
-/* ===== Controles de Filtros ===== */
+
 .filter-group {
     height: auto;
     overflow: visible;
     margin-bottom: 20px;
     padding: 10px;
-    background-color: #FFFFFF; /* Fondo blanco para resaltar */
+    background-color: #FFFFFF; 
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 20px; /* Espaciado adicional entre grupos */
+    margin-top: 20px; 
 
 }
 
@@ -632,7 +630,7 @@ h4 {
     -webkit-appearance: none;
     appearance: none;
     height: 8px;
-    background: #E4E4E4; /* Color de la pista */
+    background: #E4E4E4; 
     border-radius: 5px;
     outline: none;
     transition: background 0.3s ease-in-out;
@@ -652,39 +650,39 @@ h4 {
 .filter-group input[type="range"]::-webkit-slider-thumb:hover,
 .filter-group input[type="range"]::-moz-range-thumb:hover {
     background-color: #5A4CBC;
-    transform: scale(1.1); /* Animación suave */
+    transform: scale(1.1); 
 }
 
-/* ===== Botón de Toggle ===== */
+
 .toggle-checkbox {
-    display: none; /* Oculta el checkbox */
+    display: none; 
 }
 
-/* Botón */
+
 .toggle-label {
-    position: fixed; /* Fija el botón */
-    top: 70px; /* Ajusta la distancia desde arriba */
-    left: 20px; /* Pega al borde izquierdo */
+    position: fixed; 
+    top: 70px; 
+    left: 20px; 
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #6A5ACD;
     width: 40px;
     height: 40px;
-    border-radius: 50%; /* Botón circular */
+    border-radius: 50%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    z-index: 1100; /* Asegura estar sobre otros elementos */
-    margin: 0; /* Elimina cualquier margen sobrante */
-    padding: 0; /* Elimina padding interno no deseado */
+    z-index: 1100; 
+    margin: 0; 
+    padding: 0; 
 
 
 }
 
 .toggle-label:hover {
-    background-color: #5A4CBC; /* Cambia el color en hover */
-    transform: scale(1.1); /* Efecto de agrandamiento */
+    background-color: #5A4CBC; 
+    transform: scale(1.1); 
 }
 
 
@@ -693,31 +691,31 @@ h4 {
     height: 24px;
 }
 
-/* ===== Barra Lateral ===== */
+
 .sidebar {
     display: none;
     position: fixed;
     top: 0;
-    right: -300px; /* Fuera de la pantalla inicialmente */
+    right: -300px; 
     width: 300px;
-    height: auto; /* Ajuste dinámico basado en contenido */
+    height: auto; 
     background-color: #FFFFFF;
     box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     padding: 20px;
-    border-radius: 8px 0 0 8px; /* Esquinas redondeadas */
-    transition: right 0.3s ease; /* Animación al abrir/cerrar */
+    border-radius: 8px 0 0 8px; 
+    transition: right 0.3s ease; 
     z-index: 1000;
 }
 
 
 .sidebar.open {
-    right: 10px; /* Aparece en la vista */
+    right: 10px; 
 }
 
-/* Espaciado del título "Filtros" */
+
 .sidebar h3 {
-    margin-top: 40px; /* Baja el título para darle espacio al botón */
+    margin-top: 40px; 
     font-size: 1.1rem;
     color: #6A5ACD;
 }
@@ -731,7 +729,7 @@ h4 {
     display: block; 
 }
 
-/* Animación para apertura suave */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -747,95 +745,94 @@ h4 {
 
 
 @media (max-width: 480px) {
-    /* Reset general para evitar desplazamientos y desbordamientos */
+    
     body, html {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        overflow-x: hidden; /* Evita cualquier desplazamiento horizontal */
+        overflow-x: hidden; 
     }
 
     *, *::before, *::after {
-        box-sizing: inherit; /* Consistencia en el cálculo del tamaño */
+        box-sizing: inherit; 
     }
 
-    /* Header */
     header {
         width: 100%;
-        padding: 8px; /* Espaciado interno ajustado */
+        padding: 8px; 
         display: flex;
-        justify-content: space-between; /* Distribución horizontal de los elementos */
-        align-items: center; /* Alineación vertical */
+        justify-content: space-between; 
+        align-items: center; 
         background-color: #ffffff;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
         position: relative;
     }
 
-    /* Logo y título más compactos */
+    
     .derecha-hover {
         display: flex;
         align-items: center;
-        gap: 5px; /* Menor espacio entre elementos */
-        transition: transform 0.3s ease; /* Suave para hover */
+        gap: 5px; 
+        transition: transform 0.3s ease; 
     }
 
     .derecha-hover .derecha {
         display: flex;
         align-items: center;
-        gap: 5px; /* Espacio entre imágenes */
+        gap: 5px; 
     }
 
     .derecha-hover .logo{
-        width: 25px; /* Valor ajustado para ambos elementos */
+        width: 25px; 
         height: auto;
-        border-radius: 0; /* Bordes redondeados uniformes */
-        transition: transform 0.3s ease; /* Transición suave */
+        border-radius: 0; 
+        transition: transform 0.3s ease; 
 
 
     }
     .derecha-hover .title-image {
-        width: 50px; /* Valor ajustado para ambos elementos */
+        width: 50px; 
         height: auto;
-        border-radius: 0; /* Bordes redondeados uniformes */
-        transition: transform 0.3s ease; /* Transición suave */
+        border-radius: 0; 
+        transition: transform 0.3s ease; 
     }
 
     .derecha-hover:hover .logo,
     .derecha-hover:hover .title-image {
-        transform: scale(1.05); /* Hover solo aplicado aquí */
+        transform: scale(1.05); 
     }
 
-    /* Barra de búsqueda */
+    
     .search-bar-container {
         width: 100%;
-        max-width: 200px; /* Más compacto */
-        margin: 5px auto; /* Reducción del margen */
+        max-width: 200px; 
+        margin: 5px auto; 
         display: flex;
         justify-content: center;
-        padding: 3px; /* Menor espaciado interno */
+        padding: 3px; 
     }
 
     .search-bar {
         display: flex;
         width: 100%;
-        max-width: 200px; /* Más reducido */
-        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-        border-radius: 4px; /* Menos redondeo */
+        max-width: 200px; 
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); 
+        border-radius: 4px; 
         overflow: hidden;
     }
 
     .search-bar input {
         flex: 1;
-        padding: 4px; /* Más compacto */
-        font-size: 0.4rem; /* Fuente reducida */
+        padding: 4px; 
+        font-size: 0.4rem; 
         border: none;
         outline: none;
     }
 
     .search-bar button {
-        padding: 4px 6px; /* Proporciones más pequeñas */
-        font-size: 0.6rem; /* Fuente aún más compacta */
-        border-radius: 4px; /* Menos redondeo */
+        padding: 4px 6px; 
+        font-size: 0.6rem; 
+        border-radius: 4px; 
         background-color: #6A5ACD;
         color: #fff;
         border: none;
@@ -844,21 +841,21 @@ h4 {
     }
 
     .search-bar button:hover {
-        background-color: #5638d3; /* Hover más sutil */
+        background-color: #5638d3; 
     }
 
-    /* Botón de filtros */
+    
     .toggle-label {
         display: flex;
-        top: 65px; /* Ajusta la distancia desde arriba */
-        left: 15px; /* Pega al borde izquierdo */
+        top: 65px; 
+        left: 15px;
         align-items: center;
         justify-content: center;
         background-color: #6A5ACD;
         padding: 10px;
         cursor: pointer;
         border-radius: 50%;
-        width: 40px; /* Proporción más adecuada */
+        width: 40px; 
         height: 40px;
         transition: background-color 0.3s ease, transform 0.3s ease;
         z-index: 3000;
@@ -874,12 +871,12 @@ h4 {
         height: 24px;
     }
 
-    /* Filtros */
+    
     .sidebar {
         display: none;
         position: fixed;
         top: 0;
-        left: -250px; /* Mejor ajuste fuera del viewport */
+        left: -250px; 
         width: 250px;
         max-height: 100%;
         background-color: #F4F4F4;
@@ -931,7 +928,6 @@ h4 {
         margin-top: 10px;
     }
 
-    /* Contenedor de productos */
     .container-items {
         margin: 0 auto;
         padding: 10px;
@@ -958,14 +954,14 @@ h4 {
 
     .item img {
         width: 100%;
-        max-width: 160px; /* Mejora visual para móviles */
+        max-width: 160px; 
         height: auto;
         border-radius: 8px;
         margin-bottom: 10px;
     }
 
     .item h3 {
-        font-size: 1.2rem; /* Tamaño mejorado */
+        font-size: 1.2rem; 
         font-weight: bold;
         margin-bottom: 10px;
         overflow: hidden;
@@ -991,7 +987,7 @@ h4 {
         transform: scale(1.05);
     }
 
-    /* Ajustes para el contenido principal */
+    
     .main-content {
         width: 100%;
         padding: 0 1px;
@@ -1004,48 +1000,48 @@ h4 {
         margin-top: 5px;
     }
 
-    /* Botón de WhatsApp */
+    
     .whatsapp-button {
-        position: fixed; /* Fijo para estar siempre visible */
-        bottom: 20px; /* Separación desde la parte inferior */
-        right: 20px; /* Separación desde el lado derecho */
-        width: 45px; /* Tamaño reducido */
-        height: 45px; /* Tamaño reducido */
-        background-color: #25D366; /* Color verde de WhatsApp */
-        border-radius: 50%; /* Forma circular */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
+        position: fixed; 
+        bottom: 20px; 
+        right: 20px; 
+        width: 45px; 
+        height: 45px; 
+        background-color: #25D366; 
+        border-radius: 50%; 
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
         display: flex;
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efectos suaves */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
     }
 
     .whatsapp-button img {
-        width: 30px; /* Tamaño compacto del ícono */
+        width: 30px; 
         height: 30px;
     }
 
     .whatsapp-button:hover {
-        transform: scale(1.1); /* Efecto de hover */
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+        transform: scale(1.1); 
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); 
     }
 }
 
 
 
-/* Tablets: 3 columnas */
+
 @media (min-width: 768px) and (max-width: 1024px) {
     .container-items {
-        grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+        grid-template-columns: repeat(3, 1fr); 
     }
 }
 
 
-/* Laptops pequeños y PCs estándar (1025px en adelante): 4 columnas */
+
 @media (min-width: 1025px) {
     .container-items {
-        grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+        grid-template-columns: repeat(4, 1fr); 
     }
 }
 
@@ -1066,7 +1062,7 @@ h4 {
 
 
 #product-modal {
-    display: none; /* Oculto por defecto */
+    display: none; 
     position: fixed;
     top: 50%;
     left: 50%;
@@ -1079,12 +1075,12 @@ h4 {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     z-index: 1000;
-    text-align: center; /* Centra el contenido */
+    text-align: center; 
 }
 
 
 #modal-title {
-    font-size: 1.8rem; /* Texto más grande */
+    font-size: 1.8rem; 
     font-weight: bold;
     color: #333;
     margin-bottom: 10px;
@@ -1092,7 +1088,7 @@ h4 {
 }
 
 #modal-price {
-    font-size: 1.8rem; /* Aumentar tamaño del precio */
+    font-size: 1.8rem; 
     font-weight: bold;
     color: #6A5ACD;
     text-align: center;
@@ -1100,15 +1096,15 @@ h4 {
 }
 
 #modal-features {
-    list-style: none; /* Quitar viñetas */
+    list-style: none; 
     padding: 0;
-    font-size: 1.2rem; /* Aumentar tamaño de las características */
+    font-size: 1.2rem; 
     color: #555;
-    text-align: left; /* Alinear texto */
+    text-align: left; 
 }
 
 #modal-features li {
-    margin-bottom: 8px; /* Espaciado entre elementos */
+    margin-bottom: 8px; 
 }
 
 .close-button {
@@ -1127,7 +1123,7 @@ h4 {
 
 
 .modal-open {
-    overflow: hidden; /* Este estilo bloquea el scroll */
+    overflow: hidden;
 }
 
 #image-container {
@@ -1138,49 +1134,49 @@ h4 {
 }
 
 #modal-img {
-    width: 62%; /* Imagen ajustada al contenedor */
+    width: 62%; 
     border-radius: 8px;
     position: relative;
-    z-index: 1; /* Imagen está detrás del botón */
+    z-index: 1; 
     transform-origin: center;
 
 }
 
 
 #add-to-cart-modal-button {
-    background: linear-gradient(90deg, #8A2BE2, #BA55D3); /* Degradado en tonos lilas */
-    color: #ffffff; /* Texto blanco */
-    font-size: 1.2rem; /* Tamaño del texto */
-    font-weight: bold; /* Negrita para destacar el texto */
-    padding: 12px 25px; /* Espaciado interno */
-    border: none; /* Sin bordes */
-    border-radius: 10px; /* Bordes redondeados completos */
-    cursor: pointer; /* Indicador de clic */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra ligera */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; /* Animaciones suaves */
+    background: linear-gradient(90deg, #8A2BE2, #BA55D3); 
+    color: #ffffff; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    padding: 12px 25px; 
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; 
 }
 
 #add-to-cart-modal-button:hover {
-    background: linear-gradient(90deg, #7B68EE, #DDA0DD); /* Degradado más claro en hover */
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-    transform: scale(1.05); /* Zoom ligero al pasar el ratón */
+    background: linear-gradient(90deg, #7B68EE, #DDA0DD); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05); 
 }
 
 #add-to-cart-modal-button:active {
-    background: linear-gradient(90deg, #6A5ACD, #9932CC); /* Degradado más intenso al hacer clic */
-    transform: scale(0.95); /* Reducir ligeramente al hacer clic */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra reducida */
+    background: linear-gradient(90deg, #6A5ACD, #9932CC); 
+    transform: scale(0.95); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); 
 }
 
 #modal-overlay {
-    display: none; /* Oculto por defecto */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro semi-transparente */
-    z-index: 999; /* Colocar detrás del modal pero delante del resto */
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 999; 
 }
 
 #product-modal {
@@ -1191,63 +1187,63 @@ h4 {
     width: 90%;
     max-width: px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.98); /* Fondo blanco */
+    background: rgba(255, 255, 255, 0.98); 
     border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra ligera */
-    z-index: 1000; /* Por encima del fondo oscuro */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+    z-index: 1000; 
 }
 
 .add-to-cart-button {
-    background: linear-gradient(90deg, #8A2BE2, #BA55D3); /* Degradado en tonos lilas */
-    color: white; /* Texto blanco */
-    font-size: 0.6rem; /* Tamaño del texto */
-    font-weight: bold; /* Negrita */
-    padding: 10px 30px; /* Espaciado interno */
-    border: none; /* Sin bordes visibles */
-    border-radius: 10px; /* Bordes completamente redondeados */
-    cursor: pointer; /* Indicador de clic */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Sombra ligera */
-    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; /* Animaciones suaves */
+    background: linear-gradient(90deg, #8A2BE2, #BA55D3); 
+    color: white; 
+    font-size: 0.6rem; 
+    font-weight: bold; 
+    padding: 10px 30px; 
+    border: none; 
+    border-radius: 10px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease; 
 }
 
 
 .add-to-cart-button:hover {
-    background: linear-gradient(90deg, #7B68EE, #DDA0DD); /* Degradado más claro al pasar el ratón */
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-    transform: scale(1.05); /* Zoom ligero */
+    background: linear-gradient(90deg, #7B68EE, #DDA0DD); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05); 
 }
 
 .add-to-cart-button:active {
-    background: linear-gradient(90deg, #6A5ACD, #9932CC); /* Tonos más intensos en clic */
-    transform: scale(0.95); /* Efecto de hundimiento */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Sombra reducida */
+    background: linear-gradient(90deg, #6A5ACD, #9932CC); 
+    transform: scale(0.95); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); 
 }
 
 #add-to-cart-message {
     position: fixed;
-    top: 10%; /* Mantén la posición */
+    top: 10%; 
     right: 10%;
-    background-color: #7B68EE; /* Lila vibrante */
+    background-color: #7B68EE; 
     color: white;
-    font-size: 0.9rem; /* Reduce el tamaño del texto */
+    font-size: 0.9rem; 
     font-weight: bold;
-    padding: 8px 15px; /* Menor espaciado interno */
-    border-radius: 5px; /* Bordes menos redondeados */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra más ligera */
+    padding: 8px 15px; 
+    border-radius: 5px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
     z-index: 1000;
     opacity: 1;
-    transform: translateY(-15px); /* Ajusta la animación según el nuevo tamaño */
+    transform: translateY(-15px); 
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
 #close-modal {
-    position: absolute; /* Mantenerlo flotante */
-    top: 10px; /* Espaciado desde arriba */
-    right: 15px; /* Espaciado desde la derecha */
-    z-index: 9999; /* Asegúrate de que sea el más alto */
-    font-size: 1.5rem; /* Tamaño grande para visibilidad */
-    color: white; /* Texto blanco */
-    background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    z-index: 9999; 
+    font-size: 1.5rem; 
+    color: white; 
+    background-color: rgba(0, 0, 0, 0.6); 
     border: 2px solid red; 
     border-radius: 50%;
     padding: 8px;
@@ -1256,6 +1252,6 @@ h4 {
 }
 
 #close-modal:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Más oscuro al pasar el ratón */
+    background-color: rgba(0, 0, 0, 0.8); 
 }
 
