@@ -649,7 +649,7 @@ h4 {
 
 .filter-group input[type="range"]::-webkit-slider-thumb:hover,
 .filter-group input[type="range"]::-moz-range-thumb:hover {
-    background-color: #5A4CBC;
+    background-color: #5638D3;
     transform: scale(1.1); 
 }
 
@@ -666,7 +666,7 @@ h4 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #6A5ACD;
+    background-color: #5638D3;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -681,7 +681,7 @@ h4 {
 }
 
 .toggle-label:hover {
-    background-color: #5A4CBC; 
+    background-color: #5738d3b3; 
     transform: scale(1.1); 
 }
 
@@ -851,7 +851,7 @@ h4 {
         left: 15px;
         align-items: center;
         justify-content: center;
-        background-color: #6A5ACD;
+        background-color: #5638D3;
         padding: 10px;
         cursor: pointer;
         border-radius: 50%;
@@ -862,7 +862,7 @@ h4 {
     }
 
     .toggle-label:hover {
-        background-color: #5A4CBC;
+        background-color: #5738d3b3;
         transform: scale(1.05);
     }
 
