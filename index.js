@@ -114,8 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
     { id: 34, name: "Samsung Galaxy S25 Ultra 5G", price: 1925773, img: "https://drphonescm.github.io/img/CELULARES/S25ULTRA.png", features: ["Pantalla: 6.8'' Dynamic AMOLED", "Almacenamiento: 256 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
     { id: 35, name: "Samsung Galaxy S25 Ultra 5G", price: 2099527, img: "https://drphonescm.github.io/img/CELULARES/S25ULTRA.png", features: ["Pantalla: 6.8'' Dynamic AMOLED", "Almacenamiento: 512 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
     { id: 36, name: "Xiaomi Poco C75", price: 218847, img: "https://drphonescm.github.io/img/CELULARES/POCOC75.png", features: ["Pantalla: 6.5'' IPS", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 50 MP"] },
-    { id: 37, name: "Xiaomi 14T Pro", price: 999306, img: "https://drphonescm.github.io/img/CELULARES/14TPRO.png", features: ["Pantalla: 6.67'' AMOLED", "Almacenamiento: 512 GB", "RAM: 12 GB", "Cámara: 50 MP"] }
-    
+    { id: 37, name: "Xiaomi 14T Pro", price: 999306, img: "https://drphonescm.github.io/img/CELULARES/14T.png", features: ["Pantalla: 6.67'' AMOLED", "Almacenamiento: 512 GB", "RAM: 12 GB", "Cámara: 50 MP"] }
+
     ];
     
 
