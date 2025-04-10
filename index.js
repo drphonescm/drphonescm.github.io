@@ -78,57 +78,48 @@ document.addEventListener('DOMContentLoaded', () => {
     const loadProducts = () => {
        allProducts = [
         
-        { id: 1, name: "Motorola Moto G04s", price: 226999, img: "https://drphonescm.github.io/img/CELULARES/G04S.png", features: ["Pantalla: 6.5''", "Almacenamiento: 64 GB", "RAM: 4 GB", "Cámara: 48 MP"] },
-        
-        { id: 2, name: "Motorola Moto G24 Power", price: 286999, img: "https://drphonescm.github.io/img/CELULARES/G24%20POWER.png", features: ["Pantalla: 6.6''", "Almacenamiento: 128 GB", "RAM: 6 GB", "Cámara: 50 MP"] },
-        
-        { id: 3, name: "Motorola Moto G14", price: 264999, img: "https://drphonescm.github.io/img/CELULARES/G14.png", features: ["Pantalla: 6.5''", "Almacenamiento: 128 GB", "RAM: 4 GB", "Cámara: 50 MP"] },
-        
-        { id: 4, name: "Samsung Galaxy A05", price: 293999, img: "https://drphonescm.github.io/img/CELULARES/A05.png", features: ["Pantalla: 6.6''", "Almacenamiento: 128 GB", "RAM: 4 GB", "Cámara: 64 MP"] },
-        
-        { id: 5, name: "Xiaomi Redmi Note 13", price: 386999, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2013.png", features: ["Pantalla: 6.67''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 200 MP"] },
-        
-        { id: 6, name: "Samsung Galaxy A15", price: 309999, img: "https://drphonescm.github.io/img/CELULARES/A15.png", features: ["Pantalla: 6.5''", "Almacenamiento: 128 GB", "RAM: 6 GB", "Cámara: 50 MP"] },
-        
-        { id: 7, name: "Samsung Galaxy A25", price: 389999, img: "https://drphonescm.github.io/img/CELULARES/A25.png", features: ["Pantalla: 6.7''", "Almacenamiento: 128 GB", "RAM: 8 GB", "Cámara: 64 MP"] },
-        
-        { id: 8, name: "Samsung Galaxy A25", price: 442999, img: "https://drphonescm.github.io/img/CELULARES/A25%20256GB.png", features: ["Pantalla: 6.7''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 64 MP"] },
-        
-        { id: 9, name: "Samsung Galaxy A35", price: 530999, img: "https://drphonescm.github.io/img/CELULARES/A35.png", features: ["Pantalla: 6.5''", "Almacenamiento: 128 GB", "RAM: 6 GB", "Cámara: 108 MP"] },
-        
-        { id: 10, name: "Samsung Galaxy A35", price: 548999, img: "https://drphonescm.github.io/img/CELULARES/A35%20256.png", features: ["Pantalla: 6.5''", "Almacenamiento: 256 GB", "RAM: 6 GB", "Cámara: 108 MP"] },
-        
-        { id: 11, name: "Samsung Galaxy A55", price: 610999, img: "https://drphonescm.github.io/img/CELULARES/A55.png", features: ["Pantalla: 6.7''", "Almacenamiento: 128 GB", "RAM: 8 GB", "Cámara: 200 MP"] },
-        
-        { id: 12, name: "Samsung Galaxy A55", price: 671999, img: "https://drphonescm.github.io/img/CELULARES/A55%20256.png", features: ["Pantalla: 6.7''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 200 MP"] },
-        
-        { id: 13, name: "Samsung S23 ULTRA", price: 1224999, img: "https://drphonescm.github.io/img/CELULARES/S23%20ULTRA.png", features: ["Pantalla: 6.8''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 200 MP"] },
-        
-        { id: 14, name: "Samsung S23 ULTRA", price: 1313999, img: "https://drphonescm.github.io/img/CELULARES/S23%20ULTRA%20512.png", features: ["Pantalla: 6.8''", "Almacenamiento: 512 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
-        
-        { id: 15, name: "Samsung S24 FE", price: 1135999, img: "https://drphonescm.github.io/img/CELULARES/S24%20FE.png", features: ["Pantalla: 6.8''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 200 MP"] },
-        
-        { id: 16, name: "Samsung S24 ULTRA", price: 1446999, img: "https://drphonescm.github.io/img/CELULARES/S24%20256.png", features: ["Pantalla: 6.9''", "Almacenamiento: 256 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
-        
-        { id: 17, name: "Samsung S24 ULTRA", price: 1556999, img: "https://drphonescm.github.io/img/CELULARES/S24%20512.png", features: ["Pantalla: 6.9''", "Almacenamiento: 512 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
-        
-        { id: 18, name: "Xiaomi Redmi Note 13 PRO ", price: 528999, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2013%20PRO.png", features: ["Pantalla: 6.6''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 200 MP"] },
-        
-        { id: 19, name: "Xiaomi Redmi Note 13 PRO", price: 607999, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2013%20PRO%20512.png", features: ["Pantalla: 6.6''", "Almacenamiento: 512 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
-        
-        { id: 20, name: "Xiaomi Redmi Note 13 PRO PLUS", price: 639999, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2013%20PRO%20PLUS.png", features: ["Pantalla: 6.67''", "Almacenamiento: 256 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
-        
-        { id: 21, name: "Xiaomi Redmi Note 13C", price: 265999, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2013C.png", features: ["Pantalla: 6.5''", "Almacenamiento: 128 GB", "RAM: 4 GB", "Cámara: 50 MP"] },
-        
-        { id: 22, name: "Xiaomi Redmi Note 14C", price: 291999, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2014C.png", features: ["Pantalla: 6.6''", "Almacenamiento: 128 GB", "RAM: 8 GB", "Cámara: 64 MP"] },
-        
-        { id: 23, name: "Motorola Moto G14", price: 349999, img: "https://drphonescm.github.io/img/CELULARES/G14%20256.png", features: ["Pantalla: 6.5''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 64 MP"] },
-        
-        { id: 24, name: "Xiaomi Redmi Note 14 PRO", price: 729999, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2014%20PRO.png", features: ["Pantalla: 6.67''", "Almacenamiento: 512 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
-        
-        { id: 25, name: "Motorola Moto G84", price: 520999, img: "https://drphonescm.github.io/img/CELULARES/G84.png", features: ["Pantalla: 6.55''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 50 MP"] }
-        
+    { id: 1, name: "Motorola Moto G04s", price: 222019, img: "https://drphonescm.github.io/img/CELULARES/G04S.png", features: ["Pantalla: 6.5''", "Almacenamiento: 128 GB", "RAM: 4 GB", "Cámara: 48 MP"] },
+    { id: 2, name: "Motorola Moto G24 Power", price: 237878, img: "https://drphonescm.github.io/img/CELULARES/G24%20POWER.png", features: ["Pantalla: 6.6''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 50 MP"] },
+    { id: 3, name: "Motorola Moto G14", price: 222019, img: "https://drphonescm.github.io/img/CELULARES/G14.png", features: ["Pantalla: 6.5''", "Almacenamiento: 128 GB", "RAM: 4 GB", "Cámara: 50 MP"] },
+    { id: 4, name: "Samsung Galaxy A05", price: 245807, img: "https://drphonescm.github.io/img/CELULARES/A05.png", features: ["Pantalla: 6.6''", "Almacenamiento: 128 GB", "RAM: 4 GB", "Cámara: 64 MP"] },
+    { id: 5, name: "Xiaomi Redmi Note 13", price: 323513, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2013.png", features: ["Pantalla: 6.67''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 200 MP"] },
+    { id: 6, name: "Samsung Galaxy A15", price: 333029, img: "https://drphonescm.github.io/img/CELULARES/A15.png", features: ["Pantalla: 6.5''", "Almacenamiento: 128 GB", "RAM: 6 GB", "Cámara: 50 MP"] },
+    { id: 7, name: "Samsung Galaxy A25", price: 348887, img: "https://drphonescm.github.io/img/CELULARES/A25.png", features: ["Pantalla: 6.7''", "Almacenamiento: 128 GB", "RAM: 8 GB", "Cámara: 64 MP"] },
+    { id: 8, name: "Samsung Galaxy A25", price: 396463, img: "https://drphonescm.github.io/img/CELULARES/A25%20256GB.png", features: ["Pantalla: 6.7''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 64 MP"] },
+    { id: 9, name: "Samsung Galaxy A35", price: 475755, img: "https://drphonescm.github.io/img/CELULARES/A35.png", features: ["Pantalla: 6.5''", "Almacenamiento: 128 GB", "RAM: 6 GB", "Cámara: 108 MP"] },
+    { id: 10, name: "Samsung Galaxy A35", price: 594694, img: "https://drphonescm.github.io/img/CELULARES/A35%20256.png", features: ["Pantalla: 6.5''", "Almacenamiento: 256 GB", "RAM: 6 GB", "Cámara: 108 MP"] },
+    { id: 11, name: "Samsung Galaxy A55", price: 547118, img: "https://drphonescm.github.io/img/CELULARES/A55.png", features: ["Pantalla: 6.7''", "Almacenamiento: 128 GB", "RAM: 8 GB", "Cámara: 200 MP"] },
+    { id: 12, name: "Samsung Galaxy A55", price: 602623, img: "https://drphonescm.github.io/img/CELULARES/A55%20256.png", features: ["Pantalla: 6.7''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 200 MP"] },
+    { id: 13, name: "Samsung S23 ULTRA", price: 1224999, img: "https://drphonescm.github.io/img/CELULARES/S23%20ULTRA.png", features: ["Pantalla: 6.8''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 200 MP"] },
+    { id: 14, name: "Samsung S24 ULTRA", price: 1245237, img: "https://drphonescm.github.io/img/CELULARES/S24%20256.png", features: ["Pantalla: 6.9''", "Almacenamiento: 256 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
+    { id: 15, name: "Samsung S24 ULTRA", price: 1375552, img: "https://drphonescm.github.io/img/CELULARES/S24%20512.png", features: ["Pantalla: 6.9''", "Almacenamiento: 512 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
+    { id: 16, name: "Samsung Galaxy S25 Ultra 5G", price: 1925774, img: "https://drphonescm.github.io/img/CELULARES/S25ULTRA.png", features: ["Pantalla: 6.8'' Dynamic AMOLED", "Almacenamiento: 256 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
+    { id: 17, name: "Samsung Galaxy S25 Ultra 5G", price: 2099528, img: "https://drphonescm.github.io/img/CELULARES/S25ULTRA.png", features: ["Pantalla: 6.8'' Dynamic AMOLED", "Almacenamiento: 512 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
+    { id: 18, name: "Xiaomi Redmi Note 13 PRO", price: 586765, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2013%20PRO.png", features: ["Pantalla: 6.6''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 200 MP"] },
+    { id: 19, name: "Xiaomi Redmi Note 13 PRO", price: 650198, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2013%20PRO%20512.png", features: ["Pantalla: 6.6''", "Almacenamiento: 512 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
+    { id: 20, name: "Xiaomi Redmi Note 13 PRO PLUS", price: 650199, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2013%20PRO%20PLUS.png", features: ["Pantalla: 6.67''", "Almacenamiento: 256 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
+    { id: 21, name: "Xiaomi Redmi Note 13C", price: 222019, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2013C.png", features: ["Pantalla: 6.5''", "Almacenamiento: 128 GB", "RAM: 4 GB", "Cámara: 50 MP"] },
+    { id: 22, name: "Xiaomi Redmi Note 14C", price: 222019, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2014C.png", features: ["Pantalla: 6.6''", "Almacenamiento: 128 GB", "RAM: 8 GB", "Cámara: 64 MP"] },
+    { id: 23, name: "Motorola Moto G14", price: 293383, img: "https://drphonescm.github.io/img/CELULARES/G14%20256.png", features: ["Pantalla: 6.5''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 64 MP"] },
+    { id: 24, name: "Xiaomi Redmi Note 14 PRO PLUS", price: 729999, img: "https://drphonescm.github.io/img/CELULARES/NOTE%2014%20PRO.png", features: ["Pantalla: 6.67''", "Almacenamiento: 512 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
+    { id: 25, name: "Motorola Moto G84", price: 329857, img: "https://drphonescm.github.io/img/CELULARES/G84.png", features: ["Pantalla: 6.55''", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 50 MP"] },
+    { id: 26, name: "Motorola E14", price: 142726, img: "https://drphonescm.github.io/img/CELULARES/E14.png", features: ["Pantalla: 6.3'' HD+", "Almacenamiento: 64 GB", "RAM: 2 GB", "Cámara: 13 MP"] },
+    { id: 27, name: "Motorola G34 5G", price: 293382, img: "https://drphonescm.github.io/img/CELULARES/G34.png", features: ["Pantalla: 6.5'' FHD+", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 50 MP"] },
+    { id: 28, name: "Samsung Galaxy A06", price: 207746, img: "https://drphonescm.github.io/img/CELULARES/A06.png", features: ["Pantalla: 6.6'' HD+", "Almacenamiento: 128 GB", "RAM: 4 GB", "Cámara: 48 MP"] },
+    { id: 29, name: "Samsung Galaxy A16", price: 272766, img: "https://drphonescm.github.io/img/CELULARES/A16.png", features: ["Pantalla: 6.5'' HD+", "Almacenamiento: 128 GB", "RAM: 4 GB", "Cámara: 50 MP"] },
+    { id: 30, name: "Samsung Galaxy A26 5G", price: 491613, img: "https://drphonescm.github.io/img/CELULARES/A26.png", features: ["Pantalla: 6.6'' FHD+", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 64 MP"] },
+    { id: 31, name: "Samsung Galaxy A36 5G", price: 650198, img: "https://drphonescm.github.io/img/CELULARES/A36.png", features: ["Pantalla: 6.6'' FHD+", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 108 MP"] },
+    { id: 32, name: "Samsung Galaxy A56 5G", price: 713632, img: "https://drphonescm.github.io/img/CELULARES/A56.png", features: ["Pantalla: 6.8'' AMOLED", "Almacenamiento: 128 GB", "RAM: 8 GB", "Cámara: 50 MP"] },
+    { id: 33, name: "Samsung Galaxy A56 5G", price: 792925, img: "https://drphonescm.github.io/img/CELULARES/A56.png", features: ["Pantalla: 6.8'' AMOLED", "Almacenamiento: 256 GB", "RAM: 12 GB", "Cámara: 50 MP"] },
+    { id: 34, name: "Samsung Galaxy S25 Ultra 5G", price: 1925773, img: "https://drphonescm.github.io/img/CELULARES/S25ULTRA.png", features: ["Pantalla: 6.8'' Dynamic AMOLED", "Almacenamiento: 256 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
+    { id: 35, name: "Samsung Galaxy S25 Ultra 5G", price: 2099527, img: "https://drphonescm.github.io/img/CELULARES/S25ULTRA.png", features: ["Pantalla: 6.8'' Dynamic AMOLED", "Almacenamiento: 512 GB", "RAM: 12 GB", "Cámara: 200 MP"] },
+    { id: 36, name: "Xiaomi Poco C75", price: 218847, img: "https://drphonescm.github.io/img/CELULARES/POCOC75.png", features: ["Pantalla: 6.5'' IPS", "Almacenamiento: 256 GB", "RAM: 8 GB", "Cámara: 50 MP"] },
+    { id: 37, name: "Xiaomi 14T Pro", price: 999306, img: "https://drphonescm.github.io/img/CELULARES/14TPRO.png", features: ["Pantalla: 6.67'' AMOLED", "Almacenamiento: 512 GB", "RAM: 12 GB", "Cámara: 50 MP"] }
+    
     ];
+    
+
+    
         filteredProducts = [...allProducts];
         renderProducts(filteredProducts);
         renderPageNumbers(filteredProducts);
